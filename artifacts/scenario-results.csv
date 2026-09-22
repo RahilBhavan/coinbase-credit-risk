@@ -1,0 +1,12 @@
+scenario_id,decision,requested_amount_usd,recommended_amount_usd,available_proceeds_usd,exposure_usd,shortfall_usd,recommended_pro_forma_exposure_usd,recommended_pro_forma_coverage_surplus_usd,binding_cap,hard_blockers
+base,approve_reduced,5000000.00,3000000.00,3870600.00,5050000.00,1179400.00,3050000.00,820600.00,collateral,
+collateral_down_30,approve_reduced,5000000.00,2200000.00,2759000.00,5050000.00,2291000.00,2250000.00,509000.00,collateral,
+collateral_down_50,approve_reduced,5000000.00,1500000.00,1965000.00,5050000.00,3085000.00,1550000.00,415000.00,collateral,
+stale_price,decline,5000000.00,0.00,0.00,5050000.00,5050000.00,0.00,0.00,hard_blocker,SIM-USDC-BASE-01:price_stale
+zero_collateral,decline,5000000.00,0.00,0.00,5050000.00,5050000.00,0.00,0.00,collateral,
+route_delay_24h,approve_reduced,5000000.00,3000000.00,3830000.00,5050000.00,1220000.00,3050000.00,780000.00,collateral,
+canonical_withdrawal_168h,approve_reduced,5000000.00,2400000.00,3110000.00,5050000.00,1940000.00,2450000.00,660000.00,collateral,
+route_failure,decline,5000000.00,0.00,0.00,5050000.00,5050000.00,0.00,0.00,hard_blocker,SIM-USDC-BASE-01:repayment_route_unavailable
+missing_ownership_evidence,decline,5000000.00,0.00,0.00,5050000.00,5050000.00,0.00,0.00,hard_blocker,SIM-USDC-BASE-01:ownership_not_verified
+borrower_cash_stress,approve_reduced,5000000.00,2000000.00,3870600.00,5050000.00,1179400.00,2050000.00,1820600.00,obligor,
+correlated_portfolio_stress,approve_reduced,5000000.00,1000000.00,2661000.00,5050000.00,2389000.00,1050000.00,1611000.00,concentration,

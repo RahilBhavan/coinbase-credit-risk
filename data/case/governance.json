@@ -1,0 +1,10 @@
+{
+  "evidence_class": "assumed",
+  "illustrative_rating": "3 / Watchful",
+  "rating_rationale": "Reported liquidity is large relative to the request, but leverage, historical operating cash use, bitcoin exposure, and incomplete private diligence warrant heightened monitoring.",
+  "reversal_trigger": "Increase only after a refreshed borrowing-entity cash forecast and debt schedule support repayment without collateral, or after additional eligible collateral raises the binding cap without another policy breach; decline if ownership, priority, control, price freshness, or the repayment route is not evidenced.",
+  "source_coverage_rate": "1.0",
+  "source_coverage_scope": "All 13 material public filing facts used in the model and memo map to SRC-001 or SRC-002; this rate does not measure private-diligence completeness.",
+  "preparer": "Credit Risk project builder",
+  "review_status": "self-reviewed; independent practitioner review outstanding"
+}

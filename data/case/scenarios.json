@@ -1,0 +1,100 @@
+[
+  {
+    "scenario_id": "base",
+    "price_shock_pct": "0.02",
+    "extra_execution_cost_bps": "0",
+    "additional_route_delay_hours": "0",
+    "delayed_route": "base_to_bank",
+    "unavailable_routes": []
+  },
+  {
+    "scenario_id": "collateral_down_30",
+    "price_shock_pct": "0.30",
+    "extra_execution_cost_bps": "0",
+    "additional_route_delay_hours": "0",
+    "delayed_route": "base_to_bank",
+    "unavailable_routes": []
+  },
+  {
+    "scenario_id": "collateral_down_50",
+    "price_shock_pct": "0.50",
+    "extra_execution_cost_bps": "0",
+    "additional_route_delay_hours": "0",
+    "delayed_route": "base_to_bank",
+    "unavailable_routes": []
+  },
+  {
+    "scenario_id": "stale_price",
+    "price_shock_pct": "0.02",
+    "extra_execution_cost_bps": "100",
+    "additional_route_delay_hours": "0",
+    "delayed_route": "base_to_bank",
+    "unavailable_routes": [],
+    "forced_exclusion_reasons": {
+      "SIM-USDC-BASE-01": ["price_stale"]
+    }
+  },
+  {
+    "scenario_id": "zero_collateral",
+    "price_shock_pct": "0",
+    "extra_execution_cost_bps": "0",
+    "additional_route_delay_hours": "0",
+    "delayed_route": "base_to_bank",
+    "unavailable_routes": [],
+    "accessible_quantity_pct": "0"
+  },
+  {
+    "scenario_id": "route_delay_24h",
+    "price_shock_pct": "0",
+    "extra_execution_cost_bps": "0",
+    "additional_route_delay_hours": "24",
+    "delayed_route": "base_to_bank",
+    "unavailable_routes": []
+  },
+  {
+    "scenario_id": "canonical_withdrawal_168h",
+    "price_shock_pct": "0",
+    "extra_execution_cost_bps": "0",
+    "additional_route_delay_hours": "168",
+    "delayed_route": "base_to_bank",
+    "unavailable_routes": []
+  },
+  {
+    "scenario_id": "route_failure",
+    "price_shock_pct": "0",
+    "extra_execution_cost_bps": "0",
+    "additional_route_delay_hours": "0",
+    "delayed_route": "base_to_bank",
+    "unavailable_routes": ["base_to_bank"]
+  },
+  {
+    "scenario_id": "missing_ownership_evidence",
+    "price_shock_pct": "0.02",
+    "extra_execution_cost_bps": "0",
+    "additional_route_delay_hours": "0",
+    "delayed_route": "base_to_bank",
+    "unavailable_routes": [],
+    "forced_exclusion_reasons": {
+      "SIM-USDC-BASE-01": ["ownership_not_verified"]
+    }
+  },
+  {
+    "scenario_id": "borrower_cash_stress",
+    "price_shock_pct": "0.02",
+    "extra_execution_cost_bps": "0",
+    "additional_route_delay_hours": "0",
+    "delayed_route": "base_to_bank",
+    "unavailable_routes": [],
+    "obligor_cap_usd_override": "2000000"
+  },
+  {
+    "scenario_id": "correlated_portfolio_stress",
+    "price_shock_pct": "0.30",
+    "extra_execution_cost_bps": "50",
+    "additional_route_delay_hours": "24",
+    "delayed_route": "base_to_bank",
+    "unavailable_routes": [],
+    "obligor_cap_usd_override": "2000000",
+    "concentration_cap_usd_override": "1000000"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "artifact": "outputs/committee-packet.pdf",
+  "bookmark_titles": [
+    "Executive cover",
+    "Credit memorandum",
+    "Downside and cure ladder",
+    "Model-risk posture",
+    "Opposing memorandum",
+    "Reviewer brief"
+  ],
+  "failure_count": 0,
+  "page_count": 7,
+  "required_text": [
+    "Downside and cure ladder",
+    "Exact modeled breach",
+    "64.7k USDC",
+    "$48.8k",
+    "$2.9m",
+    "Committee question",
+    "Model-risk posture",
+    "MR-01",
+    "MR-08",
+    "Known limitations are decision inputs"
+  ],
+  "schema_version": "1.0",
+  "sha256": "d3a9a68b77d762431cb83f703c4944c44aec4bbb2d2d42a74bf4820b135d0cd4"
+}

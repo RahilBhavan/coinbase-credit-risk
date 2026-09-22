@@ -1,0 +1,95 @@
+{
+  "evidence_class": "assumed",
+  "enforceability_status": "draft_only",
+  "method_limit": "Illustrative covenant design only. These terms are not executed, legally reviewed, or Coinbase policy, and they do not establish borrower compliance.",
+  "covenants": [
+    {
+      "covenant_id": "COV-01",
+      "covenant_type": "maintenance",
+      "requirement": "Maintain stressed collateral coverage at or above the required coverage ratio.",
+      "threshold": ">= 1.25x",
+      "test_frequency": "continuous and before each draw",
+      "cure_period": "one business day by cash repayment or eligible collateral top-up",
+      "breach_consequence": "Block new draws and require cure; escalate unresolved deficiency for default or waiver analysis.",
+      "owner_role": "Credit risk and collateral operations",
+      "monitor_id": "MON-01"
+    },
+    {
+      "covenant_id": "COV-02",
+      "covenant_type": "negative",
+      "requirement": "Preserve verified ownership, first priority, and enforceable lender control over eligible collateral.",
+      "threshold": "all elements verified continuously",
+      "test_frequency": "continuous and on any custody or control change",
+      "cure_period": "no draw availability during any deficiency",
+      "breach_consequence": "Assign zero collateral credit, block funding, and begin immediate legal review.",
+      "owner_role": "Legal and collateral operations",
+      "monitor_id": "MON-02"
+    },
+    {
+      "covenant_id": "COV-03",
+      "covenant_type": "operational",
+      "requirement": "Maintain a tested collateral-to-cash repayment route within the approved completion time.",
+      "threshold": "<= 4 hours end to end",
+      "test_frequency": "monthly and after any route change",
+      "cure_period": "availability suspended until a successful test",
+      "breach_consequence": "Suspend availability and require same-day operations and credit review.",
+      "owner_role": "Collateral operations",
+      "monitor_id": "MON-03"
+    },
+    {
+      "covenant_id": "COV-04",
+      "covenant_type": "financial",
+      "requirement": "Maintain minimum unrestricted cash at the borrowing entity.",
+      "threshold": ">= $25 million",
+      "test_frequency": "monthly",
+      "cure_period": "five business days to deliver a remediation plan; availability remains frozen",
+      "breach_consequence": "Freeze incremental availability and reassess repayment capacity and the obligor cap.",
+      "owner_role": "Borrower reporting and credit risk",
+      "monitor_id": "MON-04"
+    },
+    {
+      "covenant_id": "COV-05",
+      "covenant_type": "information",
+      "requirement": "Explain and remediate material adverse variance to the approved operating cash forecast.",
+      "threshold": "no >20% adverse variance",
+      "test_frequency": "monthly and quarterly",
+      "cure_period": "five business days to provide an updated forecast and action plan",
+      "breach_consequence": "Refresh the rating and repayment analysis; freeze availability if liquidity runway is affected.",
+      "owner_role": "Credit risk",
+      "monitor_id": "MON-05"
+    },
+    {
+      "covenant_id": "COV-06",
+      "covenant_type": "negative",
+      "requirement": "Do not incur additional secured debt or create liens without lender consent.",
+      "threshold": "$0 without lender consent",
+      "test_frequency": "event-driven with monthly certification",
+      "cure_period": "none unless expressly waived in writing",
+      "breach_consequence": "Block new draws and assess default, release, subordination, or waiver requirements.",
+      "owner_role": "Legal and credit risk",
+      "monitor_id": "MON-06"
+    },
+    {
+      "covenant_id": "COV-07",
+      "covenant_type": "portfolio",
+      "requirement": "Remain within the approved USDC collateral concentration capacity.",
+      "threshold": ">= $0 headroom",
+      "test_frequency": "continuous and before each draw",
+      "cure_period": "no draw may create or increase a breach",
+      "breach_consequence": "Reject the draw or reduce the facility limit before funding.",
+      "owner_role": "Portfolio risk",
+      "monitor_id": "MON-07"
+    },
+    {
+      "covenant_id": "COV-08",
+      "covenant_type": "reporting",
+      "requirement": "Deliver complete financial and collateral reporting after each month end.",
+      "threshold": "within 15 business days",
+      "test_frequency": "monthly",
+      "cure_period": "five business days after notice",
+      "breach_consequence": "Block new draws until the reporting package is complete and accepted.",
+      "owner_role": "Credit administration",
+      "monitor_id": "MON-08"
+    }
+  ]
+}

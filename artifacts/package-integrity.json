@@ -1,0 +1,312 @@
+{
+  "case_id": "MARA-CR-001",
+  "case_version": "1.0.0",
+  "files": {
+    "artifacts/assumption-register.csv": {
+      "bytes": 3064,
+      "sha256": "3dec5e70cbd643162c60dd59bce6a137d6bef8d61ccdae148a0ef1dc85bf00e9"
+    },
+    "artifacts/assumption-register.json": {
+      "bytes": 5829,
+      "sha256": "0b0a5c2db28b9c2759730c0dd94a101ea31940612b7f8e0eb7384bd2fbaa963f"
+    },
+    "artifacts/collateral-call-ladder.csv": {
+      "bytes": 929,
+      "sha256": "51b9fcc752e47ccef0b11c97b02f59130b374c9c208b28d77830e4decb7d6d03"
+    },
+    "artifacts/collateral-call-ladder.json": {
+      "bytes": 3926,
+      "sha256": "b3dbbca9e7a2c1ea4582c3227a27e28fb8816f8d39209c4754c69ec290fee0f2"
+    },
+    "artifacts/committee-packet-audit.json": {
+      "bytes": 632,
+      "sha256": "a9acca590b22001aba64b23190d5bf6b6ddbcc081636b2020257e35239e579ec"
+    },
+    "artifacts/condition-register.csv": {
+      "bytes": 2004,
+      "sha256": "8701440846db029de438d5d4db944d8b8e7e2926a75c5280b69baf3049df4aa3"
+    },
+    "artifacts/condition-register.json": {
+      "bytes": 4616,
+      "sha256": "1c53aa245acfc515320621de2864a935d9df1098933580a1a136f46bc82a1a7a"
+    },
+    "artifacts/control-matrix.csv": {
+      "bytes": 3895,
+      "sha256": "af32376b6b408cee737cbcc858358076b58a9d381180de53fe423c0278f22505"
+    },
+    "artifacts/control-matrix.json": {
+      "bytes": 8368,
+      "sha256": "38bb4dc9f03a84541f3e1a0b01b994b1ac3cf153ad510cb85f57f78a8c112d43"
+    },
+    "artifacts/covenant-plan.csv": {
+      "bytes": 3135,
+      "sha256": "6414df82063fa4daaf43e327410929060c8ba51fce5d4370eea48e5dc10f8f2c"
+    },
+    "artifacts/covenant-plan.json": {
+      "bytes": 5956,
+      "sha256": "cedf7a0efe5b0ff0001db3e76219894cb92ae3c1c1ce44ef141ced70c45cf024"
+    },
+    "artifacts/credit-memo.md": {
+      "bytes": 7946,
+      "sha256": "81d58ad89b708e483ef3107af0aeed4f10fda2ce7bd82fac1b227eb55c783d65"
+    },
+    "artifacts/decision-lineage.csv": {
+      "bytes": 3492,
+      "sha256": "a88cd53e612dccf8b7095674cb21bb3876e61cc3064b8d26fc893d7d43912d06"
+    },
+    "artifacts/decision-lineage.json": {
+      "bytes": 8365,
+      "sha256": "2a372a76f4b8f735455e10fd821e2dc52468684ff37cc84d7cd29d9f13f0c9ce"
+    },
+    "artifacts/decision-record.json": {
+      "bytes": 11561,
+      "sha256": "5ef0aeb3e329aac2c2d25f0325249dde7367bb266eae0405b8ed33192e7c8858"
+    },
+    "artifacts/decision-view-audit.json": {
+      "bytes": 8050,
+      "sha256": "71373889118c73cf825bc472ed56c190af11837fa96fd34355c43ed9873f49e3"
+    },
+    "artifacts/diligence-plan.csv": {
+      "bytes": 3834,
+      "sha256": "06ca33872757a82f204f4b86ba0053a86a0e8a777a8b6538900a0e98719faf7f"
+    },
+    "artifacts/diligence-plan.json": {
+      "bytes": 8115,
+      "sha256": "7208ccc4649b0570fe5b2c20d06cfd60004b5b0c47f56c1a65c7faf53630ee47"
+    },
+    "artifacts/escalation-playbook.csv": {
+      "bytes": 3079,
+      "sha256": "8bc20e03bc6ae6b4cc8ec69631185aecc7aa196f2afeda8d80631751b9ab902a"
+    },
+    "artifacts/escalation-playbook.json": {
+      "bytes": 6122,
+      "sha256": "a95882cdbbfd2fc9091973d947402a8013ad765a6ea4c2fb5fe70d46e0517577"
+    },
+    "artifacts/issuer-fact-ledger.csv": {
+      "bytes": 3004,
+      "sha256": "3a8a828e36ef47e9bdbdd966fe7befd7cbff8aad2e149b89dfa4103f2aa5f841"
+    },
+    "artifacts/liquidity-analysis.csv": {
+      "bytes": 829,
+      "sha256": "0ee81b33a08bc78be47d6a5c3c351eebee04d2de51c1a1e8e60f7a6a7d82e665"
+    },
+    "artifacts/liquidity-analysis.json": {
+      "bytes": 2419,
+      "sha256": "d2c6beb3960a406200ab13b8f3e0f9476c1aa5a75d14aa599b0fabb23e18e31e"
+    },
+    "artifacts/model-risk-register.csv": {
+      "bytes": 3615,
+      "sha256": "f2e3931fe3ecb10adbd1af50decb92544897a91b457f3b104d39598311eca226"
+    },
+    "artifacts/model-risk-register.json": {
+      "bytes": 6943,
+      "sha256": "f402eeac83178772b0cebd630bd76ce817216c2b86ecca058bd79d5e9463b530"
+    },
+    "artifacts/monitoring-plan.csv": {
+      "bytes": 2266,
+      "sha256": "1327fae8aeeb6b9ce9521c79f6e68272a53843a7b9a257b3806fc9fdd34df3ed"
+    },
+    "artifacts/monitoring-plan.json": {
+      "bytes": 5028,
+      "sha256": "15eaa2af0d9de499b038ae23cc3ce816cc7ab4fe210eb07816f71c08c55e9638"
+    },
+    "artifacts/opposing-memo.md": {
+      "bytes": 2948,
+      "sha256": "62ff8e39ca086fa87b220f57a52d0a27d33b80ba24e937432e0f34bcbbb6e044"
+    },
+    "artifacts/package-metrics.json": {
+      "bytes": 1493,
+      "sha256": "13ea51906ce6047e48e1f2bceeb76b115ae08c723150964e5bec6f7aedda076f"
+    },
+    "artifacts/package-metrics.md": {
+      "bytes": 804,
+      "sha256": "02eb57824f7dee233af6d3af3b0d4bff7f7f0b2735e173fce2bc0de96747dd3d"
+    },
+    "artifacts/rating-analysis.csv": {
+      "bytes": 1784,
+      "sha256": "107c33ee65463596ad7c3a710600f220675ba4d640ff7c95120d7f230d1c00e8"
+    },
+    "artifacts/rating-analysis.json": {
+      "bytes": 3794,
+      "sha256": "4cd01b1016be38ad44d56b79354c2cfcb3948035917c2e959c87b6a5e2750367"
+    },
+    "artifacts/readiness-report.json": {
+      "bytes": 4882,
+      "sha256": "cc7d09ac0e9d1450f8383cc63183c887a3b1c96cbae3ee4e69788674c0b2637c"
+    },
+    "artifacts/readiness-report.md": {
+      "bytes": 3666,
+      "sha256": "9bca839c4671f70083a0cb97c4eac40fa31351fb8ebdf272a7139c3a9cd07727"
+    },
+    "artifacts/reviewer-brief.md": {
+      "bytes": 2682,
+      "sha256": "f7d68b4a978fd65d8b911989e484c1eec96b581e6a71b063802189295f766d19"
+    },
+    "artifacts/reviewer-scorecard-audit.json": {
+      "bytes": 486,
+      "sha256": "ba33fc9942bba4c6b98d499e3a9f9eade2f9185e3582e988c05eac578883b788"
+    },
+    "artifacts/reviewer-scorecard.csv": {
+      "bytes": 2709,
+      "sha256": "ec1620127089b0ecafd0a26234b57045e5f1aaa5d1dcdb67cf6a48b62b321d82"
+    },
+    "artifacts/reviewer-scorecard.json": {
+      "bytes": 4355,
+      "sha256": "257380056b6dd2eacf1173b3595916075c3b490866640fad67707a65896ceb93"
+    },
+    "artifacts/reviewer-scorecard.md": {
+      "bytes": 3069,
+      "sha256": "a75b2dfe208d9d5e676c07cc57d5398304ed90fa1854cba7e608f8f3825b9253"
+    },
+    "artifacts/scenario-attribution.csv": {
+      "bytes": 2471,
+      "sha256": "bd72f7674563fe8863109b61d5a11afe3a99fd71cb4aa4647168f7b131623b12"
+    },
+    "artifacts/scenario-attribution.json": {
+      "bytes": 6833,
+      "sha256": "55e748cefa8dba2cd51ee87910b1eda4e7d1a920e9a2cba8cf2f57bf084a5719"
+    },
+    "artifacts/scenario-results.csv": {
+      "bytes": 1573,
+      "sha256": "4a14636ba97d4c7500eeef23503fd5fd36460a66577ab0ca4c39724717f71445"
+    },
+    "artifacts/scenario-results.json": {
+      "bytes": 134223,
+      "sha256": "54f83cbaf7a7858229267664f3cba64ff43cf631f01fee0430f9445a648fc208"
+    },
+    "artifacts/source-register.csv": {
+      "bytes": 4413,
+      "sha256": "19d9f651720d3dd0554338369c9aa8f78586ea649e515e97802936e037f8c4e9"
+    },
+    "artifacts/threshold-analysis.csv": {
+      "bytes": 3591,
+      "sha256": "9b31f2b4ff5e94044443b21a2f64796b9c1f52e645b9cfd6822e80d0cc95067d"
+    },
+    "artifacts/threshold-analysis.json": {
+      "bytes": 12312,
+      "sha256": "68a4960b8e07d216ee5947eec5965d78421fa6479d6adc341e73ac22d716ad13"
+    },
+    "artifacts/what-if-contract.json": {
+      "bytes": 4473,
+      "sha256": "5e7267b524f6b2c11ba85d176706b2b6006fe50283fce2b06d80112c0e112eb0"
+    },
+    "artifacts/workbook-audit.csv": {
+      "bytes": 33239,
+      "sha256": "0fdd1db5e2ba5573b52050124d1198c75fde3510536d09e7e0bfa6c07b76a21a"
+    },
+    "data/case/assumption_governance.json": {
+      "bytes": 3912,
+      "sha256": "4a5ab373b33c761ee3b9a473bde7fede4aad17db9d092e1a989d50096ac28e5b"
+    },
+    "data/case/collateral.json": {
+      "bytes": 414,
+      "sha256": "2e122d8f6688702d4dc24de856ad6046b8f99948aeac9e385162e1c4c068a928"
+    },
+    "data/case/collateral_calls.json": {
+      "bytes": 414,
+      "sha256": "73b3e427da306a01ba0a5c4cef30069318ff85c7d50656a0d1995d895de8d6d4"
+    },
+    "data/case/conditions.json": {
+      "bytes": 3919,
+      "sha256": "08b53a29068ae4d1482e29a382920ce9f2cc8b982502bb26f0bccb1c1ce8c9a3"
+    },
+    "data/case/control_matrix.json": {
+      "bytes": 1704,
+      "sha256": "0a3ccdafa02d132641a8bf0d8dccd77cd1e6878b4550f3d2ce2ce83bb010d5d5"
+    },
+    "data/case/covenants.json": {
+      "bytes": 4639,
+      "sha256": "5e476f6271c9490a7a0a48a404b8da59a935a7b122ba6db36ebb8e875a92a383"
+    },
+    "data/case/diligence.json": {
+      "bytes": 3795,
+      "sha256": "68a4a676c38dca689ddf6178d70eaa383c6c2ac4e083d3f6103df98cfbdc12e0"
+    },
+    "data/case/escalations.json": {
+      "bytes": 4526,
+      "sha256": "729ec12aaab47915be4aba01d31f344d0bde6fad4803737041ae7d5c521931aa"
+    },
+    "data/case/facility.json": {
+      "bytes": 638,
+      "sha256": "81f5308110a8db8b6ad33b2638b8ed703cf2e26b713828754752c68b39ff930b"
+    },
+    "data/case/governance.json": {
+      "bytes": 955,
+      "sha256": "e31ac3a0f72a1b5cc5a4daabe760712f096d67d2e392c3aa781cc3416d66fae7"
+    },
+    "data/case/issuer_facts.json": {
+      "bytes": 248,
+      "sha256": "1ecbde205204fb0fc17b172e57b52a4fd3156db7d65e9749332fa7df608b7832"
+    },
+    "data/case/lineage.json": {
+      "bytes": 5642,
+      "sha256": "35a1cecf6d972d5f67fd34c5d8e1867fb1df9135ddf73373912d0a50def6b19a"
+    },
+    "data/case/model_risks.json": {
+      "bytes": 5598,
+      "sha256": "d6eded503e408b0e242ac3e725b20164cef1bdebe00ce3068dbabfe41ef8c26c"
+    },
+    "data/case/monitoring.json": {
+      "bytes": 3953,
+      "sha256": "43411427afa69a20dbf45665e9d5368fe5e3346b63719a42d5f0e629b3e95ac9"
+    },
+    "data/case/policy.json": {
+      "bytes": 273,
+      "sha256": "96fb530ca42a3bd35762f597f8e7634c4b847d8fda8e653bdad385e0cff857e2"
+    },
+    "data/case/portfolio.json": {
+      "bytes": 402,
+      "sha256": "b0823e284bc9cb9d0c67aff193757db460753642d5beadd667598d79fffc0bca"
+    },
+    "data/case/rating.json": {
+      "bytes": 3259,
+      "sha256": "7f61123ca681a125d1900b03d30f4ebd968bc337c2650b41e8efb5e0d51cdfa2"
+    },
+    "data/case/reviewer_gates.json": {
+      "bytes": 3481,
+      "sha256": "1b2dd3ea33982b05fb3d8c0155b57079fa52b24dd312747776ebcd571bf781f0"
+    },
+    "data/case/scenarios.json": {
+      "bytes": 2829,
+      "sha256": "5153ad96b0a4aa49928d07b771c2ff29e272b9c4b73de185cd534aae6b8a8f7a"
+    },
+    "data/review/reviewer-evidence.json": {
+      "bytes": 891,
+      "sha256": "84ecbb43218a8fe612cc466b460c611bfc7c54fe71bdd6958caea7ebdaec719a"
+    },
+    "outputs/committee-packet.pdf": {
+      "bytes": 26037,
+      "sha256": "d3a9a68b77d762431cb83f703c4944c44aec4bbb2d2d42a74bf4820b135d0cd4"
+    },
+    "outputs/credit-memo.pdf": {
+      "bytes": 8010,
+      "sha256": "ee5ea523fa9b627d79526ac1e5a62db5288f05c34d761e137db588da1fe6c8a8"
+    },
+    "outputs/credit-model.xlsx": {
+      "bytes": 86999,
+      "sha256": "8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e"
+    },
+    "outputs/decision-view.html": {
+      "bytes": 246737,
+      "sha256": "33162c8778fcf02fe1f58d9e68c4b25e1c4b986da08099d8e76ee5937b14f745"
+    },
+    "outputs/demo.mp4": {
+      "bytes": 861842,
+      "sha256": "10b609e7f59a62a39d517014f665b4d66b19b88997c24de0d680a3986a974179"
+    },
+    "outputs/opposing-memo.pdf": {
+      "bytes": 3689,
+      "sha256": "eab350d1d40ac09f589fed13f26f8ae0d8d731b8c4c12cfd86b7466a3c000321"
+    },
+    "outputs/reviewer-brief.pdf": {
+      "bytes": 3889,
+      "sha256": "bf041f07885a7bd9abee0f2abbccd912d34922561e60056951b868b04f3377ec"
+    },
+    "outputs/reviewer-scorecard.pdf": {
+      "bytes": 9534,
+      "sha256": "acbf4bbf7ef0b5fad0d54880fd3411fa9f135dc99fb7c15ec447153de40792c2"
+    }
+  },
+  "hash_algorithm": "sha256",
+  "schema_version": "1.0"
+}

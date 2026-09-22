@@ -1,0 +1,217 @@
+{
+  "case_id": "MARA-CR-001",
+  "funding_gate_status": "blocked_pending_conditions",
+  "method_limit": "Illustrative diligence sequencing only. It is not an executed closing checklist, legal advice, a service-level commitment, or Coinbase policy.",
+  "schema_version": "1.0",
+  "summary": {
+    "critical_count": 4,
+    "dependency_blocked_count": 1,
+    "high_count": 5,
+    "parallel_lane_count": 4,
+    "ready_to_start_count": 8,
+    "task_count": 9,
+    "wave_one_count": 8
+  },
+  "tasks": [
+    {
+      "affected_lineage_nodes": [
+        "LIN-04",
+        "LIN-05",
+        "LIN-08",
+        "LIN-09",
+        "LIN-11"
+      ],
+      "completion_output": "Verified ownership package with independent custody corroboration.",
+      "condition_id": "CP-01",
+      "current_action": "ready_to_start",
+      "decision_impact": "hard_blocker_zero_collateral_credit",
+      "depends_on": [],
+      "evidence_status": "outstanding",
+      "failure_consequence": "Decline and assign zero collateral credit.",
+      "owner_role": "Credit / borrower",
+      "parallel_lane": "collateral_control",
+      "priority": "critical",
+      "requirement": "Verify beneficial ownership of the proposed collateral lot.",
+      "verification_method": "Ownership documents and independently corroborated custody records",
+      "wave": 1
+    },
+    {
+      "affected_lineage_nodes": [
+        "LIN-04",
+        "LIN-05",
+        "LIN-08",
+        "LIN-09",
+        "LIN-11"
+      ],
+      "completion_output": "Clear lien search, executed security documents, and legal confirmation.",
+      "condition_id": "CP-02",
+      "current_action": "ready_to_start",
+      "decision_impact": "hard_blocker_zero_collateral_credit",
+      "depends_on": [],
+      "evidence_status": "outstanding",
+      "failure_consequence": "Decline and assign zero collateral credit.",
+      "owner_role": "Legal",
+      "parallel_lane": "collateral_control",
+      "priority": "critical",
+      "requirement": "Confirm no prior lien and first-priority perfected security.",
+      "verification_method": "Lien search, executed security documents, and legal confirmation",
+      "wave": 1
+    },
+    {
+      "affected_lineage_nodes": [
+        "LIN-04",
+        "LIN-05",
+        "LIN-08",
+        "LIN-09",
+        "LIN-11"
+      ],
+      "completion_output": "Executed control agreement and successful control-procedure test.",
+      "condition_id": "CP-03",
+      "current_action": "waiting_on:CP-01|CP-02",
+      "decision_impact": "hard_blocker_zero_collateral_credit",
+      "depends_on": [
+        "CP-01",
+        "CP-02"
+      ],
+      "evidence_status": "outstanding",
+      "failure_consequence": "Decline and assign zero collateral credit.",
+      "owner_role": "Legal / operations",
+      "parallel_lane": "collateral_control",
+      "priority": "critical",
+      "requirement": "Establish enforceable lender control over the collateral and custody account.",
+      "verification_method": "Executed control agreement and operating-procedure test",
+      "wave": 2
+    },
+    {
+      "affected_lineage_nodes": [
+        "LIN-04",
+        "LIN-05",
+        "LIN-08",
+        "LIN-09",
+        "LIN-11"
+      ],
+      "completion_output": "Timestamped end-to-end route test with reconciled fees and destination proceeds.",
+      "condition_id": "CP-04",
+      "current_action": "ready_to_start",
+      "decision_impact": "hard_blocker_zero_collateral_credit",
+      "depends_on": [],
+      "evidence_status": "outstanding",
+      "failure_consequence": "Decline if no approved collateral-to-bank repayment route exists.",
+      "owner_role": "Operations / treasury",
+      "parallel_lane": "route_operations",
+      "priority": "critical",
+      "requirement": "Test the Base-to-liquidation-to-bank repayment route end to end.",
+      "verification_method": "Read-only route test with timestamps, fees, and destination confirmation",
+      "wave": 1
+    },
+    {
+      "affected_lineage_nodes": [
+        "LIN-02",
+        "LIN-03",
+        "LIN-08",
+        "LIN-09",
+        "LIN-10"
+      ],
+      "completion_output": "Reconciled 13-week borrowing-entity cash forecast.",
+      "condition_id": "DD-01",
+      "current_action": "ready_to_start",
+      "decision_impact": "repayment_capacity_and_obligor_cap",
+      "depends_on": [],
+      "evidence_status": "outstanding",
+      "failure_consequence": "Keep funding blocked and do not finalize the obligor cap.",
+      "owner_role": "Credit / borrower",
+      "parallel_lane": "borrower_diligence",
+      "priority": "high",
+      "requirement": "Obtain and reconcile a current 13-week borrowing-entity cash forecast.",
+      "verification_method": "Forecast-to-bank and forecast-to-historical reconciliation",
+      "wave": 1
+    },
+    {
+      "affected_lineage_nodes": [
+        "LIN-01",
+        "LIN-03",
+        "LIN-08",
+        "LIN-09"
+      ],
+      "completion_output": "Approved sources-and-uses schedule tied to facility documents.",
+      "condition_id": "DD-02",
+      "current_action": "ready_to_start",
+      "decision_impact": "purpose_and_structure",
+      "depends_on": [],
+      "evidence_status": "outstanding",
+      "failure_consequence": "Keep funding blocked until permitted use and controls are documented.",
+      "owner_role": "Credit / borrower",
+      "parallel_lane": "borrower_diligence",
+      "priority": "high",
+      "requirement": "Document facility purpose and a controlled use-of-proceeds schedule.",
+      "verification_method": "Approved sources-and-uses schedule tied to facility documents",
+      "wave": 1
+    },
+    {
+      "affected_lineage_nodes": [
+        "LIN-02",
+        "LIN-03",
+        "LIN-08",
+        "LIN-09",
+        "LIN-10"
+      ],
+      "completion_output": "Legal-entity chart, account map, and transfer-restriction analysis.",
+      "condition_id": "DD-03",
+      "current_action": "ready_to_start",
+      "decision_impact": "cash_availability_and_entity_risk",
+      "depends_on": [],
+      "evidence_status": "outstanding",
+      "failure_consequence": "Keep funding blocked and do not rely on consolidated cash for repayment.",
+      "owner_role": "Credit / legal",
+      "parallel_lane": "borrower_diligence",
+      "priority": "high",
+      "requirement": "Map legal-entity cash ownership and transfer restrictions.",
+      "verification_method": "Entity chart, account map, and restriction review",
+      "wave": 1
+    },
+    {
+      "affected_lineage_nodes": [
+        "LIN-02",
+        "LIN-03",
+        "LIN-08",
+        "LIN-09",
+        "LIN-10"
+      ],
+      "completion_output": "Complete debt-service and maturity schedule reconciled to agreements and forecast cash flows.",
+      "condition_id": "DD-04",
+      "current_action": "ready_to_start",
+      "decision_impact": "maturity_and_refinancing_capacity",
+      "depends_on": [],
+      "evidence_status": "outstanding",
+      "failure_consequence": "Keep funding blocked and do not finalize repayment capacity.",
+      "owner_role": "Credit / borrower",
+      "parallel_lane": "borrower_diligence",
+      "priority": "high",
+      "requirement": "Reconcile the complete debt-service and maturity schedule.",
+      "verification_method": "Debt schedule tied to agreements, filings, and forecast cash flows",
+      "wave": 1
+    },
+    {
+      "affected_lineage_nodes": [
+        "LIN-06",
+        "LIN-07",
+        "LIN-08",
+        "LIN-09",
+        "LIN-11"
+      ],
+      "completion_output": "Current portfolio exposure report with limit-owner sign-off.",
+      "condition_id": "PF-01",
+      "current_action": "ready_to_start",
+      "decision_impact": "single_name_and_concentration_capacity",
+      "depends_on": [],
+      "evidence_status": "outstanding",
+      "failure_consequence": "Keep funding blocked and do not allocate portfolio capacity.",
+      "owner_role": "Portfolio risk",
+      "parallel_lane": "portfolio",
+      "priority": "high",
+      "requirement": "Confirm current single-name and shared-risk concentration capacity.",
+      "verification_method": "Current portfolio report and limit-owner sign-off",
+      "wave": 1
+    }
+  ]
+}

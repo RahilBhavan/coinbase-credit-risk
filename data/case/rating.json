@@ -1,0 +1,63 @@
+{
+  "evidence_class": "assumed",
+  "scale": [
+    {"minimum": "1.00", "maximum": "1.49", "grade": "1 / Strong"},
+    {"minimum": "1.50", "maximum": "2.49", "grade": "2 / Satisfactory"},
+    {"minimum": "2.50", "maximum": "3.49", "grade": "3 / Watchful"},
+    {"minimum": "3.50", "maximum": "4.49", "grade": "4 / Weak"},
+    {"minimum": "4.50", "maximum": "5.00", "grade": "5 / Critical"}
+  ],
+  "factors": [
+    {
+      "factor_id": "RAT-01",
+      "factor": "Liquidity scale",
+      "weight": "0.25",
+      "score": "1",
+      "evidence_ids": ["SRC-001"],
+      "rationale": "Reported cash is large relative to the fictional request, subject to legal-entity availability and designated-cash limits.",
+      "improvement_evidence": "Borrowing-entity cash map and forecast confirm unrestricted repayment liquidity.",
+      "deterioration_trigger": "Available borrowing-entity liquidity is materially below the public headline amount."
+    },
+    {
+      "factor_id": "RAT-02",
+      "factor": "Leverage and maturities",
+      "weight": "0.25",
+      "score": "4",
+      "evidence_ids": ["SRC-001", "SRC-002"],
+      "rationale": "Reported debt is substantial and includes identified near-term obligations and holder put exposure.",
+      "improvement_evidence": "Reconciled debt schedule shows durable maturity headroom and refinancing capacity.",
+      "deterioration_trigger": "Near-term maturities, secured borrowing, or refinancing needs increase materially."
+    },
+    {
+      "factor_id": "RAT-03",
+      "factor": "Operating cash generation",
+      "weight": "0.20",
+      "score": "4",
+      "evidence_ids": ["SRC-002"],
+      "rationale": "The 2025 filing reported significant net cash used in operating activities.",
+      "improvement_evidence": "A current forecast and subsequent actuals demonstrate sustained positive operating cash generation.",
+      "deterioration_trigger": "Operating cash use persists or exceeds the current historical reference."
+    },
+    {
+      "factor_id": "RAT-04",
+      "factor": "Asset volatility and concentration",
+      "weight": "0.15",
+      "score": "3",
+      "evidence_ids": ["SRC-001"],
+      "rationale": "Headline liquidity includes material bitcoin exposure whose value and availability can change with crypto conditions.",
+      "improvement_evidence": "Repayment capacity is supported by stable cash generation without dependence on bitcoin value.",
+      "deterioration_trigger": "Bitcoin price stress and issuer liquidity weaken together."
+    },
+    {
+      "factor_id": "RAT-05",
+      "factor": "Private diligence completeness",
+      "weight": "0.15",
+      "score": "4",
+      "evidence_ids": ["ASM-C001", "ASM-C004"],
+      "rationale": "Facility purpose, borrowing-entity forecast, legal-entity cash map, and complete debt schedule are unavailable.",
+      "improvement_evidence": "All repayment-capacity diligence items reconcile without a material unresolved exception.",
+      "deterioration_trigger": "Private diligence contradicts public-data assumptions or remains unavailable near funding."
+    }
+  ],
+  "method_limit": "The score is an illustrative ordinal bridge. It is not statistically calibrated and does not imply a probability of default, expected loss, or Coinbase policy."
+}

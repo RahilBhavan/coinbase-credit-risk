@@ -1,0 +1,9 @@
+{
+  "evidence_class": "assumed",
+  "maximum_commitment_usd": "10000000",
+  "obligor_cap_usd": "7500000",
+  "single_name_cap_usd": "6000000",
+  "collateral_asset_concentration_limit": "0.40",
+  "delay_cost_bps_per_hour": "12.5",
+  "recommendation_increment_usd": "100000"
+}

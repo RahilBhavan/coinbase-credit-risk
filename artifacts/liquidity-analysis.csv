@@ -1,0 +1,10 @@
+line_id,line_item,amount_usd,source_id,evidence_class
+LIQ-01,Reported cash and cash equivalents,421300000.00,SRC-001,reported
+LIQ-02,Less: cash designated for Exaion operations,-126390000.00,SRC-001,calculated from reported approximate share
+LIQ-03,Cash after designation screen,294910000.00,SRC-001,calculated
+LIQ-04,Less: line of credit due within 12 months,-150000000.00,SRC-001,reported
+LIQ-05,Less: December 2026 notes,-48100000.00,SRC-001,reported
+LIQ-06,Residual before potential holder put,96810000.00,SRC-001,calculated
+LIQ-07,Less: June 2031 notes classified current for June 2027 put,-291600000.00,SRC-001,reported potential obligation
+LIQ-08,Residual after potential holder put,-194790000.00,SRC-001,calculated sensitivity
+LIQ-09,2025 operating cash used,-802700000.00,SRC-002,reported historical reference

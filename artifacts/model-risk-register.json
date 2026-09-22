@@ -1,0 +1,175 @@
+{
+  "case_id": "MARA-CR-001",
+  "evidence_class": "assumed",
+  "method_limit": "This register governs known model and evidence limitations; it does not prove legal sufficiency, validate private borrower information, or replace independent model review.",
+  "risks": [
+    {
+      "affected_decision": "recommended commitment",
+      "category": "input",
+      "disposition_if_unresolved": "Treat the cap as methodology only and do not fund.",
+      "linked_assumptions": [
+        "ASM-C002",
+        "ASM-C003"
+      ],
+      "linked_conditions": [
+        "CP-01",
+        "CP-02",
+        "CP-03",
+        "CP-04"
+      ],
+      "mitigation": "Replace simulated terms with executed collateral, custody, and route evidence; rerun every scenario.",
+      "owner": "Credit and collateral operations",
+      "residual_risk": "high",
+      "risk": "Synthetic collateral quantity and costs drive the binding cap.",
+      "risk_id": "MR-01",
+      "severity": "critical",
+      "status": "open",
+      "validation_evidence": "Executed term sheet, verified custody statement, control documents, and route test."
+    },
+    {
+      "affected_decision": "approval route and obligor cap",
+      "category": "repayment",
+      "disposition_if_unresolved": "Decline on the present record.",
+      "linked_assumptions": [
+        "ASM-C001",
+        "ASM-C004"
+      ],
+      "linked_conditions": [
+        "DD-01",
+        "DD-02",
+        "DD-03",
+        "DD-04"
+      ],
+      "mitigation": "Reconcile a 13-week forecast, legal-entity cash map, facility purpose, and debt-service schedule.",
+      "owner": "Senior credit officer",
+      "residual_risk": "high",
+      "risk": "Public liquidity is not a borrowing-entity cash forecast or primary repayment proof.",
+      "risk_id": "MR-02",
+      "severity": "critical",
+      "status": "open",
+      "validation_evidence": "Borrower forecast tied to banks, historical results, debt agreements, and approved sources and uses."
+    },
+    {
+      "affected_decision": "collateral eligibility and funding gate",
+      "category": "legal",
+      "disposition_if_unresolved": "Assign zero collateral credit and block funding.",
+      "linked_assumptions": [
+        "ASM-C007"
+      ],
+      "linked_conditions": [
+        "CP-01",
+        "CP-02",
+        "CP-03"
+      ],
+      "mitigation": "Obtain legal confirmation and independently verify the complete control package.",
+      "owner": "Legal",
+      "residual_risk": "high",
+      "risk": "The model cannot establish ownership, priority, perfection, control, or remedy enforceability.",
+      "risk_id": "MR-03",
+      "severity": "critical",
+      "status": "open",
+      "validation_evidence": "Clear lien search, executed security and control agreements, and counsel confirmation."
+    },
+    {
+      "affected_decision": "liquidation proceeds",
+      "category": "market_data",
+      "disposition_if_unresolved": "Retain conservative sensitivities and prohibit claims of executable recovery value.",
+      "linked_assumptions": [
+        "ASM-C003"
+      ],
+      "linked_conditions": [
+        "CP-04"
+      ],
+      "mitigation": "Obtain venue-specific stressed depth, slippage, fee, and settlement evidence for the actual route.",
+      "owner": "Market risk and collateral operations",
+      "residual_risk": "medium",
+      "risk": "Daily candles and assumed costs do not establish stressed executable depth.",
+      "risk_id": "MR-04",
+      "severity": "high",
+      "status": "open",
+      "validation_evidence": "Timestamped depth studies and reconciled execution tests across declared stress sizes."
+    },
+    {
+      "affected_decision": "internal risk characterization",
+      "category": "methodology",
+      "disposition_if_unresolved": "Use only as a transparent qualitative bridge, never as a calibrated rating.",
+      "linked_assumptions": [
+        "ASM-C004"
+      ],
+      "linked_conditions": [
+        "DD-01",
+        "DD-03",
+        "DD-04"
+      ],
+      "mitigation": "Independent credit review of factor definitions, weights, evidence, and override policy.",
+      "owner": "Credit methodology",
+      "residual_risk": "medium",
+      "risk": "The ordinal rating is judgmental and not calibrated to default probability or loss.",
+      "risk_id": "MR-05",
+      "severity": "high",
+      "status": "open",
+      "validation_evidence": "Dated reviewer challenge with documented changes or accepted disagreement."
+    },
+    {
+      "affected_decision": "portfolio and shared-risk caps",
+      "category": "portfolio",
+      "disposition_if_unresolved": "Do not allocate portfolio capacity or rely on the modeled concentration cap.",
+      "linked_assumptions": [
+        "ASM-C005"
+      ],
+      "linked_conditions": [
+        "PF-01"
+      ],
+      "mitigation": "Load the current approved exposure inventory and obtain limit-owner sign-off.",
+      "owner": "Portfolio risk",
+      "residual_risk": "medium",
+      "risk": "Invented exposures demonstrate concentration mechanics but not actual portfolio capacity.",
+      "risk_id": "MR-06",
+      "severity": "high",
+      "status": "open",
+      "validation_evidence": "Current portfolio report reconciled to limits and approved by portfolio risk."
+    },
+    {
+      "affected_decision": "availability before obligation date",
+      "category": "operations",
+      "disposition_if_unresolved": "Set route availability to false and decline.",
+      "linked_assumptions": [
+        "ASM-C006"
+      ],
+      "linked_conditions": [
+        "CP-04"
+      ],
+      "mitigation": "Execute an end-to-end read-only route test with timestamps, fees, destination, and exception handling.",
+      "owner": "Treasury and operations",
+      "residual_risk": "medium",
+      "risk": "Modeled Base-to-cash timing may not represent the approved production route.",
+      "risk_id": "MR-07",
+      "severity": "high",
+      "status": "open",
+      "validation_evidence": "Approved route runbook and successful independently observed test."
+    },
+    {
+      "affected_decision": "implementation assurance",
+      "category": "implementation",
+      "disposition_if_unresolved": "Keep the package locally verified but not ready to share.",
+      "linked_assumptions": [],
+      "linked_conditions": [],
+      "mitigation": "Recalculate in a native spreadsheet engine and independently reproduce one decision case.",
+      "owner": "Independent model reviewer",
+      "residual_risk": "low",
+      "risk": "OOXML formula inspection is not native Excel recalculation or independent code review.",
+      "risk_id": "MR-08",
+      "severity": "medium",
+      "status": "open",
+      "validation_evidence": "Signed reproduction worksheet, native recalculation log, and resolved discrepancy record."
+    }
+  ],
+  "schema_version": "1.0",
+  "summary": {
+    "critical_count": 3,
+    "decision_blocking_count": 4,
+    "high_count": 4,
+    "open_count": 8,
+    "risk_count": 8
+  }
+}

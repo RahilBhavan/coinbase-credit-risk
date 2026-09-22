@@ -1,0 +1,176 @@
+{
+  "case_id": "MARA-CR-001",
+  "case_version": "1.0.0",
+  "method_limit": "Attribution is a deterministic explanation of declared scenario outputs. It is not a probability, forecast, causal estimate, or new decision rule.",
+  "rows": [
+    {
+      "available_proceeds_usd": "3870600.00",
+      "binding_cap": "collateral",
+      "change_class": "same_limit",
+      "decision": "approve_reduced",
+      "hard_blockers": [],
+      "primary_driver": "reference_case",
+      "proceeds_delta_vs_base_usd": "0.00",
+      "recommendation_delta_vs_base_usd": "0.00",
+      "recommended_amount_usd": "3000000.00",
+      "resolution_evidence": "Complete and verify every blocking pre-funding condition.",
+      "scenario_id": "base",
+      "severity_rank": 11
+    },
+    {
+      "available_proceeds_usd": "2759000.00",
+      "binding_cap": "collateral",
+      "change_class": "reduced_limit",
+      "decision": "approve_reduced",
+      "hard_blockers": [],
+      "primary_driver": "collateral_market_value",
+      "proceeds_delta_vs_base_usd": "-1111600.00",
+      "recommendation_delta_vs_base_usd": "-800000.00",
+      "recommended_amount_usd": "2200000.00",
+      "resolution_evidence": "Add eligible collateral, repay exposure, or reduce the commitment.",
+      "scenario_id": "collateral_down_30",
+      "severity_rank": 8
+    },
+    {
+      "available_proceeds_usd": "1965000.00",
+      "binding_cap": "collateral",
+      "change_class": "reduced_limit",
+      "decision": "approve_reduced",
+      "hard_blockers": [],
+      "primary_driver": "collateral_market_value",
+      "proceeds_delta_vs_base_usd": "-1905600.00",
+      "recommendation_delta_vs_base_usd": "-1500000.00",
+      "recommended_amount_usd": "1500000.00",
+      "resolution_evidence": "Add eligible collateral, repay exposure, or reduce the commitment.",
+      "scenario_id": "collateral_down_50",
+      "severity_rank": 6
+    },
+    {
+      "available_proceeds_usd": "0.00",
+      "binding_cap": "hard_blocker",
+      "change_class": "decline",
+      "decision": "decline",
+      "hard_blockers": [
+        "SIM-USDC-BASE-01:price_stale"
+      ],
+      "primary_driver": "price_integrity_blocker",
+      "proceeds_delta_vs_base_usd": "-3870600.00",
+      "recommendation_delta_vs_base_usd": "-3000000.00",
+      "recommended_amount_usd": "0.00",
+      "resolution_evidence": "Obtain a fresh independent price within the approved staleness tolerance.",
+      "scenario_id": "stale_price",
+      "severity_rank": 3
+    },
+    {
+      "available_proceeds_usd": "0.00",
+      "binding_cap": "collateral",
+      "change_class": "decline",
+      "decision": "decline",
+      "hard_blockers": [],
+      "primary_driver": "collateral_availability",
+      "proceeds_delta_vs_base_usd": "-3870600.00",
+      "recommendation_delta_vs_base_usd": "-3000000.00",
+      "recommended_amount_usd": "0.00",
+      "resolution_evidence": "Verify accessible quantity in controlled custody or provide eligible replacement collateral.",
+      "scenario_id": "zero_collateral",
+      "severity_rank": 4
+    },
+    {
+      "available_proceeds_usd": "3830000.00",
+      "binding_cap": "collateral",
+      "change_class": "same_limit",
+      "decision": "approve_reduced",
+      "hard_blockers": [],
+      "primary_driver": "route_timing_cost",
+      "proceeds_delta_vs_base_usd": "-40600.00",
+      "recommendation_delta_vs_base_usd": "0.00",
+      "recommended_amount_usd": "3000000.00",
+      "resolution_evidence": "Complete a timed route test and evidence proceeds, fees, and destination.",
+      "scenario_id": "route_delay_24h",
+      "severity_rank": 10
+    },
+    {
+      "available_proceeds_usd": "3110000.00",
+      "binding_cap": "collateral",
+      "change_class": "reduced_limit",
+      "decision": "approve_reduced",
+      "hard_blockers": [],
+      "primary_driver": "route_timing_cost",
+      "proceeds_delta_vs_base_usd": "-760600.00",
+      "recommendation_delta_vs_base_usd": "-600000.00",
+      "recommended_amount_usd": "2400000.00",
+      "resolution_evidence": "Use a faster approved route, add collateral, or reduce the commitment.",
+      "scenario_id": "canonical_withdrawal_168h",
+      "severity_rank": 9
+    },
+    {
+      "available_proceeds_usd": "0.00",
+      "binding_cap": "hard_blocker",
+      "change_class": "decline",
+      "decision": "decline",
+      "hard_blockers": [
+        "SIM-USDC-BASE-01:repayment_route_unavailable"
+      ],
+      "primary_driver": "repayment_route_blocker",
+      "proceeds_delta_vs_base_usd": "-3870600.00",
+      "recommendation_delta_vs_base_usd": "-3000000.00",
+      "recommended_amount_usd": "0.00",
+      "resolution_evidence": "Complete a successful end-to-end collateral-to-bank repayment test.",
+      "scenario_id": "route_failure",
+      "severity_rank": 2
+    },
+    {
+      "available_proceeds_usd": "0.00",
+      "binding_cap": "hard_blocker",
+      "change_class": "decline",
+      "decision": "decline",
+      "hard_blockers": [
+        "SIM-USDC-BASE-01:ownership_not_verified"
+      ],
+      "primary_driver": "ownership_blocker",
+      "proceeds_delta_vs_base_usd": "-3870600.00",
+      "recommendation_delta_vs_base_usd": "-3000000.00",
+      "recommended_amount_usd": "0.00",
+      "resolution_evidence": "Provide independently corroborated beneficial-ownership and custody records.",
+      "scenario_id": "missing_ownership_evidence",
+      "severity_rank": 1
+    },
+    {
+      "available_proceeds_usd": "3870600.00",
+      "binding_cap": "obligor",
+      "change_class": "reduced_limit",
+      "decision": "approve_reduced",
+      "hard_blockers": [],
+      "primary_driver": "obligor_capacity",
+      "proceeds_delta_vs_base_usd": "0.00",
+      "recommendation_delta_vs_base_usd": "-1000000.00",
+      "recommended_amount_usd": "2000000.00",
+      "resolution_evidence": "Reconcile a 13-week borrowing-entity cash forecast and complete debt-service schedule.",
+      "scenario_id": "borrower_cash_stress",
+      "severity_rank": 7
+    },
+    {
+      "available_proceeds_usd": "2661000.00",
+      "binding_cap": "concentration",
+      "change_class": "reduced_limit",
+      "decision": "approve_reduced",
+      "hard_blockers": [],
+      "primary_driver": "portfolio_concentration",
+      "proceeds_delta_vs_base_usd": "-1209600.00",
+      "recommendation_delta_vs_base_usd": "-2000000.00",
+      "recommended_amount_usd": "1000000.00",
+      "resolution_evidence": "Obtain current portfolio capacity, limit-owner approval, and refreshed borrower downside evidence.",
+      "scenario_id": "correlated_portfolio_stress",
+      "severity_rank": 5
+    }
+  ],
+  "schema_version": "1.0",
+  "summary": {
+    "decline_count": 4,
+    "hard_blocker_scenario_count": 3,
+    "maximum_recommendation_loss_usd": "3000000.00",
+    "reduced_limit_count": 5,
+    "same_limit_count": 2,
+    "scenario_count": 11
+  }
+}

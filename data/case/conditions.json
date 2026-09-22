@@ -1,0 +1,110 @@
+[
+  {
+    "condition_id": "CP-01",
+    "category": "collateral",
+    "requirement": "Verify beneficial ownership of the proposed collateral lot.",
+    "evidence_class": "assumed",
+    "evidence_status": "outstanding",
+    "blocking": true,
+    "owner_role": "Credit / borrower",
+    "timing": "before_funding",
+    "verification_method": "Ownership documents and independently corroborated custody records",
+    "source_id": "ASM-C007"
+  },
+  {
+    "condition_id": "CP-02",
+    "category": "legal",
+    "requirement": "Confirm no prior lien and first-priority perfected security.",
+    "evidence_class": "assumed",
+    "evidence_status": "outstanding",
+    "blocking": true,
+    "owner_role": "Legal",
+    "timing": "before_funding",
+    "verification_method": "Lien search, executed security documents, and legal confirmation",
+    "source_id": "ASM-C007"
+  },
+  {
+    "condition_id": "CP-03",
+    "category": "control",
+    "requirement": "Establish enforceable lender control over the collateral and custody account.",
+    "evidence_class": "assumed",
+    "evidence_status": "outstanding",
+    "blocking": true,
+    "owner_role": "Legal / operations",
+    "timing": "before_funding",
+    "verification_method": "Executed control agreement and operating-procedure test",
+    "source_id": "ASM-C007"
+  },
+  {
+    "condition_id": "CP-04",
+    "category": "operations",
+    "requirement": "Test the Base-to-liquidation-to-bank repayment route end to end.",
+    "evidence_class": "assumed",
+    "evidence_status": "outstanding",
+    "blocking": true,
+    "owner_role": "Operations / treasury",
+    "timing": "before_funding",
+    "verification_method": "Read-only route test with timestamps, fees, and destination confirmation",
+    "source_id": "ASM-C007"
+  },
+  {
+    "condition_id": "DD-01",
+    "category": "repayment",
+    "requirement": "Obtain and reconcile a current 13-week borrowing-entity cash forecast.",
+    "evidence_class": "assumed",
+    "evidence_status": "outstanding",
+    "blocking": true,
+    "owner_role": "Credit / borrower",
+    "timing": "before_funding",
+    "verification_method": "Forecast-to-bank and forecast-to-historical reconciliation",
+    "source_id": "ASM-C001"
+  },
+  {
+    "condition_id": "DD-02",
+    "category": "purpose",
+    "requirement": "Document facility purpose and a controlled use-of-proceeds schedule.",
+    "evidence_class": "assumed",
+    "evidence_status": "outstanding",
+    "blocking": true,
+    "owner_role": "Credit / borrower",
+    "timing": "before_funding",
+    "verification_method": "Approved sources-and-uses schedule tied to facility documents",
+    "source_id": "ASM-C001"
+  },
+  {
+    "condition_id": "DD-03",
+    "category": "entity",
+    "requirement": "Map legal-entity cash ownership and transfer restrictions.",
+    "evidence_class": "assumed",
+    "evidence_status": "outstanding",
+    "blocking": true,
+    "owner_role": "Credit / legal",
+    "timing": "before_funding",
+    "verification_method": "Entity chart, account map, and restriction review",
+    "source_id": "ASM-C001"
+  },
+  {
+    "condition_id": "DD-04",
+    "category": "repayment",
+    "requirement": "Reconcile the complete debt-service and maturity schedule.",
+    "evidence_class": "assumed",
+    "evidence_status": "outstanding",
+    "blocking": true,
+    "owner_role": "Credit / borrower",
+    "timing": "before_funding",
+    "verification_method": "Debt schedule tied to agreements, filings, and forecast cash flows",
+    "source_id": "ASM-C001"
+  },
+  {
+    "condition_id": "PF-01",
+    "category": "portfolio",
+    "requirement": "Confirm current single-name and shared-risk concentration capacity.",
+    "evidence_class": "assumed",
+    "evidence_status": "outstanding",
+    "blocking": true,
+    "owner_role": "Portfolio risk",
+    "timing": "before_funding",
+    "verification_method": "Current portfolio report and limit-owner sign-off",
+    "source_id": "ASM-C005"
+  }
+]

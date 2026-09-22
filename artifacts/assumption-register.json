@@ -1,0 +1,139 @@
+{
+  "assumptions": [
+    {
+      "assumption": "Facility structure and primary repayment framing",
+      "assumption_id": "ASM-C001",
+      "challenge_trigger": "Actual borrower, purpose, tenor, repayment source, or facility structure differs from the fictional case.",
+      "downstream_lineage_nodes": [
+        "LIN-01",
+        "LIN-03",
+        "LIN-08",
+        "LIN-09",
+        "LIN-11"
+      ],
+      "evidence_class": "assumed",
+      "materiality": "high",
+      "owner_role": "Credit risk",
+      "source_claim": "$5m 12-month revolving working-capital request; bullet maturity; operating liquidity as primary repayment",
+      "validation_method": "Reconcile executed term sheet, use of proceeds, borrowing-entity forecast, and debt-service schedule.",
+      "validation_status": "unvalidated",
+      "workbook_inputs": "Assumptions!D8:D14"
+    },
+    {
+      "assumption": "Four million USDC collateral lot on Base",
+      "assumption_id": "ASM-C002",
+      "challenge_trigger": "Proposed asset, quantity, custody venue, chain, ownership, or accessibility changes.",
+      "downstream_lineage_nodes": [
+        "LIN-04",
+        "LIN-05",
+        "LIN-08",
+        "LIN-09",
+        "LIN-11"
+      ],
+      "evidence_class": "simulated",
+      "materiality": "critical",
+      "owner_role": "Collateral operations",
+      "source_claim": "4m USDC on Base at $1.00 in proposed lender-controlled structure",
+      "validation_method": "Verify asset, quantity, beneficial ownership, custody balance, chain, and controlled account.",
+      "validation_status": "unvalidated",
+      "workbook_inputs": "Assumptions!D18:D19"
+    },
+    {
+      "assumption": "Collateral stress, execution cost, delay cost, fixed cost, and coverage",
+      "assumption_id": "ASM-C003",
+      "challenge_trigger": "Observed liquidity, execution cost, route timing, fees, or required coverage differs materially.",
+      "downstream_lineage_nodes": [
+        "LIN-04",
+        "LIN-05",
+        "LIN-08"
+      ],
+      "evidence_class": "assumed",
+      "materiality": "critical",
+      "owner_role": "Credit risk and collateral operations",
+      "source_claim": "2% price stress; 50bp execution cost; $9800 delay cost; $20000 fixed cost; 1.25x coverage",
+      "validation_method": "Calibrate to approved policy, executable market evidence, route tests, and documented fees.",
+      "validation_status": "unvalidated",
+      "workbook_inputs": "Assumptions!D20:D24"
+    },
+    {
+      "assumption": "Illustrative obligor cap and ordinal rating",
+      "assumption_id": "ASM-C004",
+      "challenge_trigger": "Private forecast, debt schedule, liquidity, or operating performance changes the obligor assessment.",
+      "downstream_lineage_nodes": [
+        "LIN-02",
+        "LIN-03",
+        "LIN-08"
+      ],
+      "evidence_class": "assumed",
+      "materiality": "high",
+      "owner_role": "Credit risk",
+      "source_claim": "$7.5m obligor cap and grade 3 / Watchful",
+      "validation_method": "Complete private repayment analysis and independent rating review against approved criteria.",
+      "validation_status": "unvalidated",
+      "workbook_inputs": "Rating!E7:F11;Portfolio!D22"
+    },
+    {
+      "assumption": "Illustrative single-name capacity",
+      "assumption_id": "ASM-C005",
+      "challenge_trigger": "Policy limit, current exposure, pending commitments, or risk appetite differs.",
+      "downstream_lineage_nodes": [
+        "LIN-06",
+        "LIN-08",
+        "LIN-09"
+      ],
+      "evidence_class": "assumed",
+      "materiality": "high",
+      "owner_role": "Portfolio risk",
+      "source_claim": "$6m single-name cap",
+      "validation_method": "Reconcile to current approved single-name policy and live portfolio exposure.",
+      "validation_status": "unvalidated",
+      "workbook_inputs": "Assumptions!D32"
+    },
+    {
+      "assumption": "Illustrative shared-risk concentration capacity",
+      "assumption_id": "ASM-C006",
+      "challenge_trigger": "Portfolio composition, aggregation taxonomy, concentration threshold, or proposed exposure changes.",
+      "downstream_lineage_nodes": [
+        "LIN-07",
+        "LIN-08",
+        "LIN-09"
+      ],
+      "evidence_class": "assumed",
+      "materiality": "high",
+      "owner_role": "Portfolio risk",
+      "source_claim": "$4m shared-route concentration cap",
+      "validation_method": "Reconcile asset, sector, custody, and route aggregation to current portfolio reports and policy.",
+      "validation_status": "unvalidated",
+      "workbook_inputs": "Assumptions!D34:D35"
+    },
+    {
+      "assumption": "Ownership, priority, control, custody, and route requirements",
+      "assumption_id": "ASM-C007",
+      "challenge_trigger": "Any ownership, priority, control, custody, enforceability, or route evidence is missing or adverse.",
+      "downstream_lineage_nodes": [
+        "LIN-04",
+        "LIN-05",
+        "LIN-08",
+        "LIN-09",
+        "LIN-11"
+      ],
+      "evidence_class": "assumed",
+      "materiality": "critical",
+      "owner_role": "Legal, credit, and operations",
+      "source_claim": "Ownership first priority legal control custody and repayment route required before funding",
+      "validation_method": "Obtain executed documents, lien search, legal confirmation, custody evidence, and successful route test.",
+      "validation_status": "unvalidated",
+      "workbook_inputs": "Assumptions!D25:D28"
+    }
+  ],
+  "case_id": "MARA-CR-001",
+  "method_limit": "Assumption governance documents ownership and challenge requirements. It does not validate an assumption, convert it into a fact, or establish Coinbase policy.",
+  "schema_version": "1.0",
+  "summary": {
+    "assumption_count": 7,
+    "critical_count": 3,
+    "downstream_lineage_link_count": 27,
+    "high_count": 4,
+    "unvalidated_count": 7
+  }
+}

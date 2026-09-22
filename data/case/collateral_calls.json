@@ -1,0 +1,5 @@
+{
+  "evidence_class": "assumed",
+  "stress_levels_pct": ["0.02", "0.05", "0.10", "0.20", "0.30", "0.40", "0.50"],
+  "method_limit": "Illustrative collateral sensitivity only. It is not an executed margin agreement, a liquidation instruction, or Coinbase policy. Top-up and repayment amounts assume the declared costs, immediate cure, unchanged legal eligibility, and no market impact beyond the modeled stress."
+}

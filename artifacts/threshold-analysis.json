@@ -1,0 +1,364 @@
+{
+  "base_available_proceeds_usd": "3870600.00",
+  "base_recommendation_usd": "3000000.00",
+  "case_id": "MARA-CR-001",
+  "case_version": "1.0.0",
+  "decision_surface": {
+    "cells": [
+      {
+        "available_proceeds_usd": "1965000.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "1572000.00",
+        "collateral_quantity_usdc": "2000000.00",
+        "price_stress_pct": "0",
+        "recommended_amount_usd": "1500000.00"
+      },
+      {
+        "available_proceeds_usd": "1925300.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "1540240.00",
+        "collateral_quantity_usdc": "2000000.00",
+        "price_stress_pct": "0.02",
+        "recommended_amount_usd": "1500000.00"
+      },
+      {
+        "available_proceeds_usd": "1865750.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "1492600.00",
+        "collateral_quantity_usdc": "2000000.00",
+        "price_stress_pct": "0.05",
+        "recommended_amount_usd": "1400000.00"
+      },
+      {
+        "available_proceeds_usd": "1766500.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "1413200.00",
+        "collateral_quantity_usdc": "2000000.00",
+        "price_stress_pct": "0.10",
+        "recommended_amount_usd": "1400000.00"
+      },
+      {
+        "available_proceeds_usd": "1568000.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "1254400.00",
+        "collateral_quantity_usdc": "2000000.00",
+        "price_stress_pct": "0.20",
+        "recommended_amount_usd": "1200000.00"
+      },
+      {
+        "available_proceeds_usd": "1369500.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "1095600.00",
+        "collateral_quantity_usdc": "2000000.00",
+        "price_stress_pct": "0.30",
+        "recommended_amount_usd": "1000000.00"
+      },
+      {
+        "available_proceeds_usd": "1171000.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "936800.00",
+        "collateral_quantity_usdc": "2000000.00",
+        "price_stress_pct": "0.40",
+        "recommended_amount_usd": "900000.00"
+      },
+      {
+        "available_proceeds_usd": "972500.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "778000.00",
+        "collateral_quantity_usdc": "2000000.00",
+        "price_stress_pct": "0.50",
+        "recommended_amount_usd": "700000.00"
+      },
+      {
+        "available_proceeds_usd": "2957500.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "2366000.00",
+        "collateral_quantity_usdc": "3000000.00",
+        "price_stress_pct": "0",
+        "recommended_amount_usd": "2300000.00"
+      },
+      {
+        "available_proceeds_usd": "2897950.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "2318360.00",
+        "collateral_quantity_usdc": "3000000.00",
+        "price_stress_pct": "0.02",
+        "recommended_amount_usd": "2300000.00"
+      },
+      {
+        "available_proceeds_usd": "2808625.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "2246900.00",
+        "collateral_quantity_usdc": "3000000.00",
+        "price_stress_pct": "0.05",
+        "recommended_amount_usd": "2200000.00"
+      },
+      {
+        "available_proceeds_usd": "2659750.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "2127800.00",
+        "collateral_quantity_usdc": "3000000.00",
+        "price_stress_pct": "0.10",
+        "recommended_amount_usd": "2100000.00"
+      },
+      {
+        "available_proceeds_usd": "2362000.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "1889600.00",
+        "collateral_quantity_usdc": "3000000.00",
+        "price_stress_pct": "0.20",
+        "recommended_amount_usd": "1800000.00"
+      },
+      {
+        "available_proceeds_usd": "2064250.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "1651400.00",
+        "collateral_quantity_usdc": "3000000.00",
+        "price_stress_pct": "0.30",
+        "recommended_amount_usd": "1600000.00"
+      },
+      {
+        "available_proceeds_usd": "1766500.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "1413200.00",
+        "collateral_quantity_usdc": "3000000.00",
+        "price_stress_pct": "0.40",
+        "recommended_amount_usd": "1400000.00"
+      },
+      {
+        "available_proceeds_usd": "1468750.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "1175000.00",
+        "collateral_quantity_usdc": "3000000.00",
+        "price_stress_pct": "0.50",
+        "recommended_amount_usd": "1100000.00"
+      },
+      {
+        "available_proceeds_usd": "3950000.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "3160000.00",
+        "collateral_quantity_usdc": "4000000.00",
+        "price_stress_pct": "0",
+        "recommended_amount_usd": "3100000.00"
+      },
+      {
+        "available_proceeds_usd": "3870600.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "3096480.00",
+        "collateral_quantity_usdc": "4000000.00",
+        "price_stress_pct": "0.02",
+        "recommended_amount_usd": "3000000.00"
+      },
+      {
+        "available_proceeds_usd": "3751500.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "3001200.00",
+        "collateral_quantity_usdc": "4000000.00",
+        "price_stress_pct": "0.05",
+        "recommended_amount_usd": "3000000.00"
+      },
+      {
+        "available_proceeds_usd": "3553000.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "2842400.00",
+        "collateral_quantity_usdc": "4000000.00",
+        "price_stress_pct": "0.10",
+        "recommended_amount_usd": "2800000.00"
+      },
+      {
+        "available_proceeds_usd": "3156000.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "2524800.00",
+        "collateral_quantity_usdc": "4000000.00",
+        "price_stress_pct": "0.20",
+        "recommended_amount_usd": "2500000.00"
+      },
+      {
+        "available_proceeds_usd": "2759000.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "2207200.00",
+        "collateral_quantity_usdc": "4000000.00",
+        "price_stress_pct": "0.30",
+        "recommended_amount_usd": "2200000.00"
+      },
+      {
+        "available_proceeds_usd": "2362000.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "1889600.00",
+        "collateral_quantity_usdc": "4000000.00",
+        "price_stress_pct": "0.40",
+        "recommended_amount_usd": "1800000.00"
+      },
+      {
+        "available_proceeds_usd": "1965000.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "1572000.00",
+        "collateral_quantity_usdc": "4000000.00",
+        "price_stress_pct": "0.50",
+        "recommended_amount_usd": "1500000.00"
+      },
+      {
+        "available_proceeds_usd": "4942500.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "3954000.00",
+        "collateral_quantity_usdc": "5000000.00",
+        "price_stress_pct": "0",
+        "recommended_amount_usd": "3900000.00"
+      },
+      {
+        "available_proceeds_usd": "4843250.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "3874600.00",
+        "collateral_quantity_usdc": "5000000.00",
+        "price_stress_pct": "0.02",
+        "recommended_amount_usd": "3800000.00"
+      },
+      {
+        "available_proceeds_usd": "4694375.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "3755500.00",
+        "collateral_quantity_usdc": "5000000.00",
+        "price_stress_pct": "0.05",
+        "recommended_amount_usd": "3700000.00"
+      },
+      {
+        "available_proceeds_usd": "4446250.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "3557000.00",
+        "collateral_quantity_usdc": "5000000.00",
+        "price_stress_pct": "0.10",
+        "recommended_amount_usd": "3500000.00"
+      },
+      {
+        "available_proceeds_usd": "3950000.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "3160000.00",
+        "collateral_quantity_usdc": "5000000.00",
+        "price_stress_pct": "0.20",
+        "recommended_amount_usd": "3100000.00"
+      },
+      {
+        "available_proceeds_usd": "3453750.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "2763000.00",
+        "collateral_quantity_usdc": "5000000.00",
+        "price_stress_pct": "0.30",
+        "recommended_amount_usd": "2700000.00"
+      },
+      {
+        "available_proceeds_usd": "2957500.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "2366000.00",
+        "collateral_quantity_usdc": "5000000.00",
+        "price_stress_pct": "0.40",
+        "recommended_amount_usd": "2300000.00"
+      },
+      {
+        "available_proceeds_usd": "2461250.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "1969000.00",
+        "collateral_quantity_usdc": "5000000.00",
+        "price_stress_pct": "0.50",
+        "recommended_amount_usd": "1900000.00"
+      },
+      {
+        "available_proceeds_usd": "5935000.00",
+        "binding_cap": "concentration",
+        "collateral_cap_usd": "4748000.00",
+        "collateral_quantity_usdc": "6000000.00",
+        "price_stress_pct": "0",
+        "recommended_amount_usd": "4000000.00"
+      },
+      {
+        "available_proceeds_usd": "5815900.00",
+        "binding_cap": "concentration",
+        "collateral_cap_usd": "4652720.00",
+        "collateral_quantity_usdc": "6000000.00",
+        "price_stress_pct": "0.02",
+        "recommended_amount_usd": "4000000.00"
+      },
+      {
+        "available_proceeds_usd": "5637250.00",
+        "binding_cap": "concentration",
+        "collateral_cap_usd": "4509800.00",
+        "collateral_quantity_usdc": "6000000.00",
+        "price_stress_pct": "0.05",
+        "recommended_amount_usd": "4000000.00"
+      },
+      {
+        "available_proceeds_usd": "5339500.00",
+        "binding_cap": "concentration",
+        "collateral_cap_usd": "4271600.00",
+        "collateral_quantity_usdc": "6000000.00",
+        "price_stress_pct": "0.10",
+        "recommended_amount_usd": "4000000.00"
+      },
+      {
+        "available_proceeds_usd": "4744000.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "3795200.00",
+        "collateral_quantity_usdc": "6000000.00",
+        "price_stress_pct": "0.20",
+        "recommended_amount_usd": "3700000.00"
+      },
+      {
+        "available_proceeds_usd": "4148500.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "3318800.00",
+        "collateral_quantity_usdc": "6000000.00",
+        "price_stress_pct": "0.30",
+        "recommended_amount_usd": "3300000.00"
+      },
+      {
+        "available_proceeds_usd": "3553000.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "2842400.00",
+        "collateral_quantity_usdc": "6000000.00",
+        "price_stress_pct": "0.40",
+        "recommended_amount_usd": "2800000.00"
+      },
+      {
+        "available_proceeds_usd": "2957500.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "2366000.00",
+        "collateral_quantity_usdc": "6000000.00",
+        "price_stress_pct": "0.50",
+        "recommended_amount_usd": "2300000.00"
+      }
+    ],
+    "price_stress_axis_pct": [
+      "0",
+      "0.02",
+      "0.05",
+      "0.10",
+      "0.20",
+      "0.30",
+      "0.40",
+      "0.50"
+    ],
+    "quantity_axis_usdc": [
+      "2000000.00",
+      "3000000.00",
+      "4000000.00",
+      "5000000.00",
+      "6000000.00"
+    ]
+  },
+  "full_request_feasible_under_current_caps": false,
+  "interpretation": "Thresholds hold execution, delay, fixed cost, coverage, and all non-target drivers constant. They are sensitivities, not forecasts.",
+  "max_price_decline_for_target": {
+    "2000000": "0.365239",
+    "3000000": "0.050378",
+    "4000000": "0.000000",
+    "5000000": "0.000000"
+  },
+  "maximum_non_collateral_limit_name": "concentration",
+  "maximum_non_collateral_limit_usd": "4000000.00",
+  "post_cost_factor_before_price_stress": "0.9925",
+  "required_collateral_quantity_for_target": {
+    "2000000": "2590860.02",
+    "3000000": "3876008.84",
+    "4000000": "5161157.66",
+    "5000000": "6446306.48"
+  }
+}

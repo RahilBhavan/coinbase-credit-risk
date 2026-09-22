@@ -1,0 +1,99 @@
+{
+  "accrued_amount_usd": "50000.00",
+  "case_id": "MARA-CR-001",
+  "evidence_class": "assumed",
+  "exact_modeled_breach_price_stress_pct": "0.034635",
+  "first_grid_call_stress_pct": "0.05",
+  "method_limit": "Illustrative collateral sensitivity only. It is not an executed margin agreement, a liquidation instruction, or Coinbase policy. Top-up and repayment amounts assume the declared costs, immediate cure, unchanged legal eligibility, and no market impact beyond the modeled stress.",
+  "pro_forma_exposure_usd": "3050000.00",
+  "recommended_commitment_usd": "3000000.00",
+  "required_coverage_ratio": "1.25",
+  "required_proceeds_usd": "3812500.00",
+  "rows": [
+    {
+      "available_proceeds_usd": "3870600.00",
+      "covenant_headroom_usd": "58100.00",
+      "coverage_ratio": "1.2690",
+      "max_coverage_compliant_commitment_usd": "3046480.00",
+      "price_stress_pct": "0.02",
+      "repayment_required_usd": "0.00",
+      "required_proceeds_usd": "3812500.00",
+      "rounded_coverage_compliant_commitment_usd": "3000000.00",
+      "status": "PASS",
+      "top_up_required_usdc": "0.00"
+    },
+    {
+      "available_proceeds_usd": "3751500.00",
+      "covenant_headroom_usd": "-61000.00",
+      "coverage_ratio": "1.2300",
+      "max_coverage_compliant_commitment_usd": "2951200.00",
+      "price_stress_pct": "0.05",
+      "repayment_required_usd": "48800.00",
+      "required_proceeds_usd": "3812500.00",
+      "rounded_coverage_compliant_commitment_usd": "2900000.00",
+      "status": "CALL_REQUIRED",
+      "top_up_required_usdc": "64695.74"
+    },
+    {
+      "available_proceeds_usd": "3553000.00",
+      "covenant_headroom_usd": "-259500.00",
+      "coverage_ratio": "1.1649",
+      "max_coverage_compliant_commitment_usd": "2792400.00",
+      "price_stress_pct": "0.10",
+      "repayment_required_usd": "207600.00",
+      "required_proceeds_usd": "3812500.00",
+      "rounded_coverage_compliant_commitment_usd": "2700000.00",
+      "status": "CALL_REQUIRED",
+      "top_up_required_usdc": "290512.17"
+    },
+    {
+      "available_proceeds_usd": "3156000.00",
+      "covenant_headroom_usd": "-656500.00",
+      "coverage_ratio": "1.0348",
+      "max_coverage_compliant_commitment_usd": "2474800.00",
+      "price_stress_pct": "0.20",
+      "repayment_required_usd": "525200.00",
+      "required_proceeds_usd": "3812500.00",
+      "rounded_coverage_compliant_commitment_usd": "2400000.00",
+      "status": "CALL_REQUIRED",
+      "top_up_required_usdc": "826826.20"
+    },
+    {
+      "available_proceeds_usd": "2759000.00",
+      "covenant_headroom_usd": "-1053500.00",
+      "coverage_ratio": "0.9046",
+      "max_coverage_compliant_commitment_usd": "2157200.00",
+      "price_stress_pct": "0.30",
+      "repayment_required_usd": "842800.00",
+      "required_proceeds_usd": "3812500.00",
+      "rounded_coverage_compliant_commitment_usd": "2100000.00",
+      "status": "CALL_REQUIRED",
+      "top_up_required_usdc": "1516372.80"
+    },
+    {
+      "available_proceeds_usd": "2362000.00",
+      "covenant_headroom_usd": "-1450500.00",
+      "coverage_ratio": "0.7744",
+      "max_coverage_compliant_commitment_usd": "1839600.00",
+      "price_stress_pct": "0.40",
+      "repayment_required_usd": "1160400.00",
+      "required_proceeds_usd": "3812500.00",
+      "rounded_coverage_compliant_commitment_usd": "1800000.00",
+      "status": "CALL_REQUIRED",
+      "top_up_required_usdc": "2435768.26"
+    },
+    {
+      "available_proceeds_usd": "1965000.00",
+      "covenant_headroom_usd": "-1847500.00",
+      "coverage_ratio": "0.6443",
+      "max_coverage_compliant_commitment_usd": "1522000.00",
+      "price_stress_pct": "0.50",
+      "repayment_required_usd": "1478000.00",
+      "required_proceeds_usd": "3812500.00",
+      "rounded_coverage_compliant_commitment_usd": "1500000.00",
+      "status": "CALL_REQUIRED",
+      "top_up_required_usdc": "3722921.91"
+    }
+  ],
+  "schema_version": "1.0"
+}

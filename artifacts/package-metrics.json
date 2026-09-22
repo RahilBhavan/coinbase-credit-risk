@@ -1,0 +1,49 @@
+{
+  "artifact_sha256": {
+    "outputs/committee-packet.pdf": "d3a9a68b77d762431cb83f703c4944c44aec4bbb2d2d42a74bf4820b135d0cd4",
+    "outputs/credit-model.xlsx": "8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e",
+    "outputs/decision-view.html": "33162c8778fcf02fe1f58d9e68c4b25e1c4b986da08099d8e76ee5937b14f745",
+    "outputs/reviewer-scorecard.pdf": "acbf4bbf7ef0b5fad0d54880fd3411fa9f135dc99fb7c15ec447153de40792c2"
+  },
+  "case_id": "MARA-CR-001",
+  "case_version": "1.0.0",
+  "decision_support": {
+    "condition_count": 9,
+    "control_mapping_count": 8,
+    "covenant_count": 8,
+    "escalation_count": 8,
+    "model_risk_count": 8,
+    "monitoring_rule_count": 8,
+    "scenario_count": 11,
+    "source_count": 13
+  },
+  "decision_view": {
+    "collateral_call_row_count": 7,
+    "control_chain_count": 8,
+    "required_id_count": 79,
+    "runtime_failure_count": 0,
+    "what_if_vector_count": 4
+  },
+  "package": {
+    "integrity_manifest_file_count": 76,
+    "portable_bundle_artifact_count": 58
+  },
+  "review": {
+    "committee_packet_bookmarks": 6,
+    "committee_packet_pages": 7,
+    "human_gate_count": 3,
+    "human_gates_passed": 0,
+    "local_criteria_count": 10,
+    "local_criteria_verified": 10,
+    "ready_to_share": false,
+    "regression_test_count": 60,
+    "reviewer_scorecard_pages": 4
+  },
+  "schema_version": "1.0",
+  "workbook": {
+    "audit_check_count": 171,
+    "audit_pass_count": 171,
+    "formula_count": 265,
+    "sheet_count": 16
+  }
+}

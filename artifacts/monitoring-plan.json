@@ -1,0 +1,137 @@
+{
+  "activation_state": "pre_funding_blocked",
+  "case_id": "MARA-CR-001",
+  "method_limit": "This is an illustrative monitoring design, not executed borrower reporting, an executed or legally reviewed covenant package, or Coinbase policy.",
+  "rules": [
+    {
+      "breach_action": "Block new draws; require cure or collateral top-up before further funding.",
+      "current_value": "1.269x",
+      "escalation": "Immediate credit and legal review",
+      "frequency": "continuous",
+      "measurement": "calculated",
+      "metric": "Collateral coverage at recommended limit",
+      "monitor_id": "MON-01",
+      "owner_role": "Credit risk",
+      "source_ids": [
+        "ASM-C002"
+      ],
+      "status": "pass_projection",
+      "threshold": ">= 1.25x"
+    },
+    {
+      "breach_action": "Assign zero collateral credit and block funding.",
+      "current_value": "9 blocking conditions outstanding",
+      "escalation": "Immediate credit, legal, and operations review",
+      "frequency": "continuous and on any custody change",
+      "measurement": "condition_register",
+      "metric": "Collateral ownership, priority, and control",
+      "monitor_id": "MON-02",
+      "owner_role": "Legal and collateral operations",
+      "source_ids": [
+        "ASM-C002"
+      ],
+      "status": "pre_funding_blocked",
+      "threshold": "all verified"
+    },
+    {
+      "breach_action": "Suspend availability until a successful route test.",
+      "current_value": "not measured \u2014 private evidence required",
+      "escalation": "Same-day operations and credit review",
+      "frequency": "monthly and after any route change",
+      "measurement": "private_test_required",
+      "metric": "Base-to-cash route test",
+      "monitor_id": "MON-03",
+      "owner_role": "Collateral operations",
+      "source_ids": [
+        "ASM-C002",
+        "SRC-005"
+      ],
+      "status": "not_measured",
+      "threshold": "<= 4 hours end to end"
+    },
+    {
+      "breach_action": "Freeze incremental availability and reassess the obligor cap.",
+      "current_value": "not measured \u2014 private evidence required",
+      "escalation": "Five-business-day credit review",
+      "frequency": "monthly",
+      "measurement": "private_reporting_required",
+      "metric": "Borrowing-entity unrestricted cash",
+      "monitor_id": "MON-04",
+      "owner_role": "Borrower reporting and credit risk",
+      "source_ids": [
+        "ASM-C001"
+      ],
+      "status": "not_measured",
+      "threshold": ">= $25 million"
+    },
+    {
+      "breach_action": "Refresh rating factors and repayment analysis.",
+      "current_value": "not measured \u2014 private evidence required",
+      "escalation": "Next credit review; immediate if liquidity runway is affected",
+      "frequency": "monthly and quarterly",
+      "measurement": "private_reporting_required",
+      "metric": "Operating cash generation variance",
+      "monitor_id": "MON-05",
+      "owner_role": "Credit risk",
+      "source_ids": [
+        "ASM-C001",
+        "SRC-002"
+      ],
+      "status": "not_measured",
+      "threshold": "no >20% adverse variance to approved forecast"
+    },
+    {
+      "breach_action": "Block new draws and assess default or waiver path.",
+      "current_value": "not measured \u2014 private evidence required",
+      "escalation": "Immediate legal and credit review",
+      "frequency": "event-driven with monthly certification",
+      "measurement": "private_reporting_required",
+      "metric": "Additional secured debt or lien creation",
+      "monitor_id": "MON-06",
+      "owner_role": "Legal and credit risk",
+      "source_ids": [
+        "ASM-C004"
+      ],
+      "status": "not_measured",
+      "threshold": "$0 without lender consent"
+    },
+    {
+      "breach_action": "Reject the draw or reduce the facility limit.",
+      "current_value": "$1,000,000.00",
+      "escalation": "Pre-draw portfolio-risk review",
+      "frequency": "continuous before each draw",
+      "measurement": "calculated",
+      "metric": "USDC collateral concentration headroom",
+      "monitor_id": "MON-07",
+      "owner_role": "Portfolio risk",
+      "source_ids": [
+        "ASM-C003"
+      ],
+      "status": "pass_projection",
+      "threshold": ">= $0"
+    },
+    {
+      "breach_action": "Block new draws until the reporting package is complete.",
+      "current_value": "not measured \u2014 private evidence required",
+      "escalation": "Five-business-day credit-administration review",
+      "frequency": "monthly",
+      "measurement": "private_reporting_required",
+      "metric": "Financial and collateral reporting delivery",
+      "monitor_id": "MON-08",
+      "owner_role": "Credit administration",
+      "source_ids": [
+        "ASM-C001",
+        "ASM-C002"
+      ],
+      "status": "not_measured",
+      "threshold": "within 15 business days after month end"
+    }
+  ],
+  "schema_version": "1.0",
+  "summary": {
+    "not_measured_count": 5,
+    "pass_projection_count": 2,
+    "pre_funding_blocked_count": 1,
+    "rule_count": 8
+  }
+}

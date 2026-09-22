@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "case_id": "MARA-CR-001",
+  "method_limit": "Only attributable evidence from an actual qualifying reviewer can pass a human gate. Generated forms, local checks, blank records, and self-attestation do not count.",
+  "records": [
+    {"gate_id":"HG-01","outcome":"OUTSTANDING","reviewer_identifier":"","reviewer_role":"","reviewed_on":"","attribution_permission":"","criterion_results":[],"evidence_paths":[],"notes":"","recorded_at":""},
+    {"gate_id":"HG-02","outcome":"OUTSTANDING","reviewer_identifier":"","reviewer_role":"","reviewed_on":"","attribution_permission":"","criterion_results":[],"evidence_paths":[],"notes":"","recorded_at":""},
+    {"gate_id":"HG-03","outcome":"OUTSTANDING","reviewer_identifier":"","reviewer_role":"","reviewed_on":"","attribution_permission":"","criterion_results":[],"evidence_paths":[],"notes":"","recorded_at":""}
+  ]
+}

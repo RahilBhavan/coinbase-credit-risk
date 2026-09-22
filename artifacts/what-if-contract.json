@@ -1,0 +1,156 @@
+{
+  "accrued_amount_usd": "50000",
+  "base_route_delay_hours": "2",
+  "bounds": {
+    "additional_route_delay_hours": {
+      "maximum": "168",
+      "minimum": "0",
+      "step": "1"
+    },
+    "execution_cost_bps": {
+      "maximum": "300",
+      "minimum": "0",
+      "step": "5"
+    },
+    "price_stress_pct": {
+      "maximum": "0.60",
+      "minimum": "0",
+      "step": "0.01"
+    },
+    "quantity_usdc": {
+      "maximum": "6000000",
+      "minimum": "0",
+      "step": "100000"
+    }
+  },
+  "case_id": "MARA-CR-001",
+  "case_version": "1.0.0",
+  "concentration_cap_usd": "4000000.00",
+  "defaults": {
+    "additional_route_delay_hours": "0",
+    "controls": {
+      "first_priority": true,
+      "legal_control": true,
+      "ownership": true,
+      "route_available": true
+    },
+    "execution_cost_bps": "50",
+    "price_stress_pct": "0.02",
+    "quantity_usdc": "4000000"
+  },
+  "delay_cost_bps_per_hour": "12.5",
+  "evidence_class": "simulated",
+  "fixed_cost_usd": "20000",
+  "method_limit": "Interactive sensitivity only. Results are not a credit approval, a market forecast, observed collateral, or authority to fund.",
+  "obligor_cap_usd": "7500000",
+  "quoted_price_usd": "1",
+  "recommendation_increment_usd": "100000",
+  "requested_commitment_usd": "5000000",
+  "required_coverage_ratio": "1.25",
+  "schema_version": "1.0",
+  "single_name_cap_usd": "6000000",
+  "test_vectors": [
+    {
+      "expected": {
+        "available_proceeds_usd": "3870600.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "3096480.00",
+        "coverage_surplus_usd": "820600.00",
+        "decision": "approve_reduced",
+        "hard_blockers": [],
+        "recommended_amount_usd": "3000000.00",
+        "recommended_pro_forma_exposure_usd": "3050000.00"
+      },
+      "inputs": {
+        "additional_route_delay_hours": "0",
+        "controls": {
+          "first_priority": true,
+          "legal_control": true,
+          "ownership": true,
+          "route_available": true
+        },
+        "execution_cost_bps": "50",
+        "price_stress_pct": "0.02",
+        "quantity_usdc": "4000000"
+      },
+      "vector_id": "base"
+    },
+    {
+      "expected": {
+        "available_proceeds_usd": "1965000.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "1572000.00",
+        "coverage_surplus_usd": "415000.00",
+        "decision": "approve_reduced",
+        "hard_blockers": [],
+        "recommended_amount_usd": "1500000.00",
+        "recommended_pro_forma_exposure_usd": "1550000.00"
+      },
+      "inputs": {
+        "additional_route_delay_hours": "0",
+        "controls": {
+          "first_priority": true,
+          "legal_control": true,
+          "ownership": true,
+          "route_available": true
+        },
+        "execution_cost_bps": "50",
+        "price_stress_pct": "0.50",
+        "quantity_usdc": "4000000"
+      },
+      "vector_id": "price_down_50"
+    },
+    {
+      "expected": {
+        "available_proceeds_usd": "3753000.00",
+        "binding_cap": "collateral",
+        "collateral_cap_usd": "3002400.00",
+        "coverage_surplus_usd": "703000.00",
+        "decision": "approve_reduced",
+        "hard_blockers": [],
+        "recommended_amount_usd": "3000000.00",
+        "recommended_pro_forma_exposure_usd": "3050000.00"
+      },
+      "inputs": {
+        "additional_route_delay_hours": "24",
+        "controls": {
+          "first_priority": true,
+          "legal_control": true,
+          "ownership": true,
+          "route_available": true
+        },
+        "execution_cost_bps": "50",
+        "price_stress_pct": "0.02",
+        "quantity_usdc": "4000000"
+      },
+      "vector_id": "route_delay_24h"
+    },
+    {
+      "expected": {
+        "available_proceeds_usd": "0.00",
+        "binding_cap": "hard_blocker",
+        "collateral_cap_usd": "0.00",
+        "coverage_surplus_usd": "0.00",
+        "decision": "decline",
+        "hard_blockers": [
+          "ownership"
+        ],
+        "recommended_amount_usd": "0.00",
+        "recommended_pro_forma_exposure_usd": "0.00"
+      },
+      "inputs": {
+        "additional_route_delay_hours": "0",
+        "controls": {
+          "first_priority": true,
+          "legal_control": true,
+          "ownership": false,
+          "route_available": true
+        },
+        "execution_cost_bps": "50",
+        "price_stress_pct": "0.02",
+        "quantity_usdc": "4000000"
+      },
+      "vector_id": "ownership_blocker"
+    }
+  ]
+}

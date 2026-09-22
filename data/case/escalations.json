@@ -1,0 +1,95 @@
+{
+  "evidence_class": "assumed",
+  "activation_state": "pre_funding_blocked",
+  "method_limit": "Illustrative response design only. No incident is open, no borrower breach has been observed, and these response paths are not executed agreements or Coinbase policy.",
+  "playbooks": [
+    {
+      "playbook_id": "ESC-01",
+      "monitor_id": "MON-01",
+      "covenant_id": "COV-01",
+      "severity_on_trigger": "critical",
+      "response_sla": "immediate; same-day decision",
+      "draw_state_on_trigger": "blocked",
+      "decision_owner": "Head of credit risk",
+      "required_evidence": "Current collateral valuation, exposure ledger, custody balance, and top-up or repayment confirmation",
+      "exit_criteria": "Coverage is restored to at least 1.25x and independently reconciled"
+    },
+    {
+      "playbook_id": "ESC-02",
+      "monitor_id": "MON-02",
+      "covenant_id": "COV-02",
+      "severity_on_trigger": "critical",
+      "response_sla": "immediate; no funding",
+      "draw_state_on_trigger": "blocked",
+      "decision_owner": "Credit and legal jointly",
+      "required_evidence": "Ownership records, lien search, executed security documents, control agreement, and operating-procedure test",
+      "exit_criteria": "Ownership, first priority, enforceability, and lender control are all verified"
+    },
+    {
+      "playbook_id": "ESC-03",
+      "monitor_id": "MON-03",
+      "covenant_id": "COV-03",
+      "severity_on_trigger": "high",
+      "response_sla": "same business day",
+      "draw_state_on_trigger": "suspended",
+      "decision_owner": "Collateral operations lead",
+      "required_evidence": "Timestamped route test, transaction identifiers, fees, destination confirmation, and exception log",
+      "exit_criteria": "A complete route test finishes within four hours with reconciled proceeds"
+    },
+    {
+      "playbook_id": "ESC-04",
+      "monitor_id": "MON-04",
+      "covenant_id": "COV-04",
+      "severity_on_trigger": "high",
+      "response_sla": "within five business days",
+      "draw_state_on_trigger": "frozen",
+      "decision_owner": "Senior credit officer",
+      "required_evidence": "Borrowing-entity bank statements, unrestricted-cash reconciliation, forecast, and remediation plan",
+      "exit_criteria": "Unrestricted cash is at least $25 million or a documented waiver is approved"
+    },
+    {
+      "playbook_id": "ESC-05",
+      "monitor_id": "MON-05",
+      "covenant_id": "COV-05",
+      "severity_on_trigger": "moderate",
+      "response_sla": "next scheduled review; immediate if runway is affected",
+      "draw_state_on_trigger": "review_required",
+      "decision_owner": "Credit risk manager",
+      "required_evidence": "Budget-to-actual bridge, revised cash forecast, variance explanation, and management action plan",
+      "exit_criteria": "Rating and repayment analysis are refreshed and the decision owner accepts the remediation plan"
+    },
+    {
+      "playbook_id": "ESC-06",
+      "monitor_id": "MON-06",
+      "covenant_id": "COV-06",
+      "severity_on_trigger": "critical",
+      "response_sla": "immediate; same-day legal review",
+      "draw_state_on_trigger": "blocked",
+      "decision_owner": "Credit and legal jointly",
+      "required_evidence": "Debt and lien documents, consent request, priority analysis, and proposed waiver or subordination terms",
+      "exit_criteria": "The lien is released or subordinated, or an authorized written waiver is effective"
+    },
+    {
+      "playbook_id": "ESC-07",
+      "monitor_id": "MON-07",
+      "covenant_id": "COV-07",
+      "severity_on_trigger": "high",
+      "response_sla": "before draw approval",
+      "draw_state_on_trigger": "rejected",
+      "decision_owner": "Portfolio risk lead",
+      "required_evidence": "Current portfolio exposure report, shared-risk aggregation, requested draw, and limit-owner sign-off",
+      "exit_criteria": "Pro forma concentration headroom is non-negative after the approved draw amount"
+    },
+    {
+      "playbook_id": "ESC-08",
+      "monitor_id": "MON-08",
+      "covenant_id": "COV-08",
+      "severity_on_trigger": "high",
+      "response_sla": "within five business days after notice",
+      "draw_state_on_trigger": "blocked",
+      "decision_owner": "Credit administration lead",
+      "required_evidence": "Complete monthly financial package, collateral report, covenant certificate, and exception explanation",
+      "exit_criteria": "The reporting package is complete, reconciled, and accepted by credit administration"
+    }
+  ]
+}

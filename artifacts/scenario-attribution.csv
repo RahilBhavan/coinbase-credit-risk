@@ -1,0 +1,12 @@
+scenario_id,severity_rank,decision,change_class,recommended_amount_usd,recommendation_delta_vs_base_usd,available_proceeds_usd,proceeds_delta_vs_base_usd,binding_cap,primary_driver,hard_blockers,resolution_evidence
+base,11,approve_reduced,same_limit,3000000.00,0.00,3870600.00,0.00,collateral,reference_case,,Complete and verify every blocking pre-funding condition.
+collateral_down_30,8,approve_reduced,reduced_limit,2200000.00,-800000.00,2759000.00,-1111600.00,collateral,collateral_market_value,,"Add eligible collateral, repay exposure, or reduce the commitment."
+collateral_down_50,6,approve_reduced,reduced_limit,1500000.00,-1500000.00,1965000.00,-1905600.00,collateral,collateral_market_value,,"Add eligible collateral, repay exposure, or reduce the commitment."
+stale_price,3,decline,decline,0.00,-3000000.00,0.00,-3870600.00,hard_blocker,price_integrity_blocker,SIM-USDC-BASE-01:price_stale,Obtain a fresh independent price within the approved staleness tolerance.
+zero_collateral,4,decline,decline,0.00,-3000000.00,0.00,-3870600.00,collateral,collateral_availability,,Verify accessible quantity in controlled custody or provide eligible replacement collateral.
+route_delay_24h,10,approve_reduced,same_limit,3000000.00,0.00,3830000.00,-40600.00,collateral,route_timing_cost,,"Complete a timed route test and evidence proceeds, fees, and destination."
+canonical_withdrawal_168h,9,approve_reduced,reduced_limit,2400000.00,-600000.00,3110000.00,-760600.00,collateral,route_timing_cost,,"Use a faster approved route, add collateral, or reduce the commitment."
+route_failure,2,decline,decline,0.00,-3000000.00,0.00,-3870600.00,hard_blocker,repayment_route_blocker,SIM-USDC-BASE-01:repayment_route_unavailable,Complete a successful end-to-end collateral-to-bank repayment test.
+missing_ownership_evidence,1,decline,decline,0.00,-3000000.00,0.00,-3870600.00,hard_blocker,ownership_blocker,SIM-USDC-BASE-01:ownership_not_verified,Provide independently corroborated beneficial-ownership and custody records.
+borrower_cash_stress,7,approve_reduced,reduced_limit,2000000.00,-1000000.00,3870600.00,0.00,obligor,obligor_capacity,,Reconcile a 13-week borrowing-entity cash forecast and complete debt-service schedule.
+correlated_portfolio_stress,5,approve_reduced,reduced_limit,1000000.00,-2000000.00,2661000.00,-1209600.00,concentration,portfolio_concentration,,"Obtain current portfolio capacity, limit-owner approval, and refreshed borrower downside evidence."

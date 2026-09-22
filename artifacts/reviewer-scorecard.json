@@ -1,0 +1,101 @@
+{
+  "case_id": "MARA-CR-001",
+  "evidence_class": "assumed",
+  "gates": [
+    {
+      "current_status": "OUTSTANDING",
+      "evidence_paths": [],
+      "gate_id": "HG-01",
+      "name": "Independent calculation reproduction",
+      "objective": "Reproduce the base collateral cap without using the workbook result as an input.",
+      "pass_criteria": [
+        "Available proceeds equal $3,870,600 within $1",
+        "Collateral cap equals $3,096,480 within $1",
+        "Reviewer documents independent steps and identifies any ambiguity"
+      ],
+      "required_evidence": "Dated calculation steps, reviewer role, result, variance, conclusion, and permission to attribute the review role",
+      "required_inputs": [
+        "4,000,000 fictional USDC",
+        "$1.00 reference price",
+        "2% stress",
+        "50 bps execution cost",
+        "25 bps delay cost",
+        "$20,000 fixed cost",
+        "1.25x coverage"
+      ],
+      "review_outcome": "OUTSTANDING",
+      "review_questions": [
+        "What available proceeds did you calculate?",
+        "What unrounded collateral cap did you calculate?",
+        "Which assumption most affects the result?",
+        "Did any instruction or label create ambiguity?"
+      ],
+      "reviewed_on": "",
+      "reviewer_role": "Independent second reader with financial-model review experience",
+      "reviewer_role_recorded": ""
+    },
+    {
+      "current_status": "OUTSTANDING",
+      "evidence_paths": [],
+      "gate_id": "HG-02",
+      "name": "Unscripted presentation assessment",
+      "objective": "Assess whether the presenter can explain the recommendation, strongest opposing view, evidence boundary, and funding gate without reading a script.",
+      "pass_criteria": [
+        "All four questions answered accurately without a script",
+        "Fictional inputs and public facts remain clearly separated",
+        "Observer records misunderstandings and follow-up actions"
+      ],
+      "required_evidence": "Dated observer notes, reviewer role, question-level result, conclusion, and any corrective action",
+      "required_inputs": [
+        "Committee packet",
+        "Reviewer brief",
+        "Decision view"
+      ],
+      "review_outcome": "OUTSTANDING",
+      "review_questions": [
+        "Why is the recommendation $3.0 million rather than $5.0 million?",
+        "Why can a conditional recommendation still be blocked from funding?",
+        "What is the strongest case for decline?",
+        "What evidence would reverse the decision?"
+      ],
+      "reviewed_on": "",
+      "reviewer_role": "Observer who did not build the case",
+      "reviewer_role_recorded": ""
+    },
+    {
+      "current_status": "OUTSTANDING",
+      "evidence_paths": [],
+      "gate_id": "HG-03",
+      "name": "Attributed external practitioner feedback",
+      "objective": "Obtain substantive feedback on the decision, control design, or evidence needed to change the recommendation.",
+      "pass_criteria": [
+        "Response comes from an actual external practitioner",
+        "Reviewer role and permission are recorded accurately",
+        "Feedback, change made, and remaining disagreement are logged without embellishment"
+      ],
+      "required_evidence": "Dated attributed response or contemporaneous notes, permission status, resulting change, and unresolved disagreement",
+      "required_inputs": [
+        "Reviewer brief",
+        "Committee packet",
+        "Relevant supporting artifact requested by reviewer"
+      ],
+      "review_outcome": "OUTSTANDING",
+      "review_questions": [
+        "Which decision assumption would you challenge first?",
+        "What specific evidence would change your conclusion?",
+        "Which control or remedy is operationally unrealistic?",
+        "May the reviewer role and response be attributed in the project log?"
+      ],
+      "reviewed_on": "",
+      "reviewer_role": "Authorized external credit, legal, collateral, or portfolio practitioner",
+      "reviewer_role_recorded": ""
+    }
+  ],
+  "method_limit": "This scorecard defines an independent review workflow. Blank fields, generated questions, and local build checks are not human review, approval, legal validation, or evidence that a gate passed.",
+  "schema_version": "1.0",
+  "summary": {
+    "gate_count": 3,
+    "outstanding_count": 3,
+    "passed_count": 0
+  }
+}

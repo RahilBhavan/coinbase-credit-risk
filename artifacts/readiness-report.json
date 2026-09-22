@@ -1,0 +1,133 @@
+{
+  "case_id": "MARA-CR-001",
+  "criteria": [
+    {
+      "detail": "Decision memo exists and its source narrative declares repayment, binding-cap, reversal, and source-linkage content.",
+      "evidence": [
+        "outputs/credit-memo.pdf",
+        "artifacts/credit-memo.md",
+        "artifacts/decision-record.json",
+        "artifacts/condition-register.json"
+      ],
+      "id": "CR-01",
+      "name": "Two-page committee decision",
+      "status": "VERIFIED_LOCAL"
+    },
+    {
+      "detail": "Opposing memo exists and names the alternative, disputed assumption, and resolving evidence.",
+      "evidence": [
+        "outputs/opposing-memo.pdf",
+        "artifacts/opposing-memo.md"
+      ],
+      "id": "CR-02",
+      "name": "Best case against the recommendation",
+      "status": "VERIFIED_LOCAL"
+    },
+    {
+      "detail": "Workbook exists; 171/171 audit rows pass, including funding-gate and condition-register reconciliation.",
+      "evidence": [
+        "outputs/credit-model.xlsx",
+        "artifacts/workbook-audit.csv"
+      ],
+      "id": "CR-03",
+      "name": "Auditable credit model",
+      "status": "VERIFIED_LOCAL"
+    },
+    {
+      "detail": "Source register contains 13 classified evidence rows.",
+      "evidence": [
+        "artifacts/source-register.csv",
+        "02-research/snapshots"
+      ],
+      "id": "CR-04",
+      "name": "Evidence register",
+      "status": "VERIFIED_LOCAL"
+    },
+    {
+      "detail": "Scenario suite contains 11 cases, including all required decision signals.",
+      "evidence": [
+        "artifacts/scenario-results.csv",
+        "data/case/scenarios.json"
+      ],
+      "id": "CR-05",
+      "name": "Comparable scenario results",
+      "status": "VERIFIED_LOCAL"
+    },
+    {
+      "detail": "Validation report records method, reviewer, actual results, evidence, and explicit failure/skip semantics.",
+      "evidence": [
+        "artifacts/validation-report.md",
+        "scripts/validate_package.py"
+      ],
+      "id": "CR-06",
+      "name": "Executed validation report",
+      "status": "VERIFIED_LOCAL"
+    },
+    {
+      "detail": "Demo container exists and its deterministic slide source covers the required narrative beats and disclaimer.",
+      "evidence": [
+        "outputs/demo.mp4",
+        "04-deliverables/demo-storyboard.md",
+        "work/build_demo.py"
+      ],
+      "id": "CR-07",
+      "name": "Three-minute-or-less walkthrough",
+      "status": "VERIFIED_LOCAL"
+    },
+    {
+      "detail": "Reviewer brief declares a decision, chart, unresolved assumption, precise question, and self-review status.",
+      "evidence": [
+        "outputs/reviewer-brief.pdf",
+        "artifacts/reviewer-brief.md",
+        "work/build_pdfs.py"
+      ],
+      "id": "CR-08",
+      "name": "One-page review request",
+      "status": "VERIFIED_LOCAL"
+    },
+    {
+      "detail": "Feedback log separates self-review from external review and preserves responses, changes, and disagreements.",
+      "evidence": [
+        "artifacts/feedback-log.md"
+      ],
+      "id": "CR-09",
+      "name": "Review history",
+      "status": "VERIFIED_LOCAL"
+    },
+    {
+      "detail": "Reproducibility guide identifies the case, snapshots, rebuild command, tolerances, and limitations.",
+      "evidence": [
+        "artifacts/reproducibility.md",
+        "scripts/build_package.py"
+      ],
+      "id": "CR-10",
+      "name": "Rebuild guide",
+      "status": "VERIFIED_LOCAL"
+    }
+  ],
+  "evaluated_on": "2026-09-20",
+  "human_gates": [
+    {
+      "evidence": "Execution worksheet is available in outputs/reviewer-scorecard.pdf; governed ledger outcome is OUTSTANDING. Required evidence: Dated calculation steps, reviewer role, result, variance, conclusion, and permission to attribute the review role.",
+      "id": "HG-01",
+      "name": "Second reader reproduces a key number",
+      "status": "OUTSTANDING"
+    },
+    {
+      "evidence": "Execution worksheet is available in outputs/reviewer-scorecard.pdf; governed ledger outcome is OUTSTANDING. Required evidence: Dated observer notes, reviewer role, question-level result, conclusion, and any corrective action.",
+      "id": "HG-02",
+      "name": "Presenter explains both views without a script",
+      "status": "OUTSTANDING"
+    },
+    {
+      "evidence": "Execution worksheet is available in outputs/reviewer-scorecard.pdf; governed ledger outcome is OUTSTANDING. Required evidence: Dated attributed response or contemporaneous notes, permission status, resulting change, and unresolved disagreement.",
+      "id": "HG-03",
+      "name": "External feedback is attributed accurately",
+      "status": "OUTSTANDING"
+    }
+  ],
+  "interpretation": "Local verification is not external review, legal validation, production approval, or evidence of creditworthiness.",
+  "local_acceptance_verified": true,
+  "ready_to_share": false,
+  "schema_version": "1.0"
+}

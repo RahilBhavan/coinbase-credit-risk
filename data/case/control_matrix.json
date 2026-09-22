@@ -1,0 +1,15 @@
+{
+  "evidence_class": "assumed",
+  "enforceability_status": "draft_only",
+  "method_limit": "Illustrative control architecture only. Mappings describe intended governance coverage; they do not evidence completed conditions, active monitoring, executed covenants, observed breaches, or Coinbase policy.",
+  "mappings": [
+    {"monitor_id": "MON-01", "condition_ids": ["CP-01", "CP-02", "CP-03", "CP-04"], "control_objective": "Maintain required recovery coverage using eligible and operationally available collateral."},
+    {"monitor_id": "MON-02", "condition_ids": ["CP-01", "CP-02", "CP-03"], "control_objective": "Preserve ownership, priority, enforceability, and lender control."},
+    {"monitor_id": "MON-03", "condition_ids": ["CP-04"], "control_objective": "Keep the collateral-to-bank repayment route tested and within the approved time."},
+    {"monitor_id": "MON-04", "condition_ids": ["DD-01", "DD-03"], "control_objective": "Maintain borrowing-entity liquidity available for primary repayment."},
+    {"monitor_id": "MON-05", "condition_ids": ["DD-01", "DD-02"], "control_objective": "Detect deterioration against the approved operating cash forecast and use of proceeds."},
+    {"monitor_id": "MON-06", "condition_ids": ["CP-02", "DD-04"], "control_objective": "Prevent unapproved secured debt or liens from weakening repayment or priority."},
+    {"monitor_id": "MON-07", "condition_ids": ["PF-01"], "control_objective": "Keep the facility within single-name and shared-risk concentration capacity."},
+    {"monitor_id": "MON-08", "condition_ids": ["DD-01", "DD-02", "DD-03", "DD-04"], "control_objective": "Ensure complete and timely financial, collateral, and covenant reporting."}
+  ]
+}

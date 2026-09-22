@@ -1,0 +1,23 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Local build logs and rendered inspection material
+work/*.log
+work/demo/
+work/pycache/
+work/pdf-previews/
+work/workbook-previews/
+work/committee-packet-previews/
+work/packet-preview/
+work/reviewer-scorecard-preview/
+work/node_modules
+outputs/*.inspect.ndjson
+
+# Editor and environment files
+.env
+.env.*
+.venv/
+venv/
+.idea/
+.vscode/

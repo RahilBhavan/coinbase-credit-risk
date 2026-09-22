@@ -1,0 +1,20 @@
+{
+  "evidence_class": "simulated",
+  "exposures": [
+    {
+      "name": "Fictional Compute Co",
+      "funded_usd": "12000000",
+      "collateral_asset": "NONE"
+    },
+    {
+      "name": "Fictional Mining Co",
+      "funded_usd": "5600000",
+      "collateral_asset": "USDC"
+    },
+    {
+      "name": "Fictional Exchange Co",
+      "funded_usd": "2400000",
+      "collateral_asset": "ETH"
+    }
+  ]
+}

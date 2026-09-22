@@ -1,0 +1,18 @@
+{
+  "case_id": "MARA-CR-001",
+  "case_version": "1.0.0",
+  "evidence_class": "assumed",
+  "requested_commitment_usd": "5000000",
+  "funded_exposure_usd": "5000000",
+  "accrued_amount_usd": "50000",
+  "tenor_months": 12,
+  "required_coverage_ratio": "1.25",
+  "repayment_rail": "bank_usd",
+  "conditions": [
+    "beneficial ownership is verified",
+    "first-priority lien and control agreement are enforceable",
+    "Base-to-liquidation-to-bank repayment route passes an end-to-end test",
+    "13-week cash forecast and debt-service schedule support repayment",
+    "single-name and shared-risk concentration capacity is confirmed"
+  ]
+}

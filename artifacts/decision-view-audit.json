@@ -1,0 +1,462 @@
+{
+  "schema_version": "1.0",
+  "artifact": "outputs/decision-view.html",
+  "vector_results": [
+    {
+      "vector_id": "base",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "vector_id": "price_down_50",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "vector_id": "route_delay_24h",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "vector_id": "ownership_blocker",
+      "status": "PASS",
+      "errors": []
+    }
+  ],
+  "required_id_results": [
+    {
+      "id": "whatIfLab",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labQuantity",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labStress",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labDelay",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labExecution",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labOwnership",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labPriority",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labControl",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labRoute",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labRecommendation",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labProceeds",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labCollateralCap",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labBinding",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labProForma",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labSurplus",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labDecision",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labBlockers",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "labContractStatus",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "resetLab",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "whatIfLimit",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "attributionCount",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "attributionReduced",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "attributionDeclines",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "attributionBlockers",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "attributionLimit",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "lineageNodes",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "lineageLinks",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "lineageReported",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "lineageAssumed",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "lineageTable",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "lineageLimit",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "diligenceTasks",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "diligenceCritical",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "diligenceLanes",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "diligenceReady",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "diligenceWaiting",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "diligenceTable",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "diligenceLimit",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "assumptionCount",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "assumptionCritical",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "assumptionHigh",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "assumptionUnvalidated",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "assumptionTable",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "assumptionLimit",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "reviewNav",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "decisionSummary",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "scenarioMatrixSection",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "modelRiskSection",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "modelRiskOpen",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "modelRiskCritical",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "modelRiskHigh",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "modelRiskBlocking",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "modelRiskSeverity",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "modelRiskBlockingOnly",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "modelRiskVisible",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "modelRiskTable",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "modelRiskLimit",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "collateralCallSection",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "callExactStress",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "callFirstGridStress",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "callRequiredProceeds",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "callExposure",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "collateralCallTable",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "collateralCallLimit",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "controlMatrixSection",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "controlMatrixCount",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "controlMatrixConditions",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "controlMatrixCritical",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "controlMatrixOutstanding",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "controlMatrixTable",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "controlMatrixLimit",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "readinessSection",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "readinessLocal",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "readinessShare",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "readinessPassed",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "readinessOutstanding",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "humanGateTable",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "reviewerScorecardLink",
+      "count": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "readinessInterpretation",
+      "count": 1,
+      "status": "PASS"
+    }
+  ],
+  "collateral_call_result": {
+    "status": "PASS",
+    "row_count": 7,
+    "errors": []
+  },
+  "control_matrix_result": {
+    "status": "PASS",
+    "row_count": 8,
+    "condition_count": 9,
+    "errors": []
+  },
+  "model_risk_result": {
+    "status": "PASS",
+    "row_count": 8,
+    "critical_count": 3,
+    "decision_blocking_count": 4,
+    "critical_blocking_count": 3,
+    "errors": []
+  },
+  "navigation_result": {
+    "status": "PASS",
+    "target_count": 7,
+    "errors": []
+  },
+  "readiness_result": {
+    "status": "PASS",
+    "gate_count": 3,
+    "outstanding_count": 3,
+    "errors": []
+  },
+  "summary": {
+    "vector_count": 4,
+    "collateral_call_row_count": 7,
+    "control_matrix_row_count": 8,
+    "model_risk_row_count": 8,
+    "human_gate_count": 3,
+    "required_id_count": 79,
+    "failure_count": 0
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "as_of_date": "2026-06-30",
+  "case_id": "MARA-CR-001",
+  "method_limit": "This is a static public-data screen, not a borrowing-entity cash forecast. It excludes cash inflows, operating needs, capex, taxes, entity restrictions beyond the stated designation, and unlisted obligations. The holder put is a sensitivity, not an assertion that it will be exercised.",
+  "residual_after_potential_put_usd": "-194790000.00",
+  "residual_before_potential_put_usd": "96810000.00",
+  "rows": [
+    {
+      "amount_usd": "421300000.00",
+      "evidence_class": "reported",
+      "line_id": "LIQ-01",
+      "line_item": "Reported cash and cash equivalents",
+      "source_id": "SRC-001"
+    },
+    {
+      "amount_usd": "-126390000.00",
+      "evidence_class": "calculated from reported approximate share",
+      "line_id": "LIQ-02",
+      "line_item": "Less: cash designated for Exaion operations",
+      "source_id": "SRC-001"
+    },
+    {
+      "amount_usd": "294910000.00",
+      "evidence_class": "calculated",
+      "line_id": "LIQ-03",
+      "line_item": "Cash after designation screen",
+      "source_id": "SRC-001"
+    },
+    {
+      "amount_usd": "-150000000.00",
+      "evidence_class": "reported",
+      "line_id": "LIQ-04",
+      "line_item": "Less: line of credit due within 12 months",
+      "source_id": "SRC-001"
+    },
+    {
+      "amount_usd": "-48100000.00",
+      "evidence_class": "reported",
+      "line_id": "LIQ-05",
+      "line_item": "Less: December 2026 notes",
+      "source_id": "SRC-001"
+    },
+    {
+      "amount_usd": "96810000.00",
+      "evidence_class": "calculated",
+      "line_id": "LIQ-06",
+      "line_item": "Residual before potential holder put",
+      "source_id": "SRC-001"
+    },
+    {
+      "amount_usd": "-291600000.00",
+      "evidence_class": "reported potential obligation",
+      "line_id": "LIQ-07",
+      "line_item": "Less: June 2031 notes classified current for June 2027 put",
+      "source_id": "SRC-001"
+    },
+    {
+      "amount_usd": "-194790000.00",
+      "evidence_class": "calculated sensitivity",
+      "line_id": "LIQ-08",
+      "line_item": "Residual after potential holder put",
+      "source_id": "SRC-001"
+    },
+    {
+      "amount_usd": "-802700000.00",
+      "evidence_class": "reported historical reference",
+      "line_id": "LIQ-09",
+      "line_item": "2025 operating cash used",
+      "source_id": "SRC-002"
+    }
+  ],
+  "schema_version": "1.0"
+}

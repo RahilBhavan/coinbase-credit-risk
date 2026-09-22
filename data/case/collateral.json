@@ -1,0 +1,17 @@
+[
+  {
+    "lot_id": "SIM-USDC-BASE-01",
+    "evidence_class": "simulated",
+    "asset": "USDC",
+    "quantity": "4000000",
+    "quoted_price_usd": "1",
+    "chain": "Base",
+    "ownership_evidence": "verified",
+    "lien_state": "first_priority",
+    "legal_control": "enforceable",
+    "earliest_usable_hours": "2",
+    "route": "base_to_bank",
+    "execution_cost_bps": "50",
+    "fixed_cost_usd": "20000"
+  }
+]

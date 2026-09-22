@@ -1,0 +1,294 @@
+{
+  "available_proceeds_usd": "3870600.00",
+  "binding_cap": "collateral",
+  "calculation_trace": {
+    "available_proceeds_formula": "sum(max(0, stressed_gross - execution_cost - delay_cost - fixed_cost)) for eligible lots; blocked lots receive zero",
+    "collateral_cap_formula": "available_proceeds / required_coverage_ratio",
+    "decision_formula": "min(requested, obligor_cap, collateral_cap, single_name_cap, concentration_cap), or zero on hard blocker",
+    "raw_recommended_amount_usd": "3096480.00",
+    "recommendation_increment_usd": "100000.00",
+    "required_coverage_ratio": "1.25",
+    "rounded_recommended_amount_usd": "3000000.00",
+    "rounding_formula": "round down to recommendation_increment_usd"
+  },
+  "caps_usd": {
+    "collateral": "3096480.00",
+    "concentration": "4000000.00",
+    "obligor": "7500000.00",
+    "single_name": "6000000.00"
+  },
+  "case_id": "MARA-CR-001",
+  "case_version": "1.0.0",
+  "collateral_lots": [
+    {
+      "accessible_quantity": "4000000",
+      "available_proceeds_usd": "3870600.00",
+      "delay_cost_usd": "9800.00",
+      "effective_delay_hours": "2",
+      "eligible": true,
+      "exclusion_reasons": [],
+      "execution_cost_usd": "19600.00",
+      "fixed_cost_usd": "20000.00",
+      "lot_id": "SIM-USDC-BASE-01",
+      "route": "base_to_bank",
+      "stressed_gross_value_usd": "3920000.00"
+    }
+  ],
+  "condition_register": [
+    {
+      "blocking": true,
+      "category": "collateral",
+      "condition_id": "CP-01",
+      "evidence_class": "assumed",
+      "evidence_status": "outstanding",
+      "owner_role": "Credit / borrower",
+      "requirement": "Verify beneficial ownership of the proposed collateral lot.",
+      "source_id": "ASM-C007",
+      "timing": "before_funding",
+      "verification_method": "Ownership documents and independently corroborated custody records"
+    },
+    {
+      "blocking": true,
+      "category": "legal",
+      "condition_id": "CP-02",
+      "evidence_class": "assumed",
+      "evidence_status": "outstanding",
+      "owner_role": "Legal",
+      "requirement": "Confirm no prior lien and first-priority perfected security.",
+      "source_id": "ASM-C007",
+      "timing": "before_funding",
+      "verification_method": "Lien search, executed security documents, and legal confirmation"
+    },
+    {
+      "blocking": true,
+      "category": "control",
+      "condition_id": "CP-03",
+      "evidence_class": "assumed",
+      "evidence_status": "outstanding",
+      "owner_role": "Legal / operations",
+      "requirement": "Establish enforceable lender control over the collateral and custody account.",
+      "source_id": "ASM-C007",
+      "timing": "before_funding",
+      "verification_method": "Executed control agreement and operating-procedure test"
+    },
+    {
+      "blocking": true,
+      "category": "operations",
+      "condition_id": "CP-04",
+      "evidence_class": "assumed",
+      "evidence_status": "outstanding",
+      "owner_role": "Operations / treasury",
+      "requirement": "Test the Base-to-liquidation-to-bank repayment route end to end.",
+      "source_id": "ASM-C007",
+      "timing": "before_funding",
+      "verification_method": "Read-only route test with timestamps, fees, and destination confirmation"
+    },
+    {
+      "blocking": true,
+      "category": "repayment",
+      "condition_id": "DD-01",
+      "evidence_class": "assumed",
+      "evidence_status": "outstanding",
+      "owner_role": "Credit / borrower",
+      "requirement": "Obtain and reconcile a current 13-week borrowing-entity cash forecast.",
+      "source_id": "ASM-C001",
+      "timing": "before_funding",
+      "verification_method": "Forecast-to-bank and forecast-to-historical reconciliation"
+    },
+    {
+      "blocking": true,
+      "category": "purpose",
+      "condition_id": "DD-02",
+      "evidence_class": "assumed",
+      "evidence_status": "outstanding",
+      "owner_role": "Credit / borrower",
+      "requirement": "Document facility purpose and a controlled use-of-proceeds schedule.",
+      "source_id": "ASM-C001",
+      "timing": "before_funding",
+      "verification_method": "Approved sources-and-uses schedule tied to facility documents"
+    },
+    {
+      "blocking": true,
+      "category": "entity",
+      "condition_id": "DD-03",
+      "evidence_class": "assumed",
+      "evidence_status": "outstanding",
+      "owner_role": "Credit / legal",
+      "requirement": "Map legal-entity cash ownership and transfer restrictions.",
+      "source_id": "ASM-C001",
+      "timing": "before_funding",
+      "verification_method": "Entity chart, account map, and restriction review"
+    },
+    {
+      "blocking": true,
+      "category": "repayment",
+      "condition_id": "DD-04",
+      "evidence_class": "assumed",
+      "evidence_status": "outstanding",
+      "owner_role": "Credit / borrower",
+      "requirement": "Reconcile the complete debt-service and maturity schedule.",
+      "source_id": "ASM-C001",
+      "timing": "before_funding",
+      "verification_method": "Debt schedule tied to agreements, filings, and forecast cash flows"
+    },
+    {
+      "blocking": true,
+      "category": "portfolio",
+      "condition_id": "PF-01",
+      "evidence_class": "assumed",
+      "evidence_status": "outstanding",
+      "owner_role": "Portfolio risk",
+      "requirement": "Confirm current single-name and shared-risk concentration capacity.",
+      "source_id": "ASM-C005",
+      "timing": "before_funding",
+      "verification_method": "Current portfolio report and limit-owner sign-off"
+    }
+  ],
+  "conditions": [
+    "beneficial ownership is verified",
+    "first-priority lien and control agreement are enforceable",
+    "Base-to-liquidation-to-bank repayment route passes an end-to-end test",
+    "13-week cash forecast and debt-service schedule support repayment",
+    "single-name and shared-risk concentration capacity is confirmed"
+  ],
+  "decision": "approve_reduced",
+  "evidence_boundary": {
+    "collateral_inputs_class": "simulated",
+    "facility_inputs_class": "assumed",
+    "issuer_facts_class": "reported",
+    "portfolio_inputs_class": "simulated"
+  },
+  "exposure_basis": "requested fully drawn recovery case plus accrued amount; not the recommended pro forma exposure",
+  "exposure_usd": "5050000.00",
+  "funding_gate_status": "blocked_pending_conditions",
+  "hard_blockers": [],
+  "illustrative_rating": "3 / Watchful",
+  "outstanding_blocking_conditions": [
+    "CP-01",
+    "CP-02",
+    "CP-03",
+    "CP-04",
+    "DD-01",
+    "DD-02",
+    "DD-03",
+    "DD-04",
+    "PF-01"
+  ],
+  "preparer": "Credit Risk project builder",
+  "rating_factors": [
+    {
+      "deterioration_trigger": "Available borrowing-entity liquidity is materially below the public headline amount.",
+      "evidence_ids": [
+        "SRC-001"
+      ],
+      "factor": "Liquidity scale",
+      "factor_id": "RAT-01",
+      "improvement_evidence": "Borrowing-entity cash map and forecast confirm unrestricted repayment liquidity.",
+      "rationale": "Reported cash is large relative to the fictional request, subject to legal-entity availability and designated-cash limits.",
+      "score": "1",
+      "weight": "0.25",
+      "weighted_contribution": "0.25"
+    },
+    {
+      "deterioration_trigger": "Near-term maturities, secured borrowing, or refinancing needs increase materially.",
+      "evidence_ids": [
+        "SRC-001",
+        "SRC-002"
+      ],
+      "factor": "Leverage and maturities",
+      "factor_id": "RAT-02",
+      "improvement_evidence": "Reconciled debt schedule shows durable maturity headroom and refinancing capacity.",
+      "rationale": "Reported debt is substantial and includes identified near-term obligations and holder put exposure.",
+      "score": "4",
+      "weight": "0.25",
+      "weighted_contribution": "1.00"
+    },
+    {
+      "deterioration_trigger": "Operating cash use persists or exceeds the current historical reference.",
+      "evidence_ids": [
+        "SRC-002"
+      ],
+      "factor": "Operating cash generation",
+      "factor_id": "RAT-03",
+      "improvement_evidence": "A current forecast and subsequent actuals demonstrate sustained positive operating cash generation.",
+      "rationale": "The 2025 filing reported significant net cash used in operating activities.",
+      "score": "4",
+      "weight": "0.20",
+      "weighted_contribution": "0.80"
+    },
+    {
+      "deterioration_trigger": "Bitcoin price stress and issuer liquidity weaken together.",
+      "evidence_ids": [
+        "SRC-001"
+      ],
+      "factor": "Asset volatility and concentration",
+      "factor_id": "RAT-04",
+      "improvement_evidence": "Repayment capacity is supported by stable cash generation without dependence on bitcoin value.",
+      "rationale": "Headline liquidity includes material bitcoin exposure whose value and availability can change with crypto conditions.",
+      "score": "3",
+      "weight": "0.15",
+      "weighted_contribution": "0.45"
+    },
+    {
+      "deterioration_trigger": "Private diligence contradicts public-data assumptions or remains unavailable near funding.",
+      "evidence_ids": [
+        "ASM-C001",
+        "ASM-C004"
+      ],
+      "factor": "Private diligence completeness",
+      "factor_id": "RAT-05",
+      "improvement_evidence": "All repayment-capacity diligence items reconcile without a material unresolved exception.",
+      "rationale": "Facility purpose, borrowing-entity forecast, legal-entity cash map, and complete debt schedule are unavailable.",
+      "score": "4",
+      "weight": "0.15",
+      "weighted_contribution": "0.60"
+    }
+  ],
+  "rating_method_limit": "The score is an illustrative ordinal bridge. It is not statistically calibrated and does not imply a probability of default, expected loss, or Coinbase policy.",
+  "rating_rationale": "Reported liquidity is large relative to the request, but leverage, historical operating cash use, bitcoin exposure, and incomplete private diligence warrant heightened monitoring.",
+  "rating_scale": [
+    {
+      "grade": "1 / Strong",
+      "maximum": "1.49",
+      "minimum": "1.00"
+    },
+    {
+      "grade": "2 / Satisfactory",
+      "maximum": "2.49",
+      "minimum": "1.50"
+    },
+    {
+      "grade": "3 / Watchful",
+      "maximum": "3.49",
+      "minimum": "2.50"
+    },
+    {
+      "grade": "4 / Weak",
+      "maximum": "4.49",
+      "minimum": "3.50"
+    },
+    {
+      "grade": "5 / Critical",
+      "maximum": "5.00",
+      "minimum": "4.50"
+    }
+  ],
+  "rating_score": "3.10",
+  "recommended_amount_usd": "3000000.00",
+  "recommended_pro_forma_coverage_surplus_usd": "820600.00",
+  "recommended_pro_forma_exposure_usd": "3050000.00",
+  "requested_amount_usd": "5000000.00",
+  "reversal_trigger": "Increase only after a refreshed borrowing-entity cash forecast and debt schedule support repayment without collateral, or after additional eligible collateral raises the binding cap without another policy breach; decline if ownership, priority, control, price freshness, or the repayment route is not evidenced.",
+  "review_status": "self-reviewed; independent practitioner review outstanding",
+  "scenario_drivers": {
+    "additional_route_delay_hours": "0",
+    "delayed_route": "base_to_bank",
+    "extra_execution_cost_bps": "0",
+    "price_shock_pct": "0.02",
+    "unavailable_routes": []
+  },
+  "scenario_id": "base",
+  "shortfall_usd": "1179400.00",
+  "source_coverage_rate": "1.0",
+  "source_coverage_scope": "All 13 material public filing facts used in the model and memo map to SRC-001 or SRC-002; this rate does not measure private-diligence completeness."
+}

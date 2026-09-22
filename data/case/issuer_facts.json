@@ -1,0 +1,10 @@
+{
+  "issuer_id": "MARA",
+  "as_of_date": "2026-06-30",
+  "evidence_class": "reported",
+  "cash_and_equivalents_usd": "421300000",
+  "bitcoin_total": "35577",
+  "bitcoin_unrestricted": "26307",
+  "debt_usd": "2400000000",
+  "source_id": "SRC-001"
+}

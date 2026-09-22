@@ -1,0 +1,95 @@
+{
+  "evidence_class": "assumed",
+  "activation_state": "pre_funding_blocked",
+  "method_limit": "This is an illustrative monitoring design, not executed borrower reporting, an executed or legally reviewed covenant package, or Coinbase policy.",
+  "rules": [
+    {
+      "monitor_id": "MON-01",
+      "metric": "Collateral coverage at recommended limit",
+      "threshold": ">= 1.25x",
+      "frequency": "continuous",
+      "owner_role": "Credit risk",
+      "source_ids": ["ASM-C002"],
+      "measurement": "calculated",
+      "breach_action": "Block new draws; require cure or collateral top-up before further funding.",
+      "escalation": "Immediate credit and legal review"
+    },
+    {
+      "monitor_id": "MON-02",
+      "metric": "Collateral ownership, priority, and control",
+      "threshold": "all verified",
+      "frequency": "continuous and on any custody change",
+      "owner_role": "Legal and collateral operations",
+      "source_ids": ["ASM-C002"],
+      "measurement": "condition_register",
+      "breach_action": "Assign zero collateral credit and block funding.",
+      "escalation": "Immediate credit, legal, and operations review"
+    },
+    {
+      "monitor_id": "MON-03",
+      "metric": "Base-to-cash route test",
+      "threshold": "<= 4 hours end to end",
+      "frequency": "monthly and after any route change",
+      "owner_role": "Collateral operations",
+      "source_ids": ["ASM-C002", "SRC-005"],
+      "measurement": "private_test_required",
+      "breach_action": "Suspend availability until a successful route test.",
+      "escalation": "Same-day operations and credit review"
+    },
+    {
+      "monitor_id": "MON-04",
+      "metric": "Borrowing-entity unrestricted cash",
+      "threshold": ">= $25 million",
+      "frequency": "monthly",
+      "owner_role": "Borrower reporting and credit risk",
+      "source_ids": ["ASM-C001"],
+      "measurement": "private_reporting_required",
+      "breach_action": "Freeze incremental availability and reassess the obligor cap.",
+      "escalation": "Five-business-day credit review"
+    },
+    {
+      "monitor_id": "MON-05",
+      "metric": "Operating cash generation variance",
+      "threshold": "no >20% adverse variance to approved forecast",
+      "frequency": "monthly and quarterly",
+      "owner_role": "Credit risk",
+      "source_ids": ["ASM-C001", "SRC-002"],
+      "measurement": "private_reporting_required",
+      "breach_action": "Refresh rating factors and repayment analysis.",
+      "escalation": "Next credit review; immediate if liquidity runway is affected"
+    },
+    {
+      "monitor_id": "MON-06",
+      "metric": "Additional secured debt or lien creation",
+      "threshold": "$0 without lender consent",
+      "frequency": "event-driven with monthly certification",
+      "owner_role": "Legal and credit risk",
+      "source_ids": ["ASM-C004"],
+      "measurement": "private_reporting_required",
+      "breach_action": "Block new draws and assess default or waiver path.",
+      "escalation": "Immediate legal and credit review"
+    },
+    {
+      "monitor_id": "MON-07",
+      "metric": "USDC collateral concentration headroom",
+      "threshold": ">= $0",
+      "frequency": "continuous before each draw",
+      "owner_role": "Portfolio risk",
+      "source_ids": ["ASM-C003"],
+      "measurement": "calculated",
+      "breach_action": "Reject the draw or reduce the facility limit.",
+      "escalation": "Pre-draw portfolio-risk review"
+    },
+    {
+      "monitor_id": "MON-08",
+      "metric": "Financial and collateral reporting delivery",
+      "threshold": "within 15 business days after month end",
+      "frequency": "monthly",
+      "owner_role": "Credit administration",
+      "source_ids": ["ASM-C001", "ASM-C002"],
+      "measurement": "private_reporting_required",
+      "breach_action": "Block new draws until the reporting package is complete.",
+      "escalation": "Five-business-day credit-administration review"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "case_id": "MARA-CR-001",
-  "case_version": "1.0.0",
+  "case_version": "1.1.0",
   "method_limit": "Decision lineage shows where declared outputs come from. It does not convert assumptions into facts, prove legal enforceability, or replace independent review.",
   "nodes": [
     {

@@ -107,7 +107,7 @@ def main() -> int:
     payload = {
         "schema_version": "1.0",
         "case_id": "MARA-CR-001",
-        "case_version": "1.0.0",
+        "case_version": "1.1.0",
         "hash_algorithm": "sha256",
         "files": {
             name: {"bytes": (ROOT / name).stat().st_size, "sha256": digest(ROOT / name)}

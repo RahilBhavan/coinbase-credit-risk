@@ -14,7 +14,7 @@ Summary: 49 PASS, 0 FAIL, 0 SKIP
 | E-02 | PASS | Frozen source snapshots match registered hashes | Verified 5 immutable source snapshot(s). | 02-research/snapshots |
 | E-03 | PASS | Design and artifact source registers are identical | Registers match byte-for-byte. | artifacts/source-register.csv |
 | E-04 | PASS | Frozen filing facts reconcile to model and memo values | Reconciled 13 extracted filing facts; all model differences are within declared tolerances. | artifacts/issuer-fact-ledger.csv |
-| E-05 | PASS | Workbook audit matches the current workbook | Verified 171 passing checks against workbook SHA-256 b762c29477f83b91cce28b6b1c71bd73c6e1a96dde635285b881a27f9901a548. | artifacts/workbook-audit.csv |
+| E-05 | PASS | Workbook audit matches the current workbook | Verified 171 passing checks against workbook SHA-256 25b254e85e6d29daf0fbdad5002b7c6bcedf46a1d4868f14bce45f2c40080c00. | artifacts/workbook-audit.csv |
 | E-06 | PASS | Package integrity manifest matches review files | Verified SHA-256 and byte length for 78 package file(s). | artifacts/package-integrity.json |
 | E-07 | PASS | Threshold analysis is internally consistent | Verified four break-even targets, the $4m concentration ceiling, and a monotonic 40-cell decision surface. | artifacts/threshold-analysis.json |
 | D-01 | PASS | Project CSV files parse with unique headers | Parsed 20 CSV file(s). | . |
@@ -54,7 +54,7 @@ Summary: 49 PASS, 0 FAIL, 0 SKIP
 | O-09 | PASS | Artifact available: reviewer-scorecard.pdf | Valid non-empty PDF container (9,534 bytes). | outputs/reviewer-scorecard.pdf |
 | O-10 | PASS | Artifact available: feedback-log.md | Present and non-empty. | artifacts/feedback-log.md |
 | O-11 | PASS | Artifact available: reproducibility.md | Present and non-empty. | artifacts/reproducibility.md |
-| O-12 | PASS | Artifact available: decision-view.html | Self-contained HTML present (247,383 characters). | outputs/decision-view.html |
+| O-12 | PASS | Artifact available: decision-view.html | Self-contained HTML present (248,554 characters). | outputs/decision-view.html |
 | L-01 | PASS | Built narrative artifacts label the case hypothetical | Found an explicit label in 5 text artifact(s). | artifacts |
 | C-01 | PASS | Scenario schema and arithmetic consistency | Validated 11 scenario row(s). | artifacts/scenario-results.csv |
 

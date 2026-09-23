@@ -1,9 +1,11 @@
 # MARA secured revolver: a credit committee case
 
-[![CI](https://github.com/RahilBhavan/coinbase-credit-risk/actions/workflows/ci.yml/badge.svg)](https://github.com/RahilBhavan/coinbase-credit-risk/actions/workflows/ci.yml)
+[![CI](https://github.com/RahilBhavan/mara-credit-case/actions/workflows/ci.yml/badge.svg)](https://github.com/RahilBhavan/mara-credit-case/actions/workflows/ci.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-**Live decision view: https://rahilbhavan.github.io/coinbase-credit-risk/**
+[![Decision view showing the $3.0 million conditional recommendation, the four-cap comparison, and the collateral waterfall](docs/screenshot.png)](https://rahilbhavan.github.io/mara-credit-case/)
+
+**Live decision view: https://rahilbhavan.github.io/mara-credit-case/**
 
 A credit committee package that sizes a hypothetical $5.0 million, 12-month secured revolver to MARA Holdings from public filings, a tested decision engine, and a fictional collateral schedule.
 
@@ -37,7 +39,7 @@ These facts frame the borrower. The case does not treat MARA's reported bitcoin 
 - [Opposing memo (PDF)](outputs/opposing-memo.pdf): the strongest case against the recommendation.
 - [Committee packet (PDF)](outputs/committee-packet.pdf): decision, thresholds, conditions, controls, and model risks.
 - [Credit model workbook (XLSX)](outputs/credit-model.xlsx): 16 sheets of live formulas, audited cell by cell against the engine.
-- [Decision view (HTML)](https://rahilbhavan.github.io/coinbase-credit-risk/): eleven scenarios, a collateral what-if lab, the decision surface, and the condition register.
+- [Decision view (HTML)](https://rahilbhavan.github.io/mara-credit-case/): eleven scenarios, a collateral what-if lab, the decision surface, and the condition register.
 - [Review package (ZIP)](outputs/review-package.zip): every output plus a start-here guide and a SHA-256 manifest.
 
 ## How it's built
@@ -59,7 +61,7 @@ python3 scripts/validate_package.py
 python3 scripts/build_package.py
 ```
 
-`build_package.py` rebuilds every artifact in dependency order, then runs the tests and the validator. The workbook step needs `@oai/artifact-tool`, a private Codex runtime package that is not on npm. From a fresh clone the script skips that step with a message and keeps the committed `outputs/credit-model.xlsx`. It also skips the decision-view audit if Node.js is missing. On macOS with `ffmpeg`, add `--with-demo` to rebuild the narrated video.
+`build_package.py` rebuilds every artifact in dependency order, then runs the tests and the validator. The workbook rebuild step uses a non-public spreadsheet tool; from a fresh clone it is skipped and the committed workbook is the source of truth. It also skips the decision-view audit if Node.js is missing. On macOS with `ffmpeg`, add `--with-demo` to rebuild the narrated video.
 
 Evaluate one scenario from the command line:
 
@@ -82,3 +84,10 @@ PYTHONPATH=src python3 -m credit_risk --case-dir data/case --scenario collateral
 - [Validation plan](05-validation/validation-plan.md), [adversarial review](05-validation/adversarial-review.md), and [validation report](artifacts/validation-report.md)
 - [Reproducibility guide](artifacts/reproducibility.md) and [feedback log](artifacts/feedback-log.md)
 - [Artifact manifest](artifacts/manifest.md)
+
+## Related projects
+
+- [spine](https://github.com/RahilBhavan/spine): live stress test of Coinbase's Morpho loan book on Base.
+- [coin-revenue-bridge](https://github.com/RahilBhavan/coin-revenue-bridge): Q3 to Q4 2024 Coinbase consumer revenue bridge from SEC filings.
+- [x402-exception-desk](https://github.com/RahilBhavan/x402-exception-desk): synthetic x402 payment exception desk.
+- [Crypto finance projects hub](https://rahilbhavan.com/crypto-finance)

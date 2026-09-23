@@ -1,6 +1,6 @@
 {
   "case_id": "MARA-CR-001",
-  "case_version": "1.0.0",
+  "case_version": "1.1.0",
   "evidence_class": "assumed",
   "requested_commitment_usd": "5000000",
   "funded_exposure_usd": "5000000",

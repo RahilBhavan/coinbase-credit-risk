@@ -73,7 +73,7 @@ def main() -> int:
     packet_audit = load("artifacts/committee-packet-audit.json")
     scorecard_audit = load("artifacts/reviewer-scorecard-audit.json")
     payload = {
-        "schema_version": "1.0", "case_id": "MARA-CR-001", "case_version": "1.0.0",
+        "schema_version": "1.0", "case_id": "MARA-CR-001", "case_version": "1.1.0",
         "workbook": {"sheet_count": sheet_count, "formula_count": formula_count,
                      "audit_check_count": len(audit_rows),
                      "audit_pass_count": sum(row.get("status") == "PASS" for row in audit_rows)},

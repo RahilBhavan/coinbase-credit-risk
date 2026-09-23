@@ -1,6 +1,6 @@
 {
   "case_id": "MARA-CR-001",
-  "case_version": "1.0.0",
+  "case_version": "1.1.0",
   "files": {
     "artifacts/assumption-register.csv": {
       "bytes": 3064,
@@ -56,11 +56,11 @@
     },
     "artifacts/decision-lineage.json": {
       "bytes": 8390,
-      "sha256": "6e5631bbbd6dd563e4fa2bcbf5bcfa0b3dd8a53b0f7f47cf9668bc39a359f177"
+      "sha256": "aaaf93789d8cdbd489a233791d04a96c9536bff3204f70a76d5071ef11313e6d"
     },
     "artifacts/decision-record.json": {
       "bytes": 11578,
-      "sha256": "0d92f802749f9554d819f4e869982b75d20137cbbc00be0c9937deea149de138"
+      "sha256": "8fa2586967a091ffda491ad40cf69f9bd5786243a3df527f2bb2c2bdd9f0c400"
     },
     "artifacts/decision-view-audit.json": {
       "bytes": 8050,
@@ -124,7 +124,7 @@
     },
     "artifacts/package-metrics.json": {
       "bytes": 1493,
-      "sha256": "5bd1119032412e48f80f4a1e9ed0d791065a5f74c4c1d2dd358f5e52359a4c58"
+      "sha256": "3a6453b4f557a7f0b3d30f549f0999ca93f27e1568c46290215fca17fb4b498f"
     },
     "artifacts/package-metrics.md": {
       "bytes": 804,
@@ -152,7 +152,7 @@
     },
     "artifacts/reviewer-scorecard-audit.json": {
       "bytes": 486,
-      "sha256": "ef62f440aa922dba5739d06999afb36ed2453d0cc5113242e39a5d3e211e1def"
+      "sha256": "c70dad5c00dd2fa23448b759d0dc99d54f6e92ffbd37a0faebba8e902e137e34"
     },
     "artifacts/reviewer-scorecard.csv": {
       "bytes": 2709,
@@ -172,7 +172,7 @@
     },
     "artifacts/scenario-attribution.json": {
       "bytes": 6833,
-      "sha256": "5c0b822e63206ad55943173e329437f210b4b02c6064eedbb5512f589ba0f8ba"
+      "sha256": "ae37a5cab857512cc8d1f4df4c7bc587ff9b209c9baacefb58b2d56799a96ae2"
     },
     "artifacts/scenario-results.csv": {
       "bytes": 1573,
@@ -180,7 +180,7 @@
     },
     "artifacts/scenario-results.json": {
       "bytes": 134410,
-      "sha256": "876b8af33e3a32fa7144f92f701c21d6d7e4313e9e4f22495897dfa6491549aa"
+      "sha256": "ddb9003e7e90fe2355a495e441be4d0fda5f2d91002c9248779b7c4b0c1a2758"
     },
     "artifacts/source-register.csv": {
       "bytes": 4125,
@@ -192,15 +192,15 @@
     },
     "artifacts/threshold-analysis.json": {
       "bytes": 12312,
-      "sha256": "294541b19105b3e1f42eaa55c85acb9586b8fc463293fb6fe3960737d72a4430"
+      "sha256": "cc092083e05da3b816a6ab6f32f55d2cade42ec322d60084615c595c3583cced"
     },
     "artifacts/what-if-contract.json": {
       "bytes": 4473,
-      "sha256": "7ad3ba6c769a4ce9696db9f2724fd2142009fc20942eb3d07bb1826837dbb64c"
+      "sha256": "e90d74212935b9524d49b9d3586185ca088e99f935fbdd50c982e0151e1a8a0a"
     },
     "artifacts/workbook-audit.csv": {
       "bytes": 33239,
-      "sha256": "d24d34c5385c0ae378db3dc1a1db45766e0a5637a8454b39079f6c2639a4829f"
+      "sha256": "a9102f6892bdc1d36852311e87d7ed53eab9433accd7fd5199bb3827c5dd0779"
     },
     "data/case/assumption_governance.json": {
       "bytes": 3912,
@@ -236,7 +236,7 @@
     },
     "data/case/facility.json": {
       "bytes": 638,
-      "sha256": "81f5308110a8db8b6ad33b2638b8ed703cf2e26b713828754752c68b39ff930b"
+      "sha256": "4226c6aa39784c0b1e80b88109e7fa4bc93d2168dd7ab5929eea48c4138d634c"
     },
     "data/case/governance.json": {
       "bytes": 955,
@@ -288,15 +288,15 @@
     },
     "outputs/credit-memo.pdf": {
       "bytes": 8025,
-      "sha256": "dbd13d57d38ef65af63f4c14bfeb32c1fbed66e3ac04c5c8c30ee30f1c04e2c9"
+      "sha256": "5f4866d009c3927eb07c2707e79ec08b368a72a860870326014ed69c7e1ebd78"
     },
     "outputs/credit-model.xlsx": {
-      "bytes": 86911,
-      "sha256": "b762c29477f83b91cce28b6b1c71bd73c6e1a96dde635285b881a27f9901a548"
+      "bytes": 86532,
+      "sha256": "25b254e85e6d29daf0fbdad5002b7c6bcedf46a1d4868f14bce45f2c40080c00"
     },
     "outputs/decision-view.html": {
-      "bytes": 247387,
-      "sha256": "45039ea29b93eb207d4811c0ac3eb43235eef4c1b1c7bd57641c94a9d9c6a7e4"
+      "bytes": 248558,
+      "sha256": "9bcec019959b279dcd869646f65dedca1d136bd337d332411ff0b65c15e3efe3"
     },
     "outputs/demo.mp4": {
       "bytes": 3517709,
@@ -304,15 +304,15 @@
     },
     "outputs/opposing-memo.pdf": {
       "bytes": 3689,
-      "sha256": "0a20f27985d1a562ce71ddfa1f33c90603e92f77cd110ec5ca94ec914deb4ee2"
+      "sha256": "1f68febc1ebf0bea0f063a12744310e85768349aa1fb6354c1909528d5deeef9"
     },
     "outputs/reviewer-brief.pdf": {
       "bytes": 3923,
-      "sha256": "13a961b29ab56e1f625d786981f2cf4be02bebd79f7c29c237825beb1dde6323"
+      "sha256": "8bce0a4691092b7946bcd79570e62120f23f2a6bdc4d9ac78dca4da9d4a184a9"
     },
     "outputs/reviewer-scorecard.pdf": {
       "bytes": 9534,
-      "sha256": "1f46fe6b9456caba12ef970503a7aeb1ddcdce142fa8af5ba6b36530b8df10f8"
+      "sha256": "5f4c8e4c90219aa1b3d487d0366f66bf1411f8196d9a8917ffd89f3407cd3525"
     }
   },
   "hash_algorithm": "sha256",

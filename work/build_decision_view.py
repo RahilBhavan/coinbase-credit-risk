@@ -37,7 +37,16 @@ template = r"""<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>MARA-CR-001 decision view</title>
+  <title>MARA secured revolver: credit decision view</title>
+  <meta name="description" content="A $5M secured revolver request to MARA Holdings, sized from public filings: a $3.0M conditional limit, with funding blocked until diligence clears.">
+  <link rel="canonical" href="https://rahilbhavan.github.io/mara-credit-case/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rahilbhavan.github.io/mara-credit-case/">
+  <meta property="og:title" content="MARA secured revolver: credit decision view">
+  <meta property="og:description" content="A $5M secured revolver request to MARA Holdings, sized from public filings: a $3.0M conditional limit, with funding blocked until diligence clears.">
+  <meta property="og:image" content="https://rahilbhavan.github.io/mara-credit-case/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%2338bdf8'%3EMC%3C/text%3E%3C/svg%3E">
   <style>
     :root { --navy:#16324f; --blue:#2f75b5; --ink:#17202a; --muted:#64707d; --line:#d8e0e8; --paper:#f4f7fa; --warn:#fff2cc; --bad:#a32121; --good:#1f6a44; }
     * { box-sizing:border-box; }

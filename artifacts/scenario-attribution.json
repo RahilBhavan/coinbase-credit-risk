@@ -1,6 +1,6 @@
 {
   "case_id": "MARA-CR-001",
-  "case_version": "1.0.0",
+  "case_version": "1.1.0",
   "method_limit": "Attribution is a deterministic explanation of declared scenario outputs. It is not a probability, forecast, causal estimate, or new decision rule.",
   "rows": [
     {

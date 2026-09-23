@@ -19,7 +19,7 @@ Generated from the current package artifacts. Do not edit these counts by hand.
 | Local criteria verified | 10 / 10 |
 | Human gates passed | 0 / 3 |
 | Ready to share | false |
-| Integrity-manifest files | 80 |
-| Portable-bundle artifacts | 62 |
+| Integrity-manifest files | 79 |
+| Portable-bundle artifacts | 61 |
 
 The JSON companion contains the full machine-readable inventory and hashes of the four primary review outputs.

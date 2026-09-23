@@ -1,9 +1,9 @@
 {
   "artifact_sha256": {
     "outputs/committee-packet.pdf": "d3a9a68b77d762431cb83f703c4944c44aec4bbb2d2d42a74bf4820b135d0cd4",
-    "outputs/credit-model.xlsx": "4d41bff85fee59c75737bfbf1e517c30dd6b94a63e165debe2c45ad62a94ca24",
+    "outputs/credit-model.xlsx": "02372d7d427957debeb6aa16108bbf73c74be8b6d72e411eb031125287c3a333",
     "outputs/decision-view.html": "56babd2eae97808c0561f351f0755b608cfaedb24778ba6d5eb19249922de71d",
-    "outputs/reviewer-scorecard.pdf": "e0956486b74ece77c9ae96348cb44dffc3c369489d2ad079a9fe9fbb618b20d1"
+    "outputs/reviewer-scorecard.pdf": "764233ae1664bf226151d8f5b900196b4cbb168a3b9e4b29c02e64d4897a9570"
   },
   "case_id": "MARA-CR-001",
   "case_version": "1.0.0",
@@ -25,8 +25,8 @@
     "what_if_vector_count": 4
   },
   "package": {
-    "integrity_manifest_file_count": 80,
-    "portable_bundle_artifact_count": 62
+    "integrity_manifest_file_count": 79,
+    "portable_bundle_artifact_count": 61
   },
   "review": {
     "committee_packet_bookmarks": 6,

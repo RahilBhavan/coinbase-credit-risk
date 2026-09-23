@@ -478,7 +478,7 @@ def check_decision_record() -> list[Result]:
         expected_pro_forma = decimal(payload.get("recommended_amount_usd", "0")) + accrued if payload.get("decision") != "decline" else Decimal("0")
         if pro_forma != expected_pro_forma:
             problems.append("recommended pro forma exposure does not reconcile")
-        expected_surplus = max(Decimal("0"), decimal(payload.get("available_proceeds_usd", "0")) - pro_forma)
+        expected_surplus = decimal(payload.get("available_proceeds_usd", "0")) - pro_forma
         if decimal(payload.get("recommended_pro_forma_coverage_surplus_usd", "0")) != expected_surplus:
             problems.append("recommended pro forma coverage surplus does not reconcile")
         factors = payload.get("rating_factors", [])
@@ -1159,9 +1159,9 @@ def check_scenarios() -> list[Result]:
             expected_shortfall = max(Decimal("0"), exposure - available)
             if abs(shortfall - expected_shortfall) > Decimal("1"):
                 failures.append(f"row {line}: shortfall differs from max(0, exposure - available) by more than $1")
-            expected_surplus = max(Decimal("0"), available - pro_forma)
+            expected_surplus = available - pro_forma
             if abs(pro_forma_surplus - expected_surplus) > Decimal("1"):
-                failures.append(f"row {line}: pro forma surplus differs from max(0, available - pro forma exposure) by more than $1")
+                failures.append(f"row {line}: pro forma surplus differs from available - pro forma exposure by more than $1")
     return [result("C-01", "FAIL" if failures else "PASS", "Scenario schema and arithmetic consistency",
                    "; ".join(failures) if failures else f"Validated {len(rows)} scenario row(s).", path)]
 

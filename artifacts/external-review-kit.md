@@ -30,7 +30,7 @@ Use an independent second reader with financial-model review experience. Do not 
 
 ### Pass standard
 
-Available proceeds must equal $3,870,600 within $1. The collateral cap must equal $3,096,480 within $1. The reviewer must document independent steps and any ambiguity.
+Available proceeds must equal $3,870,600 within $1. The collateral cap must equal $3,046,480 within $1. The reviewer must document independent steps and any ambiguity.
 
 ## HG-02: unscripted presentation assessment
 

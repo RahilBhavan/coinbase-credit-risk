@@ -31,6 +31,7 @@ Silence is not validation. Record an external reviewer only after they actually 
 
 | Date | Version | Review type | Reviewer role | Question | Response | Change made | Remaining disagreement |
 |---|---|---|---|---|---|---|---|
+| 2026-09-23 | MARA-CR-001 | Automated model review | Collateral cap basis | Can the engine approve a limit whose pro forma exposure, including the accrued amount, breaks the 1.25x coverage test? | Yes. The cap divided proceeds by coverage but ignored the $50,000 accrued amount, and the pro forma surplus was floored at zero. At 3.85% accessible quantity the engine approved $100,000 against about $130,000 of proceeds. | Sized the collateral cap as proceeds ÷ coverage − accrued ($3,046,480 in the base case), reported the surplus without a floor, rejected unknown scenario keys, and reported a `requested` binding cap when the request is below every cap. The 30% collateral decline now rounds to $2.1 million instead of $2.2 million. | None; the base $3.0 million recommendation is unchanged. |
 | — | — | External | — | — | Not received | None | External review remains outstanding |
 
 Suggested review prompt: “Would you challenge the primary-repayment analysis, the collateral-access blocker, or the use of a fictional portfolio cap first—and what specific evidence would change your answer?”

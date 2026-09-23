@@ -25,8 +25,8 @@ The current hand-worked collateral case uses:
 2. Apply the 2% stress: `$4,000,000 × 0.98 = $3,920,000`.
 3. Calculate execution cost: `$3,920,000 × 0.005 = $19,600`.
 4. Calculate available proceeds: `$3,920,000 − $19,600 − $9,800 − $20,000 = $3,870,600`.
-5. Calculate the collateral cap: `$3,870,600 ÷ 1.25 = $3,096,480`.
-6. Take the minimum of the $7.5 million obligor cap, $3.09648 million collateral cap, $6.0 million single-name cap, and $4.0 million concentration cap.
+5. Calculate the collateral cap so that the limit plus the $50,000 accrued amount keeps 1.25x coverage: `$3,870,600 ÷ 1.25 − $50,000 = $3,046,480`.
+6. Take the minimum of the $7.5 million obligor cap, $3.04648 million collateral cap, $6.0 million single-name cap, and $4.0 million concentration cap.
 7. Round down to the stated $3.0 million commitment.
 8. Apply hard blockers. If ownership, priority, legal control, or the repayment route is unknown, no collateral credit is permitted and funding is declined.
 

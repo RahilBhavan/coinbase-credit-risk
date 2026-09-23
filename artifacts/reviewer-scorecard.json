@@ -10,7 +10,7 @@
       "objective": "Reproduce the base collateral cap without using the workbook result as an input.",
       "pass_criteria": [
         "Available proceeds equal $3,870,600 within $1",
-        "Collateral cap equals $3,096,480 within $1",
+        "Collateral cap equals $3,046,480 within $1",
         "Reviewer documents independent steps and identifies any ambiguity"
       ],
       "required_evidence": "Dated calculation steps, reviewer role, result, variance, conclusion, and permission to attribute the review role",

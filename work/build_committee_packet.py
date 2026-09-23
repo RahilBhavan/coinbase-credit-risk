@@ -55,7 +55,7 @@ def cover_pdf() -> bytes:
         [
             [Paragraph("Recommendation", heading), Paragraph("$3.0 million conditional limit", ParagraphStyle("decision", parent=heading, fontSize=15, textColor=BLUE))],
             [Paragraph("Requested", body), Paragraph("$5.0 million / 12 months", body)],
-            [Paragraph("Binding constraint", body), Paragraph("Collateral cap: $3,096,480 before rounding", body)],
+            [Paragraph("Binding constraint", body), Paragraph("Collateral cap: $3,046,480 before rounding", body)],
             [Paragraph("Exposure views", body), Paragraph("Full-request recovery: $5.05m exposure / $1.1794m shortfall. Recommended limit: $3.05m pro forma exposure / $0.8206m coverage surplus.", body)],
             [Paragraph("Hard-stop rule", body), Paragraph("Decline if ownership, priority, enforceable control, price freshness, or the repayment route is unavailable.", body)],
             [Paragraph("Monitoring state", body), Paragraph(f"{monitoring['summary']['pass_projection_count']} projected passes; {monitoring['summary']['pre_funding_blocked_count']} pre-funding blocker; {monitoring['summary']['not_measured_count']} private-evidence measures not measured", body)],

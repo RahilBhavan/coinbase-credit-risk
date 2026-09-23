@@ -40,13 +40,14 @@ def analyze() -> dict:
     execution_rate = (Decimal(lot["execution_cost_bps"]) + Decimal(base_scenario["extra_execution_cost_bps"])) / Decimal("10000")
     delay_rate = effective_hours * Decimal(policy["delay_cost_bps_per_hour"]) / Decimal("10000")
     post_cost_factor = ONE - execution_rate - delay_rate
+    accrued = Decimal(facility["accrued_amount_usd"])
     base_unit_proceeds = price * (ONE - base_shock) * post_cost_factor
 
     targets = [Decimal("2000000"), Decimal("3000000"), Decimal("4000000"), Decimal("5000000")]
     max_price_declines = {}
     required_quantities = {}
     for target in targets:
-        required_proceeds = target * coverage
+        required_proceeds = (target + accrued) * coverage
         max_decline = ONE - (required_proceeds + fixed_cost) / (quantity * price * post_cost_factor)
         required_quantity = (required_proceeds + fixed_cost) / base_unit_proceeds
         key = str(int(target))
@@ -65,7 +66,7 @@ def analyze() -> dict:
         for grid_stress in stress_grid:
             gross = grid_quantity * price * (ONE - grid_stress)
             proceeds = max(ZERO, gross * post_cost_factor - fixed_cost)
-            collateral_cap = proceeds / coverage
+            collateral_cap = max(ZERO, proceeds / coverage - accrued)
             caps = {**non_collateral_caps, "collateral": collateral_cap, "requested": requested}
             raw_limit = min(caps.values())
             recommendation = (raw_limit / increment).quantize(ZERO, rounding=ROUND_DOWN) * increment

@@ -4,16 +4,16 @@
     "binding_cap": "collateral",
     "calculation_trace": {
       "available_proceeds_formula": "sum(max(0, stressed_gross - execution_cost - delay_cost - fixed_cost)) for eligible lots; blocked lots receive zero",
-      "collateral_cap_formula": "available_proceeds / required_coverage_ratio",
+      "collateral_cap_formula": "available_proceeds / required_coverage_ratio - accrued_amount",
       "decision_formula": "min(requested, obligor_cap, collateral_cap, single_name_cap, concentration_cap), or zero on hard blocker",
-      "raw_recommended_amount_usd": "3096480.00",
+      "raw_recommended_amount_usd": "3046480.00",
       "recommendation_increment_usd": "100000.00",
       "required_coverage_ratio": "1.25",
       "rounded_recommended_amount_usd": "3000000.00",
       "rounding_formula": "round down to recommendation_increment_usd"
     },
     "caps_usd": {
-      "collateral": "3096480.00",
+      "collateral": "3046480.00",
       "concentration": "4000000.00",
       "obligor": "7500000.00",
       "single_name": "6000000.00"
@@ -298,16 +298,16 @@
     "binding_cap": "collateral",
     "calculation_trace": {
       "available_proceeds_formula": "sum(max(0, stressed_gross - execution_cost - delay_cost - fixed_cost)) for eligible lots; blocked lots receive zero",
-      "collateral_cap_formula": "available_proceeds / required_coverage_ratio",
+      "collateral_cap_formula": "available_proceeds / required_coverage_ratio - accrued_amount",
       "decision_formula": "min(requested, obligor_cap, collateral_cap, single_name_cap, concentration_cap), or zero on hard blocker",
-      "raw_recommended_amount_usd": "2207200.00",
+      "raw_recommended_amount_usd": "2157200.00",
       "recommendation_increment_usd": "100000.00",
       "required_coverage_ratio": "1.25",
-      "rounded_recommended_amount_usd": "2200000.00",
+      "rounded_recommended_amount_usd": "2100000.00",
       "rounding_formula": "round down to recommendation_increment_usd"
     },
     "caps_usd": {
-      "collateral": "2207200.00",
+      "collateral": "2157200.00",
       "concentration": "4000000.00",
       "obligor": "7500000.00",
       "single_name": "6000000.00"
@@ -569,9 +569,9 @@
       }
     ],
     "rating_score": "3.10",
-    "recommended_amount_usd": "2200000.00",
-    "recommended_pro_forma_coverage_surplus_usd": "509000.00",
-    "recommended_pro_forma_exposure_usd": "2250000.00",
+    "recommended_amount_usd": "2100000.00",
+    "recommended_pro_forma_coverage_surplus_usd": "609000.00",
+    "recommended_pro_forma_exposure_usd": "2150000.00",
     "requested_amount_usd": "5000000.00",
     "reversal_trigger": "Increase only after a refreshed borrowing-entity cash forecast and debt schedule support repayment without collateral, or after additional eligible collateral raises the binding cap without another policy breach; decline if ownership, priority, control, price freshness, or the repayment route is not evidenced.",
     "review_status": "self-reviewed; independent practitioner review outstanding",
@@ -592,16 +592,16 @@
     "binding_cap": "collateral",
     "calculation_trace": {
       "available_proceeds_formula": "sum(max(0, stressed_gross - execution_cost - delay_cost - fixed_cost)) for eligible lots; blocked lots receive zero",
-      "collateral_cap_formula": "available_proceeds / required_coverage_ratio",
+      "collateral_cap_formula": "available_proceeds / required_coverage_ratio - accrued_amount",
       "decision_formula": "min(requested, obligor_cap, collateral_cap, single_name_cap, concentration_cap), or zero on hard blocker",
-      "raw_recommended_amount_usd": "1572000.00",
+      "raw_recommended_amount_usd": "1522000.00",
       "recommendation_increment_usd": "100000.00",
       "required_coverage_ratio": "1.25",
       "rounded_recommended_amount_usd": "1500000.00",
       "rounding_formula": "round down to recommendation_increment_usd"
     },
     "caps_usd": {
-      "collateral": "1572000.00",
+      "collateral": "1522000.00",
       "concentration": "4000000.00",
       "obligor": "7500000.00",
       "single_name": "6000000.00"
@@ -886,7 +886,7 @@
     "binding_cap": "hard_blocker",
     "calculation_trace": {
       "available_proceeds_formula": "sum(max(0, stressed_gross - execution_cost - delay_cost - fixed_cost)) for eligible lots; blocked lots receive zero",
-      "collateral_cap_formula": "available_proceeds / required_coverage_ratio",
+      "collateral_cap_formula": "available_proceeds / required_coverage_ratio - accrued_amount",
       "decision_formula": "min(requested, obligor_cap, collateral_cap, single_name_cap, concentration_cap), or zero on hard blocker",
       "raw_recommended_amount_usd": "0.00",
       "recommendation_increment_usd": "100000.00",
@@ -1189,7 +1189,7 @@
     "binding_cap": "collateral",
     "calculation_trace": {
       "available_proceeds_formula": "sum(max(0, stressed_gross - execution_cost - delay_cost - fixed_cost)) for eligible lots; blocked lots receive zero",
-      "collateral_cap_formula": "available_proceeds / required_coverage_ratio",
+      "collateral_cap_formula": "available_proceeds / required_coverage_ratio - accrued_amount",
       "decision_formula": "min(requested, obligor_cap, collateral_cap, single_name_cap, concentration_cap), or zero on hard blocker",
       "raw_recommended_amount_usd": "0.00",
       "recommendation_increment_usd": "100000.00",
@@ -1484,16 +1484,16 @@
     "binding_cap": "collateral",
     "calculation_trace": {
       "available_proceeds_formula": "sum(max(0, stressed_gross - execution_cost - delay_cost - fixed_cost)) for eligible lots; blocked lots receive zero",
-      "collateral_cap_formula": "available_proceeds / required_coverage_ratio",
+      "collateral_cap_formula": "available_proceeds / required_coverage_ratio - accrued_amount",
       "decision_formula": "min(requested, obligor_cap, collateral_cap, single_name_cap, concentration_cap), or zero on hard blocker",
-      "raw_recommended_amount_usd": "3064000.00",
+      "raw_recommended_amount_usd": "3014000.00",
       "recommendation_increment_usd": "100000.00",
       "required_coverage_ratio": "1.25",
       "rounded_recommended_amount_usd": "3000000.00",
       "rounding_formula": "round down to recommendation_increment_usd"
     },
     "caps_usd": {
-      "collateral": "3064000.00",
+      "collateral": "3014000.00",
       "concentration": "4000000.00",
       "obligor": "7500000.00",
       "single_name": "6000000.00"
@@ -1778,16 +1778,16 @@
     "binding_cap": "collateral",
     "calculation_trace": {
       "available_proceeds_formula": "sum(max(0, stressed_gross - execution_cost - delay_cost - fixed_cost)) for eligible lots; blocked lots receive zero",
-      "collateral_cap_formula": "available_proceeds / required_coverage_ratio",
+      "collateral_cap_formula": "available_proceeds / required_coverage_ratio - accrued_amount",
       "decision_formula": "min(requested, obligor_cap, collateral_cap, single_name_cap, concentration_cap), or zero on hard blocker",
-      "raw_recommended_amount_usd": "2488000.00",
+      "raw_recommended_amount_usd": "2438000.00",
       "recommendation_increment_usd": "100000.00",
       "required_coverage_ratio": "1.25",
       "rounded_recommended_amount_usd": "2400000.00",
       "rounding_formula": "round down to recommendation_increment_usd"
     },
     "caps_usd": {
-      "collateral": "2488000.00",
+      "collateral": "2438000.00",
       "concentration": "4000000.00",
       "obligor": "7500000.00",
       "single_name": "6000000.00"
@@ -2072,7 +2072,7 @@
     "binding_cap": "hard_blocker",
     "calculation_trace": {
       "available_proceeds_formula": "sum(max(0, stressed_gross - execution_cost - delay_cost - fixed_cost)) for eligible lots; blocked lots receive zero",
-      "collateral_cap_formula": "available_proceeds / required_coverage_ratio",
+      "collateral_cap_formula": "available_proceeds / required_coverage_ratio - accrued_amount",
       "decision_formula": "min(requested, obligor_cap, collateral_cap, single_name_cap, concentration_cap), or zero on hard blocker",
       "raw_recommended_amount_usd": "0.00",
       "recommendation_increment_usd": "100000.00",
@@ -2372,7 +2372,7 @@
     "binding_cap": "hard_blocker",
     "calculation_trace": {
       "available_proceeds_formula": "sum(max(0, stressed_gross - execution_cost - delay_cost - fixed_cost)) for eligible lots; blocked lots receive zero",
-      "collateral_cap_formula": "available_proceeds / required_coverage_ratio",
+      "collateral_cap_formula": "available_proceeds / required_coverage_ratio - accrued_amount",
       "decision_formula": "min(requested, obligor_cap, collateral_cap, single_name_cap, concentration_cap), or zero on hard blocker",
       "raw_recommended_amount_usd": "0.00",
       "recommendation_increment_usd": "100000.00",
@@ -2675,7 +2675,7 @@
     "binding_cap": "obligor",
     "calculation_trace": {
       "available_proceeds_formula": "sum(max(0, stressed_gross - execution_cost - delay_cost - fixed_cost)) for eligible lots; blocked lots receive zero",
-      "collateral_cap_formula": "available_proceeds / required_coverage_ratio",
+      "collateral_cap_formula": "available_proceeds / required_coverage_ratio - accrued_amount",
       "decision_formula": "min(requested, obligor_cap, collateral_cap, single_name_cap, concentration_cap), or zero on hard blocker",
       "raw_recommended_amount_usd": "2000000.00",
       "recommendation_increment_usd": "100000.00",
@@ -2684,7 +2684,7 @@
       "rounding_formula": "round down to recommendation_increment_usd"
     },
     "caps_usd": {
-      "collateral": "3096480.00",
+      "collateral": "3046480.00",
       "concentration": "4000000.00",
       "obligor": "2000000.00",
       "single_name": "6000000.00"
@@ -2970,7 +2970,7 @@
     "binding_cap": "concentration",
     "calculation_trace": {
       "available_proceeds_formula": "sum(max(0, stressed_gross - execution_cost - delay_cost - fixed_cost)) for eligible lots; blocked lots receive zero",
-      "collateral_cap_formula": "available_proceeds / required_coverage_ratio",
+      "collateral_cap_formula": "available_proceeds / required_coverage_ratio - accrued_amount",
       "decision_formula": "min(requested, obligor_cap, collateral_cap, single_name_cap, concentration_cap), or zero on hard blocker",
       "raw_recommended_amount_usd": "1000000.00",
       "recommendation_increment_usd": "100000.00",
@@ -2979,7 +2979,7 @@
       "rounding_formula": "round down to recommendation_increment_usd"
     },
     "caps_usd": {
-      "collateral": "2128800.00",
+      "collateral": "2078800.00",
       "concentration": "1000000.00",
       "obligor": "2000000.00",
       "single_name": "6000000.00"

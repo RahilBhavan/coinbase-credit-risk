@@ -94,7 +94,8 @@ Status: implemented reference; independent review remains
 - On the decision surface, increasing price stress cannot increase the recommendation and increasing eligible collateral quantity cannot reduce it.
 - Higher funded exposure cannot reduce shortfall when other inputs stay fixed.
 - A decline has zero recommended pro forma exposure; otherwise it equals the recommended limit plus accrued amount.
-- Recommended-limit coverage surplus equals available proceeds less recommended pro forma exposure, floored at zero.
+- The collateral cap equals available proceeds divided by the required coverage ratio, less the accrued amount, so the recommended pro forma exposure keeps the required coverage.
+- Recommended-limit coverage surplus equals available proceeds less recommended pro forma exposure. It is not floored, so a shortfall shows as a negative value.
 - A limit breach cannot increase the recommended amount.
 - A book snapshot cannot be reused as a historical observation for another time.
 - A chain state cannot stand in for custody, legal control, or settlement on a bank rail.

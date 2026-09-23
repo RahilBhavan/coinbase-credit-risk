@@ -17,6 +17,18 @@ from typing import Any
 ZERO = Decimal("0")
 ONE = Decimal("1")
 CENT = Decimal("0.01")
+SCENARIO_KEYS = {
+    "scenario_id",
+    "unavailable_routes",
+    "delayed_route",
+    "additional_route_delay_hours",
+    "price_shock_pct",
+    "extra_execution_cost_bps",
+    "accessible_quantity_pct",
+    "forced_exclusion_reasons",
+    "obligor_cap_usd_override",
+    "concentration_cap_usd_override",
+}
 
 
 def _decimal(value: Any) -> Decimal:
@@ -156,6 +168,9 @@ def evaluate_case(case_dir: str | Path, scenario_id: str = "base") -> dict[str, 
     )
     if scenario is None:
         raise ValueError(f"unknown scenario_id: {scenario_id}")
+    unknown_keys = sorted(set(scenario) - SCENARIO_KEYS)
+    if unknown_keys:
+        raise ValueError(f"unknown scenario key(s) in {scenario_id}: {', '.join(unknown_keys)}")
 
     issuer = case["issuer"]
     facility = case["facility"]
@@ -169,9 +184,11 @@ def evaluate_case(case_dir: str | Path, scenario_id: str = "base") -> dict[str, 
         case["collateral"], scenario, policy
     )
     coverage = _decimal(facility["required_coverage_ratio"])
+    accrued = _decimal(facility["accrued_amount_usd"])
     caps = {
         "obligor": _decimal(scenario.get("obligor_cap_usd_override", policy["obligor_cap_usd"])),
-        "collateral": available / coverage,
+        # Size on the same basis as the pro forma exposure: commitment plus accrued amount.
+        "collateral": available / coverage - accrued,
         "single_name": _decimal(policy["single_name_cap_usd"]),
         "concentration": _concentration_cap(
             case["portfolio"], policy, case["collateral"][0]["asset"]
@@ -180,8 +197,10 @@ def evaluate_case(case_dir: str | Path, scenario_id: str = "base") -> dict[str, 
     if "concentration_cap_usd_override" in scenario:
         caps["concentration"] = _decimal(scenario["concentration_cap_usd_override"])
     caps = {name: _money(max(ZERO, value)) for name, value in caps.items()}
-    binding_cap = min(caps, key=lambda name: (caps[name], name))
     requested = _decimal(facility["requested_commitment_usd"])
+    binding_cap = min(caps, key=lambda name: (caps[name], name))
+    if requested < caps[binding_cap]:
+        binding_cap = "requested"
     raw_recommended = ZERO if blockers else min(requested, *caps.values())
     increment = _decimal(policy["recommendation_increment_usd"])
     recommended = (
@@ -206,8 +225,8 @@ def evaluate_case(case_dir: str | Path, scenario_id: str = "base") -> dict[str, 
         else "blocked_pending_conditions" if outstanding_conditions
         else "cleared_to_fund"
     )
-    pro_forma_exposure = recommended + _decimal(facility["accrued_amount_usd"]) if recommended > ZERO else ZERO
-    pro_forma_surplus = max(ZERO, available - pro_forma_exposure)
+    pro_forma_exposure = recommended + accrued if recommended > ZERO else ZERO
+    pro_forma_surplus = available - pro_forma_exposure
 
     return {
         "case_id": facility["case_id"],
@@ -243,7 +262,7 @@ def evaluate_case(case_dir: str | Path, scenario_id: str = "base") -> dict[str, 
         "collateral_lots": lot_results,
         "calculation_trace": {
             "available_proceeds_formula": "sum(max(0, stressed_gross - execution_cost - delay_cost - fixed_cost)) for eligible lots; blocked lots receive zero",
-            "collateral_cap_formula": "available_proceeds / required_coverage_ratio",
+            "collateral_cap_formula": "available_proceeds / required_coverage_ratio - accrued_amount",
             "decision_formula": "min(requested, obligor_cap, collateral_cap, single_name_cap, concentration_cap), or zero on hard blocker",
             "rounding_formula": "round down to recommendation_increment_usd",
             "required_coverage_ratio": str(coverage),

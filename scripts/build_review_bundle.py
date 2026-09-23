@@ -100,7 +100,7 @@ This is a hypothetical credit-risk case. MARA is not represented as a Coinbase c
 16. Review `artifacts/model-risk-register.csv` for known model limitations, mitigations, evidence requirements, owners, and the required disposition if unresolved.
 17. Use `artifacts/external-review-kit.md` and `outputs/reviewer-scorecard.pdf` to execute and document the independent human gates that remain outstanding without treating generated forms as validation.
 18. Record completed gate evidence with `scripts/record_reviewer_gate.py`; the command rejects incomplete or unretained evidence and never treats local checks as human review.
-19. Use `artifacts/reproducibility.md` to rebuild or independently reproduce the $3.09648 million collateral cap.
+19. Use `artifacts/reproducibility.md` to rebuild or independently reproduce the $3.04648 million collateral cap.
 
 ## Decision in one line
 

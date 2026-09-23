@@ -28,7 +28,7 @@ def evaluate(contract: dict, inputs: dict) -> dict:
     execution_cost = gross * execution_bps / Decimal("10000")
     delay_cost = gross * delay * Decimal(contract["delay_cost_bps_per_hour"]) / Decimal("10000")
     available = ZERO if blockers else max(ZERO, gross - execution_cost - delay_cost - Decimal(contract["fixed_cost_usd"]))
-    collateral_cap = available / Decimal(contract["required_coverage_ratio"])
+    collateral_cap = max(ZERO, available / Decimal(contract["required_coverage_ratio"]) - Decimal(contract["accrued_amount_usd"]))
     caps = {
         "obligor": Decimal(contract["obligor_cap_usd"]),
         "collateral": collateral_cap,
@@ -36,6 +36,8 @@ def evaluate(contract: dict, inputs: dict) -> dict:
         "concentration": Decimal(contract["concentration_cap_usd"]),
     }
     binding = "hard_blocker" if blockers else min(caps, key=lambda name: (caps[name], name))
+    if not blockers and Decimal(contract["requested_commitment_usd"]) < caps[binding]:
+        binding = "requested"
     raw = ZERO if blockers else min(Decimal(contract["requested_commitment_usd"]), *caps.values())
     increment = Decimal(contract["recommendation_increment_usd"])
     recommended = ZERO if raw == ZERO else (raw / increment).quantize(ZERO, rounding=ROUND_DOWN) * increment
@@ -45,7 +47,7 @@ def evaluate(contract: dict, inputs: dict) -> dict:
         "collateral_cap_usd": money(collateral_cap),
         "recommended_amount_usd": money(recommended),
         "recommended_pro_forma_exposure_usd": money(pro_forma),
-        "coverage_surplus_usd": money(max(ZERO, available - pro_forma)),
+        "coverage_surplus_usd": money(available - pro_forma),
         "binding_cap": binding,
         "hard_blockers": blockers,
         "decision": "decline" if blockers or recommended == ZERO else "approve" if recommended >= Decimal(contract["requested_commitment_usd"]) else "approve_reduced",

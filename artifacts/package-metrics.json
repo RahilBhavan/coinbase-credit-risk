@@ -1,9 +1,9 @@
 {
   "artifact_sha256": {
-    "outputs/committee-packet.pdf": "d3a9a68b77d762431cb83f703c4944c44aec4bbb2d2d42a74bf4820b135d0cd4",
-    "outputs/credit-model.xlsx": "02372d7d427957debeb6aa16108bbf73c74be8b6d72e411eb031125287c3a333",
-    "outputs/decision-view.html": "56babd2eae97808c0561f351f0755b608cfaedb24778ba6d5eb19249922de71d",
-    "outputs/reviewer-scorecard.pdf": "764233ae1664bf226151d8f5b900196b4cbb168a3b9e4b29c02e64d4897a9570"
+    "outputs/committee-packet.pdf": "e34194485a40c00134f7d5cd28127713f83382e17001b9b21bde4c7ae3ddb13a",
+    "outputs/credit-model.xlsx": "abc741ee3e141504588e4091827916f1249b4ff2b3287cc095a8fed91ed3f88e",
+    "outputs/decision-view.html": "45039ea29b93eb207d4811c0ac3eb43235eef4c1b1c7bd57641c94a9d9c6a7e4",
+    "outputs/reviewer-scorecard.pdf": "c7643e51b2fc4e2f465e7313c990afafaddd2ff22b8fd2743eb04135bb00d932"
   },
   "case_id": "MARA-CR-001",
   "case_version": "1.0.0",
@@ -36,7 +36,7 @@
     "local_criteria_count": 10,
     "local_criteria_verified": 10,
     "ready_to_share": false,
-    "regression_test_count": 61,
+    "regression_test_count": 65,
     "reviewer_scorecard_pages": 4
   },
   "schema_version": "1.0",

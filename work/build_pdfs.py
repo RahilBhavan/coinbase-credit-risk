@@ -182,7 +182,7 @@ def cap_chart() -> Drawing:
     """Compact four-cap comparison for the one-page reviewer brief."""
     values = [
         ("Obligor", 7.500, NAVY),
-        ("Collateral", 3.096, colors.HexColor("#C00000")),
+        ("Collateral", 3.046, colors.HexColor("#C00000")),
         ("Single-name", 6.000, BLUE),
         ("Concentration", 4.000, colors.HexColor("#7F8C8D")),
     ]
@@ -220,7 +220,7 @@ def build_credit_memo():
             [
                 ["Cap", "Amount", "Basis"],
                 ["Obligor", "$7.500m", "Illustrative public-information judgment"],
-                ["Collateral", "$3.096m", "$3.8706m proceeds / 1.25x coverage"],
+                ["Collateral", "$3.046m", "$3.8706m proceeds / 1.25x coverage - $0.05m accrued"],
                 ["Single-name", "$6.000m", "Illustrative policy"],
                 ["Concentration", "$4.000m", "Illustrative shared-risk capacity"],
                 ["Recommended", "$3.000m", "Rounded below the binding collateral cap"],
@@ -244,7 +244,7 @@ def build_credit_memo():
                 ["Delay cost", "$3.920m x 25 bps", "($9,800)"],
                 ["Fixed cost", "Assumed", "($20,000)"],
                 ["Available proceeds", "Stressed value less costs", "$3,870,600"],
-                ["Collateral cap", "$3.8706m / 1.25x", "$3,096,480"],
+                ["Collateral cap", "$3.8706m / 1.25x - $0.05m accrued", "$3,046,480"],
             ],
             [1.45 * inch, 3.8 * inch, 2.05 * inch],
             number_cols=(2,),
@@ -330,7 +330,7 @@ def build_reviewer_brief():
         h("Decision logic"),
         cap_chart(),
         h("Waterfall"),
-        p("$4.000m quoted value - $0.080m price stress - $0.0196m execution cost - $0.0098m delay cost - $0.020m fixed cost = <b>$3.8706m available proceeds</b>. Dividing by 1.25x coverage gives a <b>$3.09648m collateral cap</b>, rounded down to $3.0m."),
+        p("$4.000m quoted value - $0.080m price stress - $0.0196m execution cost - $0.0098m delay cost - $0.020m fixed cost = <b>$3.8706m available proceeds</b>. Dividing by 1.25x coverage and subtracting the $0.05m accrued amount gives a <b>$3.04648m collateral cap</b>, rounded down to $3.0m."),
         h("Public issuer context"),
         p("MARA reported $421.3 million of cash, $2.1 billion fair value across 35,577 bitcoin, and about $2.4 billion of debt at June 30, 2026 (SRC-001). Its 2025 filing reported $802.7 million of net operating cash use (SRC-002). Reported bitcoin is not treated as facility collateral."),
         h("Strongest opposing view"),

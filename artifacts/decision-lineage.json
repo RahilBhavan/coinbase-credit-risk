@@ -85,10 +85,10 @@
     },
     {
       "artifact_locator": "artifacts/decision-record.json#caps_usd/collateral",
-      "calculation_or_rule": "Available collateral proceeds divided by required coverage ratio",
+      "calculation_or_rule": "Available collateral proceeds divided by required coverage ratio, less the accrued amount",
       "claim_type": "decision_cap",
       "committee_claim": "Collateral cap",
-      "current_value": "3096480.00",
+      "current_value": "3046480.00",
       "evidence_classes": [
         "assumed",
         "reported",

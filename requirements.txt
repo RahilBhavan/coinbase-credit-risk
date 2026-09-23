@@ -1,0 +1,4 @@
+reportlab==5.0.1
+pypdf==6.17.0
+# Only for the optional narrated demo (scripts/build_package.py --with-demo)
+pillow==11.3.0

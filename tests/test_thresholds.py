@@ -30,7 +30,8 @@ class ThresholdAnalysisTests(unittest.TestCase):
         price_decline = Decimal(result["max_price_decline_for_target"]["3000000"])
         post_cost_factor = Decimal(result["post_cost_factor_before_price_stress"])
         proceeds = quantity * (Decimal("1") - price_decline) * post_cost_factor - Decimal("20000")
-        self.assertAlmostEqual(proceeds, Decimal("3750000"), delta=Decimal("3"))
+        # ($3.0m limit + $50k accrued) x 1.25 coverage
+        self.assertAlmostEqual(proceeds, Decimal("3812500"), delta=Decimal("3"))
 
     def test_decision_surface_is_complete_and_monotonic(self):
         result = build_threshold_analysis.analyze()

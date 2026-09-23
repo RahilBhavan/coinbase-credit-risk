@@ -10,12 +10,12 @@ Summary: 49 PASS, 0 FAIL, 0 SKIP
 |---|---|---|---|---|
 | S-01 | PASS | Required project directories exist | All required directories exist. | . |
 | S-02 | PASS | Core planning documents exist | All core planning documents exist. | . |
-| E-01 | PASS | Source register schema and evidence separation | Parsed 13 rows with unique IDs and separated fact/fiction locators. | 02-research/source-register.csv |
+| E-01 | PASS | Source register schema and evidence separation | Parsed 12 rows with unique IDs and separated fact/fiction locators. | 02-research/source-register.csv |
 | E-02 | PASS | Frozen source snapshots match registered hashes | Verified 5 immutable source snapshot(s). | 02-research/snapshots |
 | E-03 | PASS | Design and artifact source registers are identical | Registers match byte-for-byte. | artifacts/source-register.csv |
 | E-04 | PASS | Frozen filing facts reconcile to model and memo values | Reconciled 13 extracted filing facts; all model differences are within declared tolerances. | artifacts/issuer-fact-ledger.csv |
-| E-05 | PASS | Workbook audit matches the current workbook | Verified 171 passing checks against workbook SHA-256 02372d7d427957debeb6aa16108bbf73c74be8b6d72e411eb031125287c3a333. | artifacts/workbook-audit.csv |
-| E-06 | PASS | Package integrity manifest matches review files | Verified SHA-256 and byte length for 79 package file(s). | artifacts/package-integrity.json |
+| E-05 | PASS | Workbook audit matches the current workbook | Verified 171 passing checks against workbook SHA-256 abc741ee3e141504588e4091827916f1249b4ff2b3287cc095a8fed91ed3f88e. | artifacts/workbook-audit.csv |
+| E-06 | PASS | Package integrity manifest matches review files | Verified SHA-256 and byte length for 78 package file(s). | artifacts/package-integrity.json |
 | E-07 | PASS | Threshold analysis is internally consistent | Verified four break-even targets, the $4m concentration ceiling, and a monotonic 40-cell decision surface. | artifacts/threshold-analysis.json |
 | D-01 | PASS | Project CSV files parse with unique headers | Parsed 20 CSV file(s). | . |
 | D-02 | PASS | Project JSON files parse | Parsed 45 JSON file(s). | . |
@@ -43,18 +43,18 @@ Summary: 49 PASS, 0 FAIL, 0 SKIP
 | X-24 | PASS | Narrated demo audit matches the distributed MP4 | Six-slide narrated demo is 147.646s with audio and video streams; SHA-256 matches. | artifacts/demo-audit.json |
 | X-05 | PASS | Readiness report separates local verification from human gates | CR-01 through CR-10 are locally verified; governed evidence records 0 of 3 human gates passed. | artifacts/readiness-report.json |
 | X-21 | PASS | Generated package metrics match current artifacts | Generated metrics reconcile to current workbook audit, scenarios, decision-view audit, and primary-output hashes. | artifacts/package-metrics.json |
-| O-01 | PASS | Artifact available: credit-memo.pdf | Valid non-empty PDF container (8,010 bytes). | outputs/credit-memo.pdf |
-| O-02 | PASS | Artifact available: committee-packet.pdf | Valid non-empty PDF container (26,037 bytes). | outputs/committee-packet.pdf |
+| O-01 | PASS | Artifact available: credit-memo.pdf | Valid non-empty PDF container (8,025 bytes). | outputs/credit-memo.pdf |
+| O-02 | PASS | Artifact available: committee-packet.pdf | Valid non-empty PDF container (26,084 bytes). | outputs/committee-packet.pdf |
 | O-03 | PASS | Artifact available: opposing-memo.pdf | Valid non-empty PDF container (3,689 bytes). | outputs/opposing-memo.pdf |
 | O-04 | PASS | Artifact available: credit-model.xlsx | Valid non-empty XLSX ZIP package with 27 members. | outputs/credit-model.xlsx |
 | O-05 | PASS | Artifact available: source-register.csv | Present and non-empty. | artifacts/source-register.csv |
 | O-06 | PASS | Artifact available: scenario-results.csv | Present and non-empty. | artifacts/scenario-results.csv |
-| O-07 | PASS | Artifact available: demo.mp4 | Valid non-empty ISO media container (3,521,817 bytes). | outputs/demo.mp4 |
-| O-08 | PASS | Artifact available: reviewer-brief.pdf | Valid non-empty PDF container (3,889 bytes). | outputs/reviewer-brief.pdf |
+| O-07 | PASS | Artifact available: demo.mp4 | Valid non-empty ISO media container (3,517,709 bytes). | outputs/demo.mp4 |
+| O-08 | PASS | Artifact available: reviewer-brief.pdf | Valid non-empty PDF container (3,923 bytes). | outputs/reviewer-brief.pdf |
 | O-09 | PASS | Artifact available: reviewer-scorecard.pdf | Valid non-empty PDF container (9,534 bytes). | outputs/reviewer-scorecard.pdf |
 | O-10 | PASS | Artifact available: feedback-log.md | Present and non-empty. | artifacts/feedback-log.md |
 | O-11 | PASS | Artifact available: reproducibility.md | Present and non-empty. | artifacts/reproducibility.md |
-| O-12 | PASS | Artifact available: decision-view.html | Self-contained HTML present (246,820 characters). | outputs/decision-view.html |
+| O-12 | PASS | Artifact available: decision-view.html | Self-contained HTML present (247,383 characters). | outputs/decision-view.html |
 | L-01 | PASS | Built narrative artifacts label the case hypothetical | Found an explicit label in 5 text artifact(s). | artifacts |
 | C-01 | PASS | Scenario schema and arithmetic consistency | Validated 11 scenario row(s). | artifacts/scenario-results.csv |
 

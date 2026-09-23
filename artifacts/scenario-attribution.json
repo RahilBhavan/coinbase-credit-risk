@@ -25,8 +25,8 @@
       "hard_blockers": [],
       "primary_driver": "collateral_market_value",
       "proceeds_delta_vs_base_usd": "-1111600.00",
-      "recommendation_delta_vs_base_usd": "-800000.00",
-      "recommended_amount_usd": "2200000.00",
+      "recommendation_delta_vs_base_usd": "-900000.00",
+      "recommended_amount_usd": "2100000.00",
       "resolution_evidence": "Add eligible collateral, repay exposure, or reduce the commitment.",
       "scenario_id": "collateral_down_30",
       "severity_rank": 8

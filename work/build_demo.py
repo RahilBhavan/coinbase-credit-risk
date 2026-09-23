@@ -116,16 +116,16 @@ slides = [
     (
         slide(4, "The lowest cap controls", "Transparent policy arithmetic beats a black-box score", [
             "The recommended limit is the minimum of obligor, collateral, single-name, and concentration caps.",
-            "The collateral cap binds at $3.09648 million and rounds down to $3.0 million.",
-        ], [("Obligor", "$7.500m", NAVY), ("Collateral", "$3.096m", RED), ("Single-name", "$6.000m", NAVY), ("Concentration", "$4.000m", NAVY)]),
-        "The decision rule is deliberately simple. The final limit is the lowest of four caps, after hard blockers. The illustrative obligor cap is seven point five million. The collateral cap is three point zero nine six million. Single name capacity is six million, and concentration capacity is four million. Collateral binds, so the recommendation rounds down to three million dollars.",
+            "The collateral cap binds at $3.04648 million and rounds down to $3.0 million.",
+        ], [("Obligor", "$7.500m", NAVY), ("Collateral", "$3.046m", RED), ("Single-name", "$6.000m", NAVY), ("Concentration", "$4.000m", NAVY)]),
+        "The decision rule is deliberately simple. The final limit is the lowest of four caps, after hard blockers. The illustrative obligor cap is seven point five million. The collateral cap is three point zero four six million. Single name capacity is six million, and concentration capacity is four million. Collateral binds, so the recommendation rounds down to three million dollars.",
     ),
     (
         slide(5, "Adverse cases must change the answer", "A route failure is not another small haircut", [
-            "A thirty percent collateral decline reduces the rounded limit to $2.2 million.",
+            "A thirty percent collateral decline reduces the rounded limit to $2.1 million.",
             "A twenty four hour delay reduces proceeds while preserving the decision structure.",
             "An unavailable route produces zero eligible proceeds and a decline.",
-        ], [("Base", "$3.0m", GREEN), ("30% decline", "$2.2m", RED), ("Route failure", "$0 / decline", RED)], alert="Chain confirmation does not equal repayment availability."),
+        ], [("Base", "$3.0m", GREEN), ("30% decline", "$2.1m", RED), ("Route failure", "$0 / decline", RED)], alert="Chain confirmation does not equal repayment availability."),
         "The scenario engine tests economic direction and hard boundaries. A thirty percent collateral decline lowers the rounded limit to two point two million dollars. A twenty four hour delay reduces available proceeds. If the Base to bank route becomes unavailable, the model does not apply a slightly larger haircut. It grants zero collateral credit and declines the facility.",
     ),
     (

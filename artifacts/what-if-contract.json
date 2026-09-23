@@ -54,7 +54,7 @@
       "expected": {
         "available_proceeds_usd": "3870600.00",
         "binding_cap": "collateral",
-        "collateral_cap_usd": "3096480.00",
+        "collateral_cap_usd": "3046480.00",
         "coverage_surplus_usd": "820600.00",
         "decision": "approve_reduced",
         "hard_blockers": [],
@@ -79,7 +79,7 @@
       "expected": {
         "available_proceeds_usd": "1965000.00",
         "binding_cap": "collateral",
-        "collateral_cap_usd": "1572000.00",
+        "collateral_cap_usd": "1522000.00",
         "coverage_surplus_usd": "415000.00",
         "decision": "approve_reduced",
         "hard_blockers": [],
@@ -104,12 +104,12 @@
       "expected": {
         "available_proceeds_usd": "3753000.00",
         "binding_cap": "collateral",
-        "collateral_cap_usd": "3002400.00",
-        "coverage_surplus_usd": "703000.00",
+        "collateral_cap_usd": "2952400.00",
+        "coverage_surplus_usd": "803000.00",
         "decision": "approve_reduced",
         "hard_blockers": [],
-        "recommended_amount_usd": "3000000.00",
-        "recommended_pro_forma_exposure_usd": "3050000.00"
+        "recommended_amount_usd": "2900000.00",
+        "recommended_pro_forma_exposure_usd": "2950000.00"
       },
       "inputs": {
         "additional_route_delay_hours": "24",

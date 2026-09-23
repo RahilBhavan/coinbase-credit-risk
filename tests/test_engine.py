@@ -146,6 +146,34 @@ class EngineTests(unittest.TestCase):
         )
         self.assertEqual(tighter["caps_usd"]["concentration"], "0.00")
 
+    def test_collateral_cap_keeps_pro_forma_exposure_within_proceeds(self):
+        root = self._modified_case(
+            "scenarios.json",
+            lambda rows: rows[0].update({"accessible_quantity_pct": "0.0385"}),
+        )
+        result = evaluate_case(root, "base")
+        available = Decimal(result["available_proceeds_usd"])
+        pro_forma = Decimal(result["recommended_pro_forma_exposure_usd"])
+        self.assertLessEqual(pro_forma * Decimal("1.25"), available)
+        self.assertEqual(Decimal(result["recommended_pro_forma_coverage_surplus_usd"]), available - pro_forma)
+
+    def test_unknown_scenario_key_is_rejected(self):
+        root = self._modified_case(
+            "scenarios.json",
+            lambda rows: rows[0].update({"price_shock": "0.9"}),
+        )
+        with self.assertRaisesRegex(ValueError, "price_shock"):
+            evaluate_case(root, "base")
+
+    def test_request_below_every_cap_binds_as_requested(self):
+        root = self._modified_case(
+            "facility.json",
+            lambda facility: facility.update({"requested_commitment_usd": "1000000"}),
+        )
+        result = evaluate_case(root, "base")
+        self.assertEqual(result["recommended_amount_usd"], "1000000.00")
+        self.assertEqual(result["binding_cap"], "requested")
+
     def test_route_failure_is_a_hard_blocker(self):
         result = evaluate_case(CASE_DIR, "route_failure")
         self.assertEqual(result["decision"], "decline")

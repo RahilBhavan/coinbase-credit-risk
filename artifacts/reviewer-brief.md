@@ -14,7 +14,7 @@ All facility, collateral, Base, portfolio, policy, and rating terms are fictiona
 | Cap | Amount | What drives it |
 |---|---:|---|
 | Obligor | $7.5m | Assumed policy judgment |
-| **Collateral** | **$3.096m** | 4.0m fictional USDC, 2% stress, explicit costs, 1.25x coverage |
+| **Collateral** | **$3.046m** | 4.0m fictional USDC, 2% stress, explicit costs, 1.25x coverage on limit plus accrued |
 | Single-name | $6.0m | Assumed limit |
 | Concentration | $4.0m | Assumed shared-route limit |
 | **Recommendation** | **$3.0m** | Rounded below collateral cap; conditions must be met before funding |
@@ -31,7 +31,8 @@ $4.000m quoted fictional collateral
 − $0.020m fixed cost
 = $3.8706m available proceeds
 ÷ 1.25x required coverage
-= $3.09648m collateral cap → $3.0m rounded recommendation
+− $0.050m accrued amount
+= $3.04648m collateral cap → $3.0m rounded recommendation
 ```
 
 Ownership, first priority, legal control, custody, and the repayment route remain unverified. Any unresolved item blocks collateral credit and therefore blocks funding under the recommendation.

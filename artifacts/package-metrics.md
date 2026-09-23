@@ -7,7 +7,7 @@ Generated from the current package artifacts. Do not edit these counts by hand.
 | Workbook sheets | 16 |
 | Workbook formulas | 265 |
 | Workbook audit checks passed | 171 / 171 |
-| Regression tests discovered | 61 |
+| Regression tests discovered | 65 |
 | Scenarios | 11 |
 | Registered sources | 12 |
 | Blocking conditions | 9 |

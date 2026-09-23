@@ -110,7 +110,7 @@ def build() -> dict[str, object]:
         criterion(
             "CR-07", "Three-minute-or-less walkthrough",
             ["outputs/demo.mp4", "artifacts/demo-audit.json", "04-deliverables/demo-storyboard.md", "work/build_demo.py"],
-            present("outputs/demo.mp4") and demo_audit.get("stream_types") == ["audio", "video"] and demo_audit.get("failure_count") == 0 and 90 <= float(demo_audit.get("duration_seconds", 0)) <= 180 and text_has("work/build_demo.py", "hypothetical", "opposing memo", "thirty percent collateral decline", "collateral cap is three point zero nine six million"),
+            present("outputs/demo.mp4") and demo_audit.get("stream_types") == ["audio", "video"] and demo_audit.get("failure_count") == 0 and 90 <= float(demo_audit.get("duration_seconds", 0)) <= 180 and text_has("work/build_demo.py", "hypothetical", "opposing memo", "thirty percent collateral decline", "collateral cap is three point zero four six million"),
             "Narrated demo exists, its audit confirms audio and video streams within three minutes, and its deterministic source covers the required narrative beats and disclaimer.",
         ),
         criterion(

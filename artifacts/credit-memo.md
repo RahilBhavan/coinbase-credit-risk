@@ -11,12 +11,12 @@
 
 The fictional request is a $5.0 million, 12-month revolving working-capital facility with a bullet maturity (ASM-C001). I would not approve it as proposed. I would permit a rounded $3.0 million commitment only after the lender obtains satisfactory evidence of collateral ownership, first priority, and legal control and validates the repayment route (ASM-C002, ASM-C007).
 
-The $3.0 million limit is below the illustrative collateral cap of $3.096 million and is the lowest of the four assumed caps. It is not supported by MARA's reported bitcoin holdings. The collateral schedule instead assumes 4.0 million USDC on Base in a lender-controlled structure that has not been evidenced (ASM-C002).
+The $3.0 million limit is below the illustrative collateral cap of $3.046 million and is the lowest of the four assumed caps. It is not supported by MARA's reported bitcoin holdings. The collateral schedule instead assumes 4.0 million USDC on Base in a lender-controlled structure that has not been evidenced (ASM-C002).
 
 | Cap | Illustrative amount | Basis |
 |---|---:|---|
 | Obligor | $7.5m | Fictional policy judgment; no calibrated probability of default (ASM-C004) |
-| Collateral | $3.096m | Fictional waterfall shown below (ASM-C002, ASM-C003) |
+| Collateral | $3.046m | Fictional waterfall shown below (ASM-C002, ASM-C003) |
 | Single-name | $6.0m | Fictional policy limit (ASM-C005) |
 | Concentration | $4.0m | Fictional shared-route limit (ASM-C006) |
 | **Recommended commitment** | **$3.0m** | Rounded below the binding collateral cap |
@@ -43,7 +43,7 @@ The schedule assumes 4.0 million USDC on Base at $1.00, a 2% price/convertibilit
 | Delay cost | Assumed | ($9,800) |
 | Fixed cost | Assumed | ($20,000) |
 | Available proceeds | Stressed value less costs | $3,870,600 |
-| **Collateral cap** | $3,870,600 ÷ 1.25 | **$3,096,480** |
+| **Collateral cap** | $3,870,600 ÷ 1.25 − $50,000 accrued | **$3,046,480** |
 
 The waterfall applies only if ownership, lien priority, legal control, custody, and the route to the repayment rail are evidenced. A Base transaction state does not prove any of those facts. If a canonical Base-to-Ethereum withdrawal is required, the route may face a roughly one-week challenge window; that delay should not be imposed on a Base-to-Base transfer (SRC-005). Unknown enforceability means zero collateral credit, not a larger haircut.
 

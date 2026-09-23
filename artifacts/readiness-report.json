@@ -34,7 +34,7 @@
       "status": "VERIFIED_LOCAL"
     },
     {
-      "detail": "Source register contains 13 classified evidence rows.",
+      "detail": "Source register contains 12 classified evidence rows.",
       "evidence": [
         "artifacts/source-register.csv",
         "02-research/snapshots"

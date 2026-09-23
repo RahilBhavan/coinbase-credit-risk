@@ -22,7 +22,7 @@ This scorecard defines an independent review workflow. Blank fields, generated q
 ### Pass criteria
 
 - [ ] Available proceeds equal $3,870,600 within $1
-- [ ] Collateral cap equals $3,096,480 within $1
+- [ ] Collateral cap equals $3,046,480 within $1
 - [ ] Reviewer documents independent steps and identifies any ambiguity
 
 **Reviewer name or identifier:** ____________________

@@ -119,6 +119,7 @@ template = r"""<!doctype html>
 <header><h1>MARA-CR-001 credit decision</h1><p>Hypothetical $5 million facility | public issuer facts + fictional transaction terms</p></header>
 <main id="main-content" tabindex="-1">
   <div class="boundary">MARA is not represented as a Coinbase customer. The facility, collateral, Base route, policy caps, and portfolio are fictional. This view supports an independent case study, not a real credit decision.</div>
+  <p class="muted">Download: <a href="credit-memo.pdf">credit memo (PDF)</a> | <a href="committee-packet.pdf">committee packet (PDF)</a> | <a href="reviewer-scorecard.pdf">reviewer scorecard (PDF)</a></p>
   <div class="toolbar" aria-label="Decision view actions">
     <button id="copySummary" type="button">Copy scenario summary</button>
     <button id="downloadScenario" type="button">Download scenario JSON</button>
@@ -456,12 +457,13 @@ function evaluateWhatIf(inputs){
  const gross=quantity*Number(whatIf.quoted_price_usd)*Math.max(0,1-stress);
  const executionCost=gross*executionBps/10000,delayCost=gross*delay*Number(whatIf.delay_cost_bps_per_hour)/10000;
  const available=blockers.length?0:Math.max(0,gross-executionCost-delayCost-Number(whatIf.fixed_cost_usd));
- const caps={obligor:Number(whatIf.obligor_cap_usd),collateral:available/Number(whatIf.required_coverage_ratio),single_name:Number(whatIf.single_name_cap_usd),concentration:Number(whatIf.concentration_cap_usd)};
- const binding=blockers.length?"hard_blocker":Object.entries(caps).sort((a,b)=>a[1]-b[1]||a[0].localeCompare(b[0]))[0][0];
+ const caps={obligor:Number(whatIf.obligor_cap_usd),collateral:Math.max(0,available/Number(whatIf.required_coverage_ratio)-Number(whatIf.accrued_amount_usd)),single_name:Number(whatIf.single_name_cap_usd),concentration:Number(whatIf.concentration_cap_usd)};
+ const lowest=Object.entries(caps).sort((a,b)=>a[1]-b[1]||a[0].localeCompare(b[0]))[0];
+ const binding=blockers.length?"hard_blocker":Number(whatIf.requested_commitment_usd)<lowest[1]?"requested":lowest[0];
  const raw=blockers.length?0:Math.min(Number(whatIf.requested_commitment_usd),...Object.values(caps));
  const increment=Number(whatIf.recommendation_increment_usd),recommended=raw===0?0:Math.floor((raw+1e-7)/increment)*increment;
  const proForma=recommended>0?recommended+Number(whatIf.accrued_amount_usd):0;
- return {available_proceeds_usd:available,collateral_cap_usd:caps.collateral,recommended_amount_usd:recommended,recommended_pro_forma_exposure_usd:proForma,coverage_surplus_usd:Math.max(0,available-proForma),binding_cap:binding,hard_blockers:blockers,decision:blockers.length||recommended===0?"decline":recommended>=Number(whatIf.requested_commitment_usd)?"approve":"approve_reduced"};
+ return {available_proceeds_usd:available,collateral_cap_usd:caps.collateral,recommended_amount_usd:recommended,recommended_pro_forma_exposure_usd:proForma,coverage_surplus_usd:available-proForma,binding_cap:binding,hard_blockers:blockers,decision:blockers.length||recommended===0?"decline":recommended>=Number(whatIf.requested_commitment_usd)?"approve":"approve_reduced"};
 }
 function renderLab(){
  const inputs=labInputs(),result=evaluateWhatIf(inputs);

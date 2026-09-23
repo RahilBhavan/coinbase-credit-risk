@@ -277,11 +277,11 @@ function formatCrossLinks(sheet, range) {
   s.getRange("C24:F28").values = [
     ["Decision measure", "Value", "Unit", "Formula note"],
     ["Required coverage ratio", "", "x", "Assumption link"],
-    ["Collateral cap", "", "USD", "Eligible proceeds ÷ coverage"],
+    ["Collateral cap", "", "USD", "Eligible proceeds ÷ coverage − accrued"],
     ["Exposure incl. accrued", "", "USD", "Funded + accrued"],
     ["Shortfall", "", "USD", "Max(0, exposure − eligible proceeds)"],
   ];
-  header(s, "C24:F24"); s.getRange("D25:D28").formulas = [["='Assumptions'!D12"],["=MAX(0,D21/D25)"],["='Assumptions'!D9+'Assumptions'!D10"],["=MAX(0,D27-D21)"]];
+  header(s, "C24:F24"); s.getRange("D25:D28").formulas = [["='Assumptions'!D12"],["=MAX(0,D21/D25-'Assumptions'!D10)"],["='Assumptions'!D9+'Assumptions'!D10"],["=MAX(0,D27-D21)"]];
   formatCrossLinks(s, "D25"); formatCrossLinks(s, "D27"); s.getRange("D26:D28").format.numberFormat = money;
   s.getRange("C31:H33").values = [["Interpretation", "Base-case ownership, priority, legal control, and route approval are simulated conditions precedent—not evidenced facts. Unknown or failed status sets proceeds to zero."],["Base note", "Chain state and protocol finality do not establish custody, enforceability, liquidation, withdrawal, or bank settlement."],["Reversal evidence", "Verified ownership, first-priority lien, enforceable control agreement, and approved tested repayment route."]];
   s.getRange("C31:C33").format.font = { bold: true, color: navy }; s.getRange("D31:H33").format.wrapText = true;
@@ -354,7 +354,7 @@ function formatCrossLinks(sheet, range) {
   s.getRange("C6:O11").values = [
     ["Scenario", "Price decline", "Execution cost", "Effective hours", "Delay bps/hr", "Accessible qty", "Legal gate", "Gross value", "Available proceeds", "Collateral cap", "Exposure + accrued", "Shortfall", "Decision effect"],
     ["Base: simulated CPs verified", 0.02, 0.005, 2, 0.00125, 4000000, "Clear", "", "", "", "", "", "$3.0m rounded conditional limit"],
-    ["30% USDC price decline", 0.30, 0.005, 2, 0.00125, 4000000, "Clear", "", "", "", "", "", "$2.2m rounded conditional limit"],
+    ["30% USDC price decline", 0.30, 0.005, 2, 0.00125, 4000000, "Clear", "", "", "", "", "", "$2.1m rounded conditional limit"],
     ["24-hour additional route delay", 0, 0.005, 26, 0.00125, 4000000, "Clear", "", "", "", "", "", "$3.0m rounded conditional limit"],
     ["Route unavailable", 0, 0.005, 2, 0.00125, 0, "Blocked", "", "", "", "", "", "Decline; no eligible proceeds"],
     ["Unknown enforceability", 0.02, 0.005, 2, 0.00125, 4000000, "Blocked", "", "", "", "", "", "Decline pending diligence"],
@@ -365,7 +365,7 @@ function formatCrossLinks(sheet, range) {
     s.getRange(`J${row}:N${row}`).formulas = [[
       `=H${row}*'Assumptions'!D19*(1-D${row})`,
       `=IF(I${row}=\"Blocked\",0,MAX(0,J${row}*(1-E${row}-F${row}*G${row})-'Assumptions'!D24))`,
-      `=MAX(0,K${row}/'Assumptions'!D12)`,
+      `=MAX(0,K${row}/'Assumptions'!D12-'Assumptions'!D10)`,
       `='Assumptions'!D9+'Assumptions'!D10`,
       `=MAX(0,M${row}-K${row})`,
     ]];
@@ -401,7 +401,7 @@ function formatCrossLinks(sheet, range) {
   for (let row = 8; row <= 12; row++) {
     for (let col = 4; col <= 11; col++) {
       const letter = String.fromCharCode(64 + col);
-      s.getRange(`${letter}${row}`).formulas = [[`=FLOOR(MIN('Assumptions'!$D$8,MAX(0,($C${row}*'Assumptions'!$D$19*(1-${letter}$7))*(1-'Assumptions'!$D$21-'Assumptions'!$D$22*'Assumptions'!$D$23)-'Assumptions'!$D$24)/'Assumptions'!$D$12,'Portfolio'!$D$22,'Portfolio'!$D$24,'Portfolio'!$D$25),'Assumptions'!$D$14)`]];
+      s.getRange(`${letter}${row}`).formulas = [[`=FLOOR(MAX(0,MIN('Assumptions'!$D$8,MAX(0,($C${row}*'Assumptions'!$D$19*(1-${letter}$7))*(1-'Assumptions'!$D$21-'Assumptions'!$D$22*'Assumptions'!$D$23)-'Assumptions'!$D$24)/'Assumptions'!$D$12-'Assumptions'!$D$10,'Portfolio'!$D$22,'Portfolio'!$D$24,'Portfolio'!$D$25)),'Assumptions'!$D$14)`]];
     }
   }
   s.getRange("D8:K12").format.numberFormat = money1;
@@ -434,7 +434,7 @@ function formatCrossLinks(sheet, range) {
     ["Funding gate", "", "status", "Conditional approval is not authority to fund"],
   ];
   header(s, "C7:F7");
-  s.getRange("D8:D16").formulas = [["='Assumptions'!D8"],["='Collateral'!D20"],["='Portfolio'!D22"],["='Portfolio'!D23"],["='Portfolio'!D24"],["='Portfolio'!D25"],["=IF(D9=\"YES\",0,FLOOR(MIN(D8,D10:D13),'Assumptions'!D14))"],["=IF(D9=\"YES\",\"DECLINE PENDING DILIGENCE\",IF(D14>=D8,\"APPROVE REQUESTED AMOUNT\",IF(D14>0,\"APPROVE $3.0M SUBJECT TO SIMULATED CONDITIONS PRECEDENT\",\"DECLINE\")))"],["='Conditions'!D10"]];
+  s.getRange("D8:D16").formulas = [["='Assumptions'!D8"],["='Collateral'!D20"],["='Portfolio'!D22"],["='Portfolio'!D23"],["='Portfolio'!D24"],["='Portfolio'!D25"],["=IF(D9=\"YES\",0,FLOOR(MIN(D8,D10:D13),'Assumptions'!D14))"],["=IF(D9=\"YES\",\"DECLINE PENDING DILIGENCE\",IF(D14>=D8,\"APPROVE REQUESTED AMOUNT\",IF(D14>0,\"APPROVE $\"&TEXT(D14/1000000,\"0.0\")&\"M SUBJECT TO SIMULATED CONDITIONS PRECEDENT\",\"DECLINE\")))"],["='Conditions'!D10"]];
   s.getRange("D8").format.numberFormat = money; s.getRange("D10:D14").format.numberFormat = money1;
   formatCrossLinks(s, "D16");
   s.getRange("D16").conditionalFormats.add("containsText", { text: "BLOCKED", format: { fill: paleRed, font: { bold: true, color: "#C00000" } } });
@@ -445,9 +445,9 @@ function formatCrossLinks(sheet, range) {
     ["Requested-draw recovery exposure", "", "USD", "Requested fully drawn amount plus accrued; used only for recovery testing"],
     ["Requested-draw recovery shortfall", "", "USD", "Requested-draw recovery exposure less eligible proceeds, floored at zero"],
     ["Recommended pro forma exposure", "", "USD", "Recommended limit plus accrued amount"],
-    ["Recommended-limit coverage surplus", "", "USD", "Eligible proceeds less recommended pro forma exposure, floored at zero"],
+    ["Recommended-limit coverage surplus", "", "USD", "Eligible proceeds less recommended pro forma exposure"],
   ];
-  header(s, "C17:F17"); s.getRange("D18:D23").formulas = [["='Collateral'!D15"],["='Collateral'!D21"],["='Collateral'!D27"],["='Collateral'!D28"],["=IF(D14>0,D14+'Assumptions'!D10,0)"],["=MAX(0,D19-D22)"]]; s.getRange("D18:D23").format.numberFormat = money1;
+  header(s, "C17:F17"); s.getRange("D18:D23").formulas = [["='Collateral'!D15"],["='Collateral'!D21"],["='Collateral'!D27"],["='Collateral'!D28"],["=IF(D14>0,D14+'Assumptions'!D10,0)"],["=D19-D22"]]; s.getRange("D18:D23").format.numberFormat = money1;
   s.getRange("C26:H30").values = [
     ["Action", "Requirement"],
     ["Decision", "Approve a $3.0 million conditional limit only if the simulated ownership, first-priority lien, enforceable control, and Base-to-cash route conditions are evidenced before funding."],

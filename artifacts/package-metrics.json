@@ -15,7 +15,7 @@
     "model_risk_count": 8,
     "monitoring_rule_count": 8,
     "scenario_count": 11,
-    "source_count": 13
+    "source_count": 12
   },
   "decision_view": {
     "collateral_call_row_count": 7,
@@ -25,8 +25,8 @@
     "what_if_vector_count": 4
   },
   "package": {
-    "integrity_manifest_file_count": 79,
-    "portable_bundle_artifact_count": 61
+    "integrity_manifest_file_count": 78,
+    "portable_bundle_artifact_count": 60
   },
   "review": {
     "committee_packet_bookmarks": 6,

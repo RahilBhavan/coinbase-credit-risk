@@ -43,9 +43,6 @@ Build a local one-screen view only if CR-01 through CR-06 already meet their dra
 
 The required build uses a spreadsheet editor, a PDF exporter, SEC filing snapshots, and standard CSV files. Public Coinbase Exchange data is optional. A Python standard-library fetch script is optional and should require no new package. A Base RPC client, JavaScript framework, database, cloud service, wallet, and x402 library are not required.
 
-## Ownership evidence
-
-
 ## Practical schedule
 
 | Session | Work | Hours |

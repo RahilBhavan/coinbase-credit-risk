@@ -13,6 +13,7 @@
 - [Basel Framework: General credit risk management](https://www.bis.org/committees/bcbs/basel-consolidated-guidelines/module/cri/10)
   Covers limits, independent credit review, monitoring, reporting, and control. Use for portfolio limits and governance.
 - [OCC Comptroller's Handbook index](https://www.occ.treas.gov/publications-and-resources/publications/comptrollers-handbook/index-comptrollers-handbook.html)
+  Primary examination handbooks on lending, liquidity, governance, custody, and credit ratings. Use to compare this case with regulated-bank practice.
 - [Python documentation: `decimal`](https://docs.python.org/3/library/decimal.html)
   Defines exact decimal arithmetic and rounding behavior. Use for the decision engine.
 - [Python documentation: `unittest`](https://docs.python.org/3/library/unittest.html)

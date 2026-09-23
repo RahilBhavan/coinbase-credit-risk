@@ -4,10 +4,6 @@ Status: unresolved at the end of planning
 
 | Decision or gap | Why it matters | Resolve before | Fallback |
 |---|---|---|---|
-| Spreadsheet and accounting fluency | Controls the realistic build pace | Workbook start | Use fewer ratios and document each formula |
-| Available weekly hours | Determines whether the interface is feasible | Scheduling | Deliver memo and workbook first |
-| New York hybrid feasibility | May affect role practicality | Application | Do not infer availability |
-| Current opening and exact requirements | Prior careers navigation was blocked by browser admin-policy verification | Application | Use the dated local role extract and recheck only through an allowed direct source later |
 | Facility use of proceeds and repayment source | Shapes obligor analysis | Case version 1 | Use working-capital liquidity with bullet maturity and label it assumed |
 | Fictional collateral asset and quantity | Drives Base relevance and recovery | Case version 1 | Use two alternate schedules, BTC offchain custody and USDC on Base, without claiming either is MARA property |
 | Legal-control policy | Determines whether unknown enforceability blocks approval | Workbook design | Use a hard blocker and zero eligible value |
@@ -21,6 +17,4 @@ Status: unresolved at the end of planning
 ## Recheck policy
 
 Record a date and source whenever an open item closes. Do not silently replace an assumption with a fact. Create a new case version when a resolved item changes a material result.
-
-Do not bypass the prior browser policy-verification restriction, use a proxy, or treat search snippets as current job requirements. Do not send outreach without user authorization.
 

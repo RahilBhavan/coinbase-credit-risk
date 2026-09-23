@@ -21,7 +21,6 @@ INCLUDED = (
     "artifacts/committee-packet-audit.json",
     "artifacts/control-matrix.csv",
     "artifacts/control-matrix.json",
-    "artifacts/current-opportunity-check.md",
     "artifacts/covenant-plan.csv",
     "artifacts/covenant-plan.json",
     "artifacts/escalation-playbook.csv",

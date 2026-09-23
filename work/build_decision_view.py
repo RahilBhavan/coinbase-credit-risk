@@ -118,7 +118,7 @@ template = r"""<!doctype html>
 <a class="skip-link" href="#main-content">Skip to decision content</a>
 <header><h1>MARA-CR-001 credit decision</h1><p>Hypothetical $5 million facility | public issuer facts + fictional transaction terms</p></header>
 <main id="main-content" tabindex="-1">
-  <div class="boundary">MARA is not represented as a Coinbase customer. The facility, collateral, Base route, policy caps, and portfolio are fictional. This view supports a student case, not a real credit decision.</div>
+  <div class="boundary">MARA is not represented as a Coinbase customer. The facility, collateral, Base route, policy caps, and portfolio are fictional. This view supports an independent case study, not a real credit decision.</div>
   <div class="toolbar" aria-label="Decision view actions">
     <button id="copySummary" type="button">Copy scenario summary</button>
     <button id="downloadScenario" type="button">Download scenario JSON</button>

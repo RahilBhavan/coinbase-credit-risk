@@ -31,5 +31,7 @@ The package is ready to share only when:
 - material validation checks pass or the affected claim is removed;
 - limitations and fictional terms are visible without opening this README;
 - a second reader reproduces a key number;
+- the author can explain the recommendation and opposing view without reading a script;
 - any external feedback is attributed accurately.
 
+Ready to share does not mean production-ready, legally reviewed, or endorsed by Coinbase.

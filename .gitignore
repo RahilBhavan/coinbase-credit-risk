@@ -22,6 +22,7 @@ venv/
 .idea/
 .vscode/
 
+# Local-only notes, not part of the project
 02-research/prior-plans/
 MISSION.md
 NOTES.md

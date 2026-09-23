@@ -124,7 +124,7 @@
     },
     "artifacts/package-metrics.json": {
       "bytes": 1493,
-      "sha256": "1e42db83728b011671d9b2534b34f6bac6f58d7df85ceb4e5131dcc58a15810d"
+      "sha256": "5bd1119032412e48f80f4a1e9ed0d791065a5f74c4c1d2dd358f5e52359a4c58"
     },
     "artifacts/package-metrics.md": {
       "bytes": 804,
@@ -152,7 +152,7 @@
     },
     "artifacts/reviewer-scorecard-audit.json": {
       "bytes": 486,
-      "sha256": "2b6f07642c65bb1c176a363985c17de87bd1af9dc7fafd2c78e249cb868b8e34"
+      "sha256": "ef62f440aa922dba5739d06999afb36ed2453d0cc5113242e39a5d3e211e1def"
     },
     "artifacts/reviewer-scorecard.csv": {
       "bytes": 2709,
@@ -200,7 +200,7 @@
     },
     "artifacts/workbook-audit.csv": {
       "bytes": 33239,
-      "sha256": "31848e3be45be60d878f0067a743d5b76da9fa8a896cc5233eac2c73a38f28c3"
+      "sha256": "d24d34c5385c0ae378db3dc1a1db45766e0a5637a8454b39079f6c2639a4829f"
     },
     "data/case/assumption_governance.json": {
       "bytes": 3912,
@@ -288,11 +288,11 @@
     },
     "outputs/credit-memo.pdf": {
       "bytes": 8025,
-      "sha256": "579a06a2ce6559825903ee7e5b4f62429cb9974edce6273811967026b776d0eb"
+      "sha256": "dbd13d57d38ef65af63f4c14bfeb32c1fbed66e3ac04c5c8c30ee30f1c04e2c9"
     },
     "outputs/credit-model.xlsx": {
-      "bytes": 87055,
-      "sha256": "267e29bcc635b79281735e94561f98fa024188f85fa9e67761076f7464519fe1"
+      "bytes": 86911,
+      "sha256": "b762c29477f83b91cce28b6b1c71bd73c6e1a96dde635285b881a27f9901a548"
     },
     "outputs/decision-view.html": {
       "bytes": 247387,
@@ -304,15 +304,15 @@
     },
     "outputs/opposing-memo.pdf": {
       "bytes": 3689,
-      "sha256": "2d41fca68dde48f9e17e3ec9727e8107a5b5bafbd8a9e3e019e2fd71f61da110"
+      "sha256": "0a20f27985d1a562ce71ddfa1f33c90603e92f77cd110ec5ca94ec914deb4ee2"
     },
     "outputs/reviewer-brief.pdf": {
       "bytes": 3923,
-      "sha256": "1a1107cf67a0b5ee8c5f62e2e0ae95512018269edb66418a31cae40fd837368b"
+      "sha256": "13a961b29ab56e1f625d786981f2cf4be02bebd79f7c29c237825beb1dde6323"
     },
     "outputs/reviewer-scorecard.pdf": {
       "bytes": 9534,
-      "sha256": "dbacd79130fde95e80cce464ec8ea644a60965b36d14c3287367cc76f8634b80"
+      "sha256": "1f46fe6b9456caba12ef970503a7aeb1ddcdce142fa8af5ba6b36530b8df10f8"
     }
   },
   "hash_algorithm": "sha256",

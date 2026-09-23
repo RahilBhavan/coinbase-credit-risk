@@ -62,6 +62,7 @@ def main() -> int:
         ("PDF package", [py, "work/build_pdfs.py"]),
         ("committee packet", [py, "work/build_committee_packet.py"]),
         ("workbook", ["node", "work/build_workbook.mjs"]),
+        ("workbook metadata", [py, "scripts/scrub_workbook_metadata.py"]),
         ("workbook audit", [py, "scripts/audit_workbook.py"]),
         ("regression tests", [py, "-m", "unittest", "discover", "-s", "tests", "-v"]),
         ("reviewer scorecard", [py, "scripts/build_reviewer_scorecard.py"]),

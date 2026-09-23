@@ -284,7 +284,7 @@ def build_opposing_memo():
         h("Do not manufacture a collateral constraint"),
         p("The conditional recommendation is precise but not yet persuasive. Its binding cap comes from an invented 4.0 million USDC lot and invented costs. The waterfall demonstrates a method; it does not establish an economically appropriate limit for MARA."),
         h("Scale points toward a different question"),
-        p("MARA reported $421.3 million of cash and cash equivalents and 26,307 unrestricted bitcoin at June 30, 2026 (SRC-001). A $5.0 million request is about 1.2% of reported cash. Reducing the request by $2.0 million because synthetic collateral supports only $3.096 million creates false precision."),
+        p("MARA reported $421.3 million of cash and cash equivalents and 26,307 unrestricted bitcoin at June 30, 2026 (SRC-001). A $5.0 million request is about 1.2% of reported cash. Reducing the request by $2.0 million because synthetic collateral supports only $3.046 million creates false precision."),
         p("The same filings report about $2.4 billion of debt, meaningful near-term obligations, designated cash, and $802.7 million of operating cash use in 2025 (SRC-001, SRC-002). Those facts justify private diligence. They do not justify letting fictional collateral replace primary repayment analysis."),
         h("Alternative decision"),
         p("<b>Decline on the present record.</b> Obtain the facility purpose, borrowing-entity financials, 13-week cash forecast, legal-entity cash map, complete debt-service schedule, and actual collateral terms. If the evidence supports repayment, assess the full $5.0 million request directly. If it does not, a smaller secured exposure is not automatically safe."),

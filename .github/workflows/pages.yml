@@ -22,7 +22,7 @@ jobs:
           mkdir -p _site
           cp outputs/decision-view.html _site/index.html
           cp outputs/reviewer-scorecard.pdf outputs/credit-memo.pdf outputs/committee-packet.pdf docs/social-card.png _site/
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with: { path: _site }
   deploy:
     needs: build

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Replace generator branding in xlsx theme names and document properties."""
+"""Normalize xlsx theme names to Office and document-property authorship to the project author."""
 
 from __future__ import annotations
 
@@ -11,22 +11,26 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_WORKBOOKS = [ROOT / "outputs" / "credit-model.xlsx"]
-BRANDING = re.compile(rb"ChatGPT|OpenAI|Codex")
-REPLACEMENTS = {"xl/theme/": b"Office", "docProps/": b"Rahil Bhavan"}
+AUTHOR = b"Rahil Bhavan"
+THEME_NAME = re.compile(rb'(<a:(?:theme|clrScheme|fontScheme|fmtScheme)\b[^>]*?\bname=")[^"]*"')
+PROPERTY = re.compile(rb"(<(Application|Company|dc:creator|cp:lastModifiedBy)>)[^<]*(</\2>)")
 
 
 def scrub(path: Path) -> bool:
-    """Rewrite branded members in place; every other member keeps its bytes and timestamp."""
+    """Rewrite theme and property members in place; every other member keeps its bytes and timestamp."""
     with zipfile.ZipFile(path) as source:
         members = [(info, source.read(info)) for info in source.infolist()]
     changed = False
     cleaned = []
     for info, data in members:
-        for prefix, replacement in REPLACEMENTS.items():
-            if info.filename.startswith(prefix):
-                updated = BRANDING.sub(replacement, data)
-                changed |= updated != data
-                data = updated
+        if info.filename.startswith("xl/theme/"):
+            updated = THEME_NAME.sub(rb'\1Office"', data)
+        elif info.filename.startswith("docProps/"):
+            updated = PROPERTY.sub(rb"\1" + AUTHOR + rb"\3", data)
+        else:
+            updated = data
+        changed |= updated != data
+        data = updated
         cleaned.append((info, data))
     if not changed:
         return False

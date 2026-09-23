@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -13,7 +14,21 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def skip_reason(command: list[str]) -> str | None:
+    if command[0] != "node":
+        return None
+    if shutil.which("node") is None:
+        return "node is not installed; keeping the committed output"
+    if command[1] == "work/build_workbook.mjs" and not (ROOT / "work/node_modules/@oai/artifact-tool").exists():
+        return "work/node_modules/@oai/artifact-tool (private Codex runtime package) is missing; keeping the committed outputs/credit-model.xlsx"
+    return None
+
+
 def run(label: str, command: list[str], env: dict[str, str]) -> None:
+    reason = skip_reason(command)
+    if reason:
+        print(f"\n[{label}] SKIPPED: {reason}", flush=True)
+        return
     print(f"\n[{label}] {' '.join(command)}", flush=True)
     subprocess.run(command, cwd=ROOT, env=env, check=True)
 

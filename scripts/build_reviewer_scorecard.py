@@ -6,6 +6,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import os
 from pathlib import Path
 
 from pypdf import PdfReader
@@ -19,6 +20,7 @@ from reviewer_evidence import gate_passes, load as load_reviewer_evidence, valid
 
 
 ROOT = Path(__file__).resolve().parents[1]
+os.environ.setdefault("SOURCE_DATE_EPOCH", "1789862400")  # 2026-09-20 case date; ReportLab reads it so rebuilt PDFs are byte-identical
 CONFIG = ROOT / "data" / "case" / "reviewer_gates.json"
 JSON_OUT = ROOT / "artifacts" / "reviewer-scorecard.json"
 CSV_OUT = ROOT / "artifacts" / "reviewer-scorecard.csv"

@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 import json
 
@@ -27,6 +28,7 @@ from reportlab.platypus import (
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUTS = ROOT / "outputs"
+os.environ.setdefault("SOURCE_DATE_EPOCH", "1789862400")  # 2026-09-20 case date; ReportLab reads it so rebuilt PDFs are byte-identical
 OUTPUTS.mkdir(exist_ok=True)
 
 NAVY = colors.HexColor("#16324F")

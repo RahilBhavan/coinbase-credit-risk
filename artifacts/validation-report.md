@@ -1,6 +1,6 @@
 # Validation report
 
-Executed: 2026-09-20
+Executed: 2026-09-22
 Reviewer: automated local validator (`scripts/validate_package.py`)
 Method: deterministic Python standard-library checks; no network access
 
@@ -14,7 +14,7 @@ Summary: 48 PASS, 0 FAIL, 0 SKIP
 | E-02 | PASS | Frozen source snapshots match registered hashes | Verified 5 immutable source snapshot(s). | 02-research/snapshots |
 | E-03 | PASS | Design and artifact source registers are identical | Registers match byte-for-byte. | artifacts/source-register.csv |
 | E-04 | PASS | Frozen filing facts reconcile to model and memo values | Reconciled 13 extracted filing facts; all model differences are within declared tolerances. | artifacts/issuer-fact-ledger.csv |
-| E-05 | PASS | Workbook audit matches the current workbook | Verified 171 passing checks against workbook SHA-256 8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e. | artifacts/workbook-audit.csv |
+| E-05 | PASS | Workbook audit matches the current workbook | Verified 171 passing checks against workbook SHA-256 0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09. | artifacts/workbook-audit.csv |
 | E-06 | PASS | Package integrity manifest matches review files | Verified SHA-256 and byte length for 76 package file(s). | artifacts/package-integrity.json |
 | E-07 | PASS | Threshold analysis is internally consistent | Verified four break-even targets, the $4m concentration ceiling, and a monotonic 40-cell decision surface. | artifacts/threshold-analysis.json |
 | D-01 | PASS | Project CSV files parse with unique headers | Parsed 20 CSV file(s). | . |

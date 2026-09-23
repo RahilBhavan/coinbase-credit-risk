@@ -1,172 +1,172 @@
 check_id,status,check,expected,actual,evidence,workbook_sha256
-W-001,PASS,Workbook sheet set,"Assumptions,Collateral,Conditions,Control Matrix,Covenants,Escalations,Financials,Liquidity,Model Risks,Monitoring,Portfolio,Rating,Scenarios,Sensitivity,Sources,Summary","Assumptions,Collateral,Conditions,Control Matrix,Covenants,Escalations,Financials,Liquidity,Model Risks,Monitoring,Portfolio,Rating,Scenarios,Sensitivity,Sources,Summary",xl/workbook.xml,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-002,PASS,Formula count,265,265,xl/worksheets/*.xml,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-R01,PASS,Rating factor RAT-01 matches case input,"('RAT-01', Decimal('0.25'), Decimal('1'))","('RAT-01', Decimal('0.25'), Decimal('1'))",Rating!C7:F7,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-R02,PASS,Rating factor RAT-02 matches case input,"('RAT-02', Decimal('0.25'), Decimal('4'))","('RAT-02', Decimal('0.25'), Decimal('4'))",Rating!C8:F8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-R03,PASS,Rating factor RAT-03 matches case input,"('RAT-03', Decimal('0.20'), Decimal('4'))","('RAT-03', Decimal('0.2'), Decimal('4'))",Rating!C9:F9,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-R04,PASS,Rating factor RAT-04 matches case input,"('RAT-04', Decimal('0.15'), Decimal('3'))","('RAT-04', Decimal('0.15'), Decimal('3'))",Rating!C10:F10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-R05,PASS,Rating factor RAT-05 matches case input,"('RAT-05', Decimal('0.15'), Decimal('4'))","('RAT-05', Decimal('0.15'), Decimal('4'))",Rating!C11:F11,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-R06,PASS,Rating weighted score,3.1,3.1,Rating!D15,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-R07,PASS,Rating grade,3 / Watchful,3 / Watchful,Rating!D16,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-M01,PASS,Monitoring rule MON-01 status matches plan,"('MON-01', 'pass_projection')","('MON-01', 'pass_projection')",Monitoring!C7:G7,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-M02,PASS,Monitoring rule MON-02 status matches plan,"('MON-02', 'pre_funding_blocked')","('MON-02', 'pre_funding_blocked')",Monitoring!C8:G8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-M03,PASS,Monitoring rule MON-03 status matches plan,"('MON-03', 'not_measured')","('MON-03', 'not_measured')",Monitoring!C9:G9,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-M04,PASS,Monitoring rule MON-04 status matches plan,"('MON-04', 'not_measured')","('MON-04', 'not_measured')",Monitoring!C10:G10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-M05,PASS,Monitoring rule MON-05 status matches plan,"('MON-05', 'not_measured')","('MON-05', 'not_measured')",Monitoring!C11:G11,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-M06,PASS,Monitoring rule MON-06 status matches plan,"('MON-06', 'not_measured')","('MON-06', 'not_measured')",Monitoring!C12:G12,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-M07,PASS,Monitoring rule MON-07 status matches plan,"('MON-07', 'pass_projection')","('MON-07', 'pass_projection')",Monitoring!C13:G13,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-M08,PASS,Monitoring rule MON-08 status matches plan,"('MON-08', 'not_measured')","('MON-08', 'not_measured')",Monitoring!C14:G14,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-M18,PASS,Monitoring summary D18,8,8,Monitoring!D18,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-M19,PASS,Monitoring summary D19,2,2,Monitoring!D19,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-M20,PASS,Monitoring summary D20,1,1,Monitoring!D20,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-M21,PASS,Monitoring summary D21,5,5,Monitoring!D21,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-C01,PASS,Covenant COV-01 matches plan,"('COV-01', 'pass_projection', 'MON-01')","('COV-01', 'pass_projection', 'MON-01')",Covenants!C7:M7,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-C02,PASS,Covenant COV-02 matches plan,"('COV-02', 'pre_funding_blocked', 'MON-02')","('COV-02', 'pre_funding_blocked', 'MON-02')",Covenants!C8:M8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-C03,PASS,Covenant COV-03 matches plan,"('COV-03', 'not_measured', 'MON-03')","('COV-03', 'not_measured', 'MON-03')",Covenants!C9:M9,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-C04,PASS,Covenant COV-04 matches plan,"('COV-04', 'not_measured', 'MON-04')","('COV-04', 'not_measured', 'MON-04')",Covenants!C10:M10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-C05,PASS,Covenant COV-05 matches plan,"('COV-05', 'not_measured', 'MON-05')","('COV-05', 'not_measured', 'MON-05')",Covenants!C11:M11,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-C06,PASS,Covenant COV-06 matches plan,"('COV-06', 'not_measured', 'MON-06')","('COV-06', 'not_measured', 'MON-06')",Covenants!C12:M12,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-C07,PASS,Covenant COV-07 matches plan,"('COV-07', 'pass_projection', 'MON-07')","('COV-07', 'pass_projection', 'MON-07')",Covenants!C13:M13,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-C08,PASS,Covenant COV-08 matches plan,"('COV-08', 'not_measured', 'MON-08')","('COV-08', 'not_measured', 'MON-08')",Covenants!C14:M14,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-C18,PASS,Covenant summary D18,8,8,Covenants!D18,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-C19,PASS,Covenant summary D19,2,2,Covenants!D19,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-C20,PASS,Covenant summary D20,1,1,Covenants!D20,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-C21,PASS,Covenant summary D21,5,5,Covenants!D21,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-E01,PASS,Escalation ESC-01 matches response plan,"('ESC-01', 'pass_projection', 'MON-01', 'COV-01')","('ESC-01', 'pass_projection', 'MON-01', 'COV-01')",Escalations!C7:N7,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-E02,PASS,Escalation ESC-02 matches response plan,"('ESC-02', 'pre_funding_blocked', 'MON-02', 'COV-02')","('ESC-02', 'pre_funding_blocked', 'MON-02', 'COV-02')",Escalations!C8:N8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-E03,PASS,Escalation ESC-03 matches response plan,"('ESC-03', 'not_measured', 'MON-03', 'COV-03')","('ESC-03', 'not_measured', 'MON-03', 'COV-03')",Escalations!C9:N9,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-E04,PASS,Escalation ESC-04 matches response plan,"('ESC-04', 'not_measured', 'MON-04', 'COV-04')","('ESC-04', 'not_measured', 'MON-04', 'COV-04')",Escalations!C10:N10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-E05,PASS,Escalation ESC-05 matches response plan,"('ESC-05', 'not_measured', 'MON-05', 'COV-05')","('ESC-05', 'not_measured', 'MON-05', 'COV-05')",Escalations!C11:N11,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-E06,PASS,Escalation ESC-06 matches response plan,"('ESC-06', 'not_measured', 'MON-06', 'COV-06')","('ESC-06', 'not_measured', 'MON-06', 'COV-06')",Escalations!C12:N12,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-E07,PASS,Escalation ESC-07 matches response plan,"('ESC-07', 'pass_projection', 'MON-07', 'COV-07')","('ESC-07', 'pass_projection', 'MON-07', 'COV-07')",Escalations!C13:N13,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-E08,PASS,Escalation ESC-08 matches response plan,"('ESC-08', 'not_measured', 'MON-08', 'COV-08')","('ESC-08', 'not_measured', 'MON-08', 'COV-08')",Escalations!C14:N14,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-E19,PASS,Escalation summary D19,8,8,Escalations!D19,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-E20,PASS,Escalation summary D20,3,3,Escalations!D20,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-E21,PASS,Escalation summary D21,4,4,Escalations!D21,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-E22,PASS,Escalation summary D22,1,1,Escalations!D22,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-E23,PASS,Escalation summary D23,1,1,Escalations!D23,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-E24,PASS,Escalation summary D24,5,5,Escalations!D24,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CM-S01,PASS,Control matrix summary D7,8,8,Control Matrix!D7,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CM-S02,PASS,Control matrix summary D8,9,9,Control Matrix!D8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CM-S03,PASS,Control matrix summary D9,3,3,Control Matrix!D9,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CM-S04,PASS,Control matrix summary D10,4,4,Control Matrix!D10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CM-S05,PASS,Control matrix summary D11,8,8,Control Matrix!D11,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CM01,PASS,Control matrix row CTL-01 matches artifact,"('CTL-01', 'CP-01, CP-02, CP-03, CP-04', 'outstanding', 'MON-01', 'COV-01', 'ESC-01', 'Head of credit risk')","('CTL-01', 'CP-01, CP-02, CP-03, CP-04', 'outstanding', 'MON-01', 'COV-01', 'ESC-01', 'Head of credit risk')",Control Matrix!C15:O15,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CM02,PASS,Control matrix row CTL-02 matches artifact,"('CTL-02', 'CP-01, CP-02, CP-03', 'outstanding', 'MON-02', 'COV-02', 'ESC-02', 'Credit and legal jointly')","('CTL-02', 'CP-01, CP-02, CP-03', 'outstanding', 'MON-02', 'COV-02', 'ESC-02', 'Credit and legal jointly')",Control Matrix!C16:O16,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CM03,PASS,Control matrix row CTL-03 matches artifact,"('CTL-03', 'CP-04', 'outstanding', 'MON-03', 'COV-03', 'ESC-03', 'Collateral operations lead')","('CTL-03', 'CP-04', 'outstanding', 'MON-03', 'COV-03', 'ESC-03', 'Collateral operations lead')",Control Matrix!C17:O17,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CM04,PASS,Control matrix row CTL-04 matches artifact,"('CTL-04', 'DD-01, DD-03', 'outstanding', 'MON-04', 'COV-04', 'ESC-04', 'Senior credit officer')","('CTL-04', 'DD-01, DD-03', 'outstanding', 'MON-04', 'COV-04', 'ESC-04', 'Senior credit officer')",Control Matrix!C18:O18,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CM05,PASS,Control matrix row CTL-05 matches artifact,"('CTL-05', 'DD-01, DD-02', 'outstanding', 'MON-05', 'COV-05', 'ESC-05', 'Credit risk manager')","('CTL-05', 'DD-01, DD-02', 'outstanding', 'MON-05', 'COV-05', 'ESC-05', 'Credit risk manager')",Control Matrix!C19:O19,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CM06,PASS,Control matrix row CTL-06 matches artifact,"('CTL-06', 'CP-02, DD-04', 'outstanding', 'MON-06', 'COV-06', 'ESC-06', 'Credit and legal jointly')","('CTL-06', 'CP-02, DD-04', 'outstanding', 'MON-06', 'COV-06', 'ESC-06', 'Credit and legal jointly')",Control Matrix!C20:O20,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CM07,PASS,Control matrix row CTL-07 matches artifact,"('CTL-07', 'PF-01', 'outstanding', 'MON-07', 'COV-07', 'ESC-07', 'Portfolio risk lead')","('CTL-07', 'PF-01', 'outstanding', 'MON-07', 'COV-07', 'ESC-07', 'Portfolio risk lead')",Control Matrix!C21:O21,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CM08,PASS,Control matrix row CTL-08 matches artifact,"('CTL-08', 'DD-01, DD-02, DD-03, DD-04', 'outstanding', 'MON-08', 'COV-08', 'ESC-08', 'Credit administration lead')","('CTL-08', 'DD-01, DD-02, DD-03, DD-04', 'outstanding', 'MON-08', 'COV-08', 'ESC-08', 'Credit administration lead')",Control Matrix!C22:O22,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-MR-S01,PASS,Model-risk summary D7,8,8,Model Risks!D7,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-MR-S02,PASS,Model-risk summary D8,3,3,Model Risks!D8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-MR-S03,PASS,Model-risk summary D9,4,4,Model Risks!D9,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-MR-S04,PASS,Model-risk summary D10,4,4,Model Risks!D10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-MR01,PASS,Model-risk row MR-01 matches artifact,"('MR-01', 'input', 'critical', 'open', 'ASM-C002, ASM-C003', 'CP-01, CP-02, CP-03, CP-04', 'Credit and collateral operations')","('MR-01', 'input', 'critical', 'open', 'ASM-C002, ASM-C003', 'CP-01, CP-02, CP-03, CP-04', 'Credit and collateral operations')",Model Risks!C15:O15,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-MR02,PASS,Model-risk row MR-02 matches artifact,"('MR-02', 'repayment', 'critical', 'open', 'ASM-C001, ASM-C004', 'DD-01, DD-02, DD-03, DD-04', 'Senior credit officer')","('MR-02', 'repayment', 'critical', 'open', 'ASM-C001, ASM-C004', 'DD-01, DD-02, DD-03, DD-04', 'Senior credit officer')",Model Risks!C16:O16,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-MR03,PASS,Model-risk row MR-03 matches artifact,"('MR-03', 'legal', 'critical', 'open', 'ASM-C007', 'CP-01, CP-02, CP-03', 'Legal')","('MR-03', 'legal', 'critical', 'open', 'ASM-C007', 'CP-01, CP-02, CP-03', 'Legal')",Model Risks!C17:O17,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-MR04,PASS,Model-risk row MR-04 matches artifact,"('MR-04', 'market_data', 'high', 'open', 'ASM-C003', 'CP-04', 'Market risk and collateral operations')","('MR-04', 'market_data', 'high', 'open', 'ASM-C003', 'CP-04', 'Market risk and collateral operations')",Model Risks!C18:O18,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-MR05,PASS,Model-risk row MR-05 matches artifact,"('MR-05', 'methodology', 'high', 'open', 'ASM-C004', 'DD-01, DD-03, DD-04', 'Credit methodology')","('MR-05', 'methodology', 'high', 'open', 'ASM-C004', 'DD-01, DD-03, DD-04', 'Credit methodology')",Model Risks!C19:O19,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-MR06,PASS,Model-risk row MR-06 matches artifact,"('MR-06', 'portfolio', 'high', 'open', 'ASM-C005', 'PF-01', 'Portfolio risk')","('MR-06', 'portfolio', 'high', 'open', 'ASM-C005', 'PF-01', 'Portfolio risk')",Model Risks!C20:O20,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-MR07,PASS,Model-risk row MR-07 matches artifact,"('MR-07', 'operations', 'high', 'open', 'ASM-C006', 'CP-04', 'Treasury and operations')","('MR-07', 'operations', 'high', 'open', 'ASM-C006', 'CP-04', 'Treasury and operations')",Model Risks!C21:O21,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-MR08,PASS,Model-risk row MR-08 matches artifact,"('MR-08', 'implementation', 'medium', 'open', 'None', 'None', 'Independent model reviewer')","('MR-08', 'implementation', 'medium', 'open', 'None', 'None', 'Independent model reviewer')",Model Risks!C22:O22,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-A01,PASS,Assumption ASM-C001 governance matches register,"('ASM-C001', 'high', 'unvalidated')","('ASM-C001', 'high', 'unvalidated')",Assumptions!C45:E45,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-A02,PASS,Assumption ASM-C002 governance matches register,"('ASM-C002', 'critical', 'unvalidated')","('ASM-C002', 'critical', 'unvalidated')",Assumptions!C46:E46,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-A03,PASS,Assumption ASM-C003 governance matches register,"('ASM-C003', 'critical', 'unvalidated')","('ASM-C003', 'critical', 'unvalidated')",Assumptions!C47:E47,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-A04,PASS,Assumption ASM-C004 governance matches register,"('ASM-C004', 'high', 'unvalidated')","('ASM-C004', 'high', 'unvalidated')",Assumptions!C48:E48,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-A05,PASS,Assumption ASM-C005 governance matches register,"('ASM-C005', 'high', 'unvalidated')","('ASM-C005', 'high', 'unvalidated')",Assumptions!C49:E49,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-A06,PASS,Assumption ASM-C006 governance matches register,"('ASM-C006', 'high', 'unvalidated')","('ASM-C006', 'high', 'unvalidated')",Assumptions!C50:E50,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-A07,PASS,Assumption ASM-C007 governance matches register,"('ASM-C007', 'critical', 'unvalidated')","('ASM-C007', 'critical', 'unvalidated')",Assumptions!C51:E51,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-003,PASS,Summary funding gate links to Conditions,'Conditions'!D10,'Conditions'!D10,Summary!D16,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-004,PASS,Workbook condition count,9,9,Conditions!D8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-005,PASS,Workbook outstanding-condition count,9,9,Conditions!D9,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-006,PASS,Workbook funding gate,BLOCKED PENDING CONDITIONS,BLOCKED PENDING CONDITIONS,Conditions!D10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-007,PASS,Workbook funding-gate formula,"IF(D9>0,""BLOCKED PENDING CONDITIONS"",""CLEARED TO FUND"")","IF(D9>0,""BLOCKED PENDING CONDITIONS"",""CLEARED TO FUND"")",Conditions!D10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-081,PASS,Condition CP-01 matches case register,CP-01|outstanding|ASM-C007|yes,CP-01|outstanding|ASM-C007|yes,Conditions!C14:K14,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-082,PASS,Condition CP-02 matches case register,CP-02|outstanding|ASM-C007|yes,CP-02|outstanding|ASM-C007|yes,Conditions!C15:K15,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-083,PASS,Condition CP-03 matches case register,CP-03|outstanding|ASM-C007|yes,CP-03|outstanding|ASM-C007|yes,Conditions!C16:K16,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-084,PASS,Condition CP-04 matches case register,CP-04|outstanding|ASM-C007|yes,CP-04|outstanding|ASM-C007|yes,Conditions!C17:K17,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-085,PASS,Condition DD-01 matches case register,DD-01|outstanding|ASM-C001|yes,DD-01|outstanding|ASM-C001|yes,Conditions!C18:K18,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-086,PASS,Condition DD-02 matches case register,DD-02|outstanding|ASM-C001|yes,DD-02|outstanding|ASM-C001|yes,Conditions!C19:K19,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-087,PASS,Condition DD-03 matches case register,DD-03|outstanding|ASM-C001|yes,DD-03|outstanding|ASM-C001|yes,Conditions!C20:K20,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-088,PASS,Condition DD-04 matches case register,DD-04|outstanding|ASM-C001|yes,DD-04|outstanding|ASM-C001|yes,Conditions!C21:K21,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-089,PASS,Condition PF-01 matches case register,PF-01|outstanding|ASM-C005|yes,PF-01|outstanding|ASM-C005|yes,Conditions!C22:K22,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-010,PASS,Assumption D8 matches case input,5000000,5000000,Assumptions!D8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-011,PASS,Assumption D9 matches case input,5000000,5000000,Assumptions!D9,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-012,PASS,Assumption D10 matches case input,50000,50000,Assumptions!D10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-013,PASS,Assumption D12 matches case input,1.25,1.25,Assumptions!D12,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-014,PASS,Assumption D13 matches case input,7500000,7500000,Assumptions!D13,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-015,PASS,Assumption D14 matches case input,100000,100000,Assumptions!D14,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-016,PASS,Assumption D18 matches case input,4000000,4000000,Assumptions!D18,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-017,PASS,Assumption D19 matches case input,1,1,Assumptions!D19,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-018,PASS,Assumption D20 matches case input,0.02,0.02,Assumptions!D20,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-019,PASS,Assumption D21 matches case input,0.005,0.005,Assumptions!D21,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-020,PASS,Assumption D22 matches case input,2,2,Assumptions!D22,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-021,PASS,Assumption D23 matches case input,0.00125,0.00125,Assumptions!D23,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-022,PASS,Assumption D24 matches case input,20000,20000,Assumptions!D24,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-023,PASS,Assumption D32 matches case input,6000000,6000000,Assumptions!D32,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-030,PASS,Summary D8 matches engine base case,5000000.00,5000000,Summary!D8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-031,PASS,Summary D10 matches engine base case,7500000.00,7500000,Summary!D10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-032,PASS,Summary D11 matches engine base case,3096480.00,3096480,Summary!D11,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-033,PASS,Summary D12 matches engine base case,6000000.00,6000000,Summary!D12,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-034,PASS,Summary D13 matches engine base case,4000000.00,4000000,Summary!D13,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-035,PASS,Summary D14 matches engine base case,3000000.00,3000000,Summary!D14,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-036,PASS,Summary D18 matches engine base case,3870600.00,3870600,Summary!D18,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-037,PASS,Summary D19 matches engine base case,3870600.00,3870600,Summary!D19,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-038,PASS,Summary D20 matches engine base case,5050000.00,5050000,Summary!D20,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-039,PASS,Summary D21 matches engine base case,1179400.00,1179400,Summary!D21,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-040,PASS,Summary D22 matches engine base case,3050000.00,3050000,Summary!D22,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-041,PASS,Summary D23 matches engine base case,820600.00,820600,Summary!D23,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-040,PASS,Summary binding formula,"IF(D9=""YES"",0,FLOOR(MIN(D8,D10:D13),'Assumptions'!D14))","IF(D9=""YES"",0,FLOOR(MIN(D8,D10:D13),'Assumptions'!D14))",Summary!D14,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CC01,PASS,Collateral-call row 1 matches governed ladder,"(Decimal('0.02'), Decimal('3870600.00'), 'PASS', Decimal('58100.00'), Decimal('0.00'), Decimal('3000000.00'))","(Decimal('0.02'), Decimal('3870600'), 'PASS', Decimal('58100'), Decimal('0.00'), Decimal('3000000'))",Collateral!C38:L38,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CC02,PASS,Collateral-call row 2 matches governed ladder,"(Decimal('0.05'), Decimal('3751500.00'), 'CALL_REQUIRED', Decimal('-61000.00'), Decimal('64695.74'), Decimal('2900000.00'))","(Decimal('0.05'), Decimal('3751500'), 'CALL_REQUIRED', Decimal('-61000'), Decimal('64695.74'), Decimal('2900000'))",Collateral!C39:L39,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CC03,PASS,Collateral-call row 3 matches governed ladder,"(Decimal('0.10'), Decimal('3553000.00'), 'CALL_REQUIRED', Decimal('-259500.00'), Decimal('290512.17'), Decimal('2700000.00'))","(Decimal('0.1'), Decimal('3553000'), 'CALL_REQUIRED', Decimal('-259500'), Decimal('290512.17'), Decimal('2700000'))",Collateral!C40:L40,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CC04,PASS,Collateral-call row 4 matches governed ladder,"(Decimal('0.20'), Decimal('3156000.00'), 'CALL_REQUIRED', Decimal('-656500.00'), Decimal('826826.20'), Decimal('2400000.00'))","(Decimal('0.2'), Decimal('3156000'), 'CALL_REQUIRED', Decimal('-656500'), Decimal('826826.20'), Decimal('2400000'))",Collateral!C41:L41,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CC05,PASS,Collateral-call row 5 matches governed ladder,"(Decimal('0.30'), Decimal('2759000.00'), 'CALL_REQUIRED', Decimal('-1053500.00'), Decimal('1516372.80'), Decimal('2100000.00'))","(Decimal('0.3'), Decimal('2759000'), 'CALL_REQUIRED', Decimal('-1053500'), Decimal('1516372.80'), Decimal('2100000'))",Collateral!C42:L42,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CC06,PASS,Collateral-call row 6 matches governed ladder,"(Decimal('0.40'), Decimal('2362000.00'), 'CALL_REQUIRED', Decimal('-1450500.00'), Decimal('2435768.26'), Decimal('1800000.00'))","(Decimal('0.4'), Decimal('2362000'), 'CALL_REQUIRED', Decimal('-1450500'), Decimal('2435768.26'), Decimal('1800000'))",Collateral!C43:L43,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CC07,PASS,Collateral-call row 7 matches governed ladder,"(Decimal('0.50'), Decimal('1965000.00'), 'CALL_REQUIRED', Decimal('-1847500.00'), Decimal('3722921.91'), Decimal('1500000.00'))","(Decimal('0.5'), Decimal('1965000'), 'CALL_REQUIRED', Decimal('-1847500'), Decimal('3722921.91'), Decimal('1500000'))",Collateral!C44:L44,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-CC08,PASS,Exact modeled breach stress,0.034635,0.034635,Collateral!D46,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-057-K,PASS,Scenario base K matches engine,3870600.00,3870600,Scenarios!K7,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-057-L,PASS,Scenario base L matches engine,3096480.00,3096480,Scenarios!L7,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-057-M,PASS,Scenario base M matches engine,5050000.00,5050000,Scenarios!M7,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-057-N,PASS,Scenario base N matches engine,1179400.00,1179400,Scenarios!N7,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-058-K,PASS,Scenario collateral_down_30 K matches engine,2759000.00,2759000,Scenarios!K8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-058-L,PASS,Scenario collateral_down_30 L matches engine,2207200.00,2207200,Scenarios!L8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-058-M,PASS,Scenario collateral_down_30 M matches engine,5050000.00,5050000,Scenarios!M8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-058-N,PASS,Scenario collateral_down_30 N matches engine,2291000.00,2291000,Scenarios!N8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-059-K,PASS,Scenario route_delay_24h K matches engine,3830000.00,3830000,Scenarios!K9,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-059-L,PASS,Scenario route_delay_24h L matches engine,3064000.00,3064000,Scenarios!L9,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-059-M,PASS,Scenario route_delay_24h M matches engine,5050000.00,5050000,Scenarios!M9,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-059-N,PASS,Scenario route_delay_24h N matches engine,1220000.00,1220000,Scenarios!N9,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-060-K,PASS,Scenario route_failure K matches engine,0.00,0,Scenarios!K10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-060-L,PASS,Scenario route_failure L matches engine,0.00,0,Scenarios!L10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-060-M,PASS,Scenario route_failure M matches engine,5050000.00,5050000,Scenarios!M10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-060-N,PASS,Scenario route_failure N matches engine,5050000.00,5050000,Scenarios!N10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-0701,PASS,Workbook FIN-001 matches fact ledger,421300000,421300000,Financials!E7,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-0702,PASS,Workbook FIN-002 matches fact ledger,0.30,0.3,Financials!E8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-0703,PASS,Workbook FIN-003 matches fact ledger,35577,35577,Financials!E9,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-0704,PASS,Workbook FIN-004 matches fact ledger,2100000000,2100000000,Financials!E10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-0705,PASS,Workbook FIN-005 matches fact ledger,4742,4742,Financials!E11,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-0706,PASS,Workbook FIN-006 matches fact ledger,4528,4528,Financials!E12,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-0707,PASS,Workbook FIN-007 matches fact ledger,26307,26307,Financials!E13,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-0708,PASS,Workbook FIN-008 matches fact ledger,2400000000,2400000000,Financials!E17,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-0709,PASS,Workbook FIN-009 matches fact ledger,150000000,150000000,Financials!E18,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-0710,PASS,Workbook FIN-010 matches fact ledger,48100000,48100000,Financials!E19,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-0711,PASS,Workbook FIN-011 matches fact ledger,-802700000,-802700000,Financials!E20,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-0712,PASS,Workbook FIN-012 matches fact ledger,291600000,291600000,Financials!E21,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-0713,PASS,Workbook FIN-013 matches fact ledger,3600000000,3600000000,Financials!E22,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-L01,PASS,Liquidity line LIQ-01 matches analysis,"('LIQ-01', Decimal('421300000.00'))","('LIQ-01', Decimal('421300000'))",Liquidity!C7:E7,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-L02,PASS,Liquidity line LIQ-02 matches analysis,"('LIQ-02', Decimal('-126390000.00'))","('LIQ-02', Decimal('-126390000'))",Liquidity!C8:E8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-L03,PASS,Liquidity line LIQ-03 matches analysis,"('LIQ-03', Decimal('294910000.00'))","('LIQ-03', Decimal('294910000'))",Liquidity!C9:E9,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-L04,PASS,Liquidity line LIQ-04 matches analysis,"('LIQ-04', Decimal('-150000000.00'))","('LIQ-04', Decimal('-150000000'))",Liquidity!C10:E10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-L05,PASS,Liquidity line LIQ-05 matches analysis,"('LIQ-05', Decimal('-48100000.00'))","('LIQ-05', Decimal('-48100000'))",Liquidity!C11:E11,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-L06,PASS,Liquidity line LIQ-06 matches analysis,"('LIQ-06', Decimal('96810000.00'))","('LIQ-06', Decimal('96810000'))",Liquidity!C12:E12,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-L07,PASS,Liquidity line LIQ-07 matches analysis,"('LIQ-07', Decimal('-291600000.00'))","('LIQ-07', Decimal('-291600000'))",Liquidity!C13:E13,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-L08,PASS,Liquidity line LIQ-08 matches analysis,"('LIQ-08', Decimal('-194790000.00'))","('LIQ-08', Decimal('-194790000'))",Liquidity!C14:E14,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-L09,PASS,Liquidity line LIQ-09 matches analysis,"('LIQ-09', Decimal('-802700000.00'))","('LIQ-09', Decimal('-802700000'))",Liquidity!C15:E15,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-S01,PASS,Sensitivity D8 matches decision surface,1500000.00,1500000,Sensitivity!D8,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-S02,PASS,Sensitivity E10 matches decision surface,3000000.00,3000000,Sensitivity!E10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-S03,PASS,Sensitivity H10 matches decision surface,2500000.00,2500000,Sensitivity!H10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-S04,PASS,Sensitivity K10 matches decision surface,1500000.00,1500000,Sensitivity!K10,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
-W-S05,PASS,Sensitivity K12 matches decision surface,2300000.00,2300000,Sensitivity!K12,8d82455adb3ad8229ce3374c66ffd92ed5abadaea13e799b30a3fcc60d26703e
+W-001,PASS,Workbook sheet set,"Assumptions,Collateral,Conditions,Control Matrix,Covenants,Escalations,Financials,Liquidity,Model Risks,Monitoring,Portfolio,Rating,Scenarios,Sensitivity,Sources,Summary","Assumptions,Collateral,Conditions,Control Matrix,Covenants,Escalations,Financials,Liquidity,Model Risks,Monitoring,Portfolio,Rating,Scenarios,Sensitivity,Sources,Summary",xl/workbook.xml,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-002,PASS,Formula count,265,265,xl/worksheets/*.xml,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-R01,PASS,Rating factor RAT-01 matches case input,"('RAT-01', Decimal('0.25'), Decimal('1'))","('RAT-01', Decimal('0.25'), Decimal('1'))",Rating!C7:F7,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-R02,PASS,Rating factor RAT-02 matches case input,"('RAT-02', Decimal('0.25'), Decimal('4'))","('RAT-02', Decimal('0.25'), Decimal('4'))",Rating!C8:F8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-R03,PASS,Rating factor RAT-03 matches case input,"('RAT-03', Decimal('0.20'), Decimal('4'))","('RAT-03', Decimal('0.2'), Decimal('4'))",Rating!C9:F9,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-R04,PASS,Rating factor RAT-04 matches case input,"('RAT-04', Decimal('0.15'), Decimal('3'))","('RAT-04', Decimal('0.15'), Decimal('3'))",Rating!C10:F10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-R05,PASS,Rating factor RAT-05 matches case input,"('RAT-05', Decimal('0.15'), Decimal('4'))","('RAT-05', Decimal('0.15'), Decimal('4'))",Rating!C11:F11,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-R06,PASS,Rating weighted score,3.1,3.1,Rating!D15,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-R07,PASS,Rating grade,3 / Watchful,3 / Watchful,Rating!D16,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-M01,PASS,Monitoring rule MON-01 status matches plan,"('MON-01', 'pass_projection')","('MON-01', 'pass_projection')",Monitoring!C7:G7,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-M02,PASS,Monitoring rule MON-02 status matches plan,"('MON-02', 'pre_funding_blocked')","('MON-02', 'pre_funding_blocked')",Monitoring!C8:G8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-M03,PASS,Monitoring rule MON-03 status matches plan,"('MON-03', 'not_measured')","('MON-03', 'not_measured')",Monitoring!C9:G9,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-M04,PASS,Monitoring rule MON-04 status matches plan,"('MON-04', 'not_measured')","('MON-04', 'not_measured')",Monitoring!C10:G10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-M05,PASS,Monitoring rule MON-05 status matches plan,"('MON-05', 'not_measured')","('MON-05', 'not_measured')",Monitoring!C11:G11,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-M06,PASS,Monitoring rule MON-06 status matches plan,"('MON-06', 'not_measured')","('MON-06', 'not_measured')",Monitoring!C12:G12,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-M07,PASS,Monitoring rule MON-07 status matches plan,"('MON-07', 'pass_projection')","('MON-07', 'pass_projection')",Monitoring!C13:G13,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-M08,PASS,Monitoring rule MON-08 status matches plan,"('MON-08', 'not_measured')","('MON-08', 'not_measured')",Monitoring!C14:G14,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-M18,PASS,Monitoring summary D18,8,8,Monitoring!D18,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-M19,PASS,Monitoring summary D19,2,2,Monitoring!D19,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-M20,PASS,Monitoring summary D20,1,1,Monitoring!D20,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-M21,PASS,Monitoring summary D21,5,5,Monitoring!D21,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-C01,PASS,Covenant COV-01 matches plan,"('COV-01', 'pass_projection', 'MON-01')","('COV-01', 'pass_projection', 'MON-01')",Covenants!C7:M7,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-C02,PASS,Covenant COV-02 matches plan,"('COV-02', 'pre_funding_blocked', 'MON-02')","('COV-02', 'pre_funding_blocked', 'MON-02')",Covenants!C8:M8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-C03,PASS,Covenant COV-03 matches plan,"('COV-03', 'not_measured', 'MON-03')","('COV-03', 'not_measured', 'MON-03')",Covenants!C9:M9,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-C04,PASS,Covenant COV-04 matches plan,"('COV-04', 'not_measured', 'MON-04')","('COV-04', 'not_measured', 'MON-04')",Covenants!C10:M10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-C05,PASS,Covenant COV-05 matches plan,"('COV-05', 'not_measured', 'MON-05')","('COV-05', 'not_measured', 'MON-05')",Covenants!C11:M11,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-C06,PASS,Covenant COV-06 matches plan,"('COV-06', 'not_measured', 'MON-06')","('COV-06', 'not_measured', 'MON-06')",Covenants!C12:M12,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-C07,PASS,Covenant COV-07 matches plan,"('COV-07', 'pass_projection', 'MON-07')","('COV-07', 'pass_projection', 'MON-07')",Covenants!C13:M13,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-C08,PASS,Covenant COV-08 matches plan,"('COV-08', 'not_measured', 'MON-08')","('COV-08', 'not_measured', 'MON-08')",Covenants!C14:M14,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-C18,PASS,Covenant summary D18,8,8,Covenants!D18,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-C19,PASS,Covenant summary D19,2,2,Covenants!D19,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-C20,PASS,Covenant summary D20,1,1,Covenants!D20,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-C21,PASS,Covenant summary D21,5,5,Covenants!D21,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-E01,PASS,Escalation ESC-01 matches response plan,"('ESC-01', 'pass_projection', 'MON-01', 'COV-01')","('ESC-01', 'pass_projection', 'MON-01', 'COV-01')",Escalations!C7:N7,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-E02,PASS,Escalation ESC-02 matches response plan,"('ESC-02', 'pre_funding_blocked', 'MON-02', 'COV-02')","('ESC-02', 'pre_funding_blocked', 'MON-02', 'COV-02')",Escalations!C8:N8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-E03,PASS,Escalation ESC-03 matches response plan,"('ESC-03', 'not_measured', 'MON-03', 'COV-03')","('ESC-03', 'not_measured', 'MON-03', 'COV-03')",Escalations!C9:N9,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-E04,PASS,Escalation ESC-04 matches response plan,"('ESC-04', 'not_measured', 'MON-04', 'COV-04')","('ESC-04', 'not_measured', 'MON-04', 'COV-04')",Escalations!C10:N10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-E05,PASS,Escalation ESC-05 matches response plan,"('ESC-05', 'not_measured', 'MON-05', 'COV-05')","('ESC-05', 'not_measured', 'MON-05', 'COV-05')",Escalations!C11:N11,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-E06,PASS,Escalation ESC-06 matches response plan,"('ESC-06', 'not_measured', 'MON-06', 'COV-06')","('ESC-06', 'not_measured', 'MON-06', 'COV-06')",Escalations!C12:N12,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-E07,PASS,Escalation ESC-07 matches response plan,"('ESC-07', 'pass_projection', 'MON-07', 'COV-07')","('ESC-07', 'pass_projection', 'MON-07', 'COV-07')",Escalations!C13:N13,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-E08,PASS,Escalation ESC-08 matches response plan,"('ESC-08', 'not_measured', 'MON-08', 'COV-08')","('ESC-08', 'not_measured', 'MON-08', 'COV-08')",Escalations!C14:N14,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-E19,PASS,Escalation summary D19,8,8,Escalations!D19,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-E20,PASS,Escalation summary D20,3,3,Escalations!D20,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-E21,PASS,Escalation summary D21,4,4,Escalations!D21,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-E22,PASS,Escalation summary D22,1,1,Escalations!D22,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-E23,PASS,Escalation summary D23,1,1,Escalations!D23,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-E24,PASS,Escalation summary D24,5,5,Escalations!D24,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CM-S01,PASS,Control matrix summary D7,8,8,Control Matrix!D7,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CM-S02,PASS,Control matrix summary D8,9,9,Control Matrix!D8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CM-S03,PASS,Control matrix summary D9,3,3,Control Matrix!D9,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CM-S04,PASS,Control matrix summary D10,4,4,Control Matrix!D10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CM-S05,PASS,Control matrix summary D11,8,8,Control Matrix!D11,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CM01,PASS,Control matrix row CTL-01 matches artifact,"('CTL-01', 'CP-01, CP-02, CP-03, CP-04', 'outstanding', 'MON-01', 'COV-01', 'ESC-01', 'Head of credit risk')","('CTL-01', 'CP-01, CP-02, CP-03, CP-04', 'outstanding', 'MON-01', 'COV-01', 'ESC-01', 'Head of credit risk')",Control Matrix!C15:O15,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CM02,PASS,Control matrix row CTL-02 matches artifact,"('CTL-02', 'CP-01, CP-02, CP-03', 'outstanding', 'MON-02', 'COV-02', 'ESC-02', 'Credit and legal jointly')","('CTL-02', 'CP-01, CP-02, CP-03', 'outstanding', 'MON-02', 'COV-02', 'ESC-02', 'Credit and legal jointly')",Control Matrix!C16:O16,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CM03,PASS,Control matrix row CTL-03 matches artifact,"('CTL-03', 'CP-04', 'outstanding', 'MON-03', 'COV-03', 'ESC-03', 'Collateral operations lead')","('CTL-03', 'CP-04', 'outstanding', 'MON-03', 'COV-03', 'ESC-03', 'Collateral operations lead')",Control Matrix!C17:O17,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CM04,PASS,Control matrix row CTL-04 matches artifact,"('CTL-04', 'DD-01, DD-03', 'outstanding', 'MON-04', 'COV-04', 'ESC-04', 'Senior credit officer')","('CTL-04', 'DD-01, DD-03', 'outstanding', 'MON-04', 'COV-04', 'ESC-04', 'Senior credit officer')",Control Matrix!C18:O18,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CM05,PASS,Control matrix row CTL-05 matches artifact,"('CTL-05', 'DD-01, DD-02', 'outstanding', 'MON-05', 'COV-05', 'ESC-05', 'Credit risk manager')","('CTL-05', 'DD-01, DD-02', 'outstanding', 'MON-05', 'COV-05', 'ESC-05', 'Credit risk manager')",Control Matrix!C19:O19,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CM06,PASS,Control matrix row CTL-06 matches artifact,"('CTL-06', 'CP-02, DD-04', 'outstanding', 'MON-06', 'COV-06', 'ESC-06', 'Credit and legal jointly')","('CTL-06', 'CP-02, DD-04', 'outstanding', 'MON-06', 'COV-06', 'ESC-06', 'Credit and legal jointly')",Control Matrix!C20:O20,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CM07,PASS,Control matrix row CTL-07 matches artifact,"('CTL-07', 'PF-01', 'outstanding', 'MON-07', 'COV-07', 'ESC-07', 'Portfolio risk lead')","('CTL-07', 'PF-01', 'outstanding', 'MON-07', 'COV-07', 'ESC-07', 'Portfolio risk lead')",Control Matrix!C21:O21,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CM08,PASS,Control matrix row CTL-08 matches artifact,"('CTL-08', 'DD-01, DD-02, DD-03, DD-04', 'outstanding', 'MON-08', 'COV-08', 'ESC-08', 'Credit administration lead')","('CTL-08', 'DD-01, DD-02, DD-03, DD-04', 'outstanding', 'MON-08', 'COV-08', 'ESC-08', 'Credit administration lead')",Control Matrix!C22:O22,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-MR-S01,PASS,Model-risk summary D7,8,8,Model Risks!D7,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-MR-S02,PASS,Model-risk summary D8,3,3,Model Risks!D8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-MR-S03,PASS,Model-risk summary D9,4,4,Model Risks!D9,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-MR-S04,PASS,Model-risk summary D10,4,4,Model Risks!D10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-MR01,PASS,Model-risk row MR-01 matches artifact,"('MR-01', 'input', 'critical', 'open', 'ASM-C002, ASM-C003', 'CP-01, CP-02, CP-03, CP-04', 'Credit and collateral operations')","('MR-01', 'input', 'critical', 'open', 'ASM-C002, ASM-C003', 'CP-01, CP-02, CP-03, CP-04', 'Credit and collateral operations')",Model Risks!C15:O15,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-MR02,PASS,Model-risk row MR-02 matches artifact,"('MR-02', 'repayment', 'critical', 'open', 'ASM-C001, ASM-C004', 'DD-01, DD-02, DD-03, DD-04', 'Senior credit officer')","('MR-02', 'repayment', 'critical', 'open', 'ASM-C001, ASM-C004', 'DD-01, DD-02, DD-03, DD-04', 'Senior credit officer')",Model Risks!C16:O16,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-MR03,PASS,Model-risk row MR-03 matches artifact,"('MR-03', 'legal', 'critical', 'open', 'ASM-C007', 'CP-01, CP-02, CP-03', 'Legal')","('MR-03', 'legal', 'critical', 'open', 'ASM-C007', 'CP-01, CP-02, CP-03', 'Legal')",Model Risks!C17:O17,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-MR04,PASS,Model-risk row MR-04 matches artifact,"('MR-04', 'market_data', 'high', 'open', 'ASM-C003', 'CP-04', 'Market risk and collateral operations')","('MR-04', 'market_data', 'high', 'open', 'ASM-C003', 'CP-04', 'Market risk and collateral operations')",Model Risks!C18:O18,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-MR05,PASS,Model-risk row MR-05 matches artifact,"('MR-05', 'methodology', 'high', 'open', 'ASM-C004', 'DD-01, DD-03, DD-04', 'Credit methodology')","('MR-05', 'methodology', 'high', 'open', 'ASM-C004', 'DD-01, DD-03, DD-04', 'Credit methodology')",Model Risks!C19:O19,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-MR06,PASS,Model-risk row MR-06 matches artifact,"('MR-06', 'portfolio', 'high', 'open', 'ASM-C005', 'PF-01', 'Portfolio risk')","('MR-06', 'portfolio', 'high', 'open', 'ASM-C005', 'PF-01', 'Portfolio risk')",Model Risks!C20:O20,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-MR07,PASS,Model-risk row MR-07 matches artifact,"('MR-07', 'operations', 'high', 'open', 'ASM-C006', 'CP-04', 'Treasury and operations')","('MR-07', 'operations', 'high', 'open', 'ASM-C006', 'CP-04', 'Treasury and operations')",Model Risks!C21:O21,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-MR08,PASS,Model-risk row MR-08 matches artifact,"('MR-08', 'implementation', 'medium', 'open', 'None', 'None', 'Independent model reviewer')","('MR-08', 'implementation', 'medium', 'open', 'None', 'None', 'Independent model reviewer')",Model Risks!C22:O22,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-A01,PASS,Assumption ASM-C001 governance matches register,"('ASM-C001', 'high', 'unvalidated')","('ASM-C001', 'high', 'unvalidated')",Assumptions!C45:E45,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-A02,PASS,Assumption ASM-C002 governance matches register,"('ASM-C002', 'critical', 'unvalidated')","('ASM-C002', 'critical', 'unvalidated')",Assumptions!C46:E46,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-A03,PASS,Assumption ASM-C003 governance matches register,"('ASM-C003', 'critical', 'unvalidated')","('ASM-C003', 'critical', 'unvalidated')",Assumptions!C47:E47,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-A04,PASS,Assumption ASM-C004 governance matches register,"('ASM-C004', 'high', 'unvalidated')","('ASM-C004', 'high', 'unvalidated')",Assumptions!C48:E48,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-A05,PASS,Assumption ASM-C005 governance matches register,"('ASM-C005', 'high', 'unvalidated')","('ASM-C005', 'high', 'unvalidated')",Assumptions!C49:E49,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-A06,PASS,Assumption ASM-C006 governance matches register,"('ASM-C006', 'high', 'unvalidated')","('ASM-C006', 'high', 'unvalidated')",Assumptions!C50:E50,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-A07,PASS,Assumption ASM-C007 governance matches register,"('ASM-C007', 'critical', 'unvalidated')","('ASM-C007', 'critical', 'unvalidated')",Assumptions!C51:E51,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-003,PASS,Summary funding gate links to Conditions,'Conditions'!D10,'Conditions'!D10,Summary!D16,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-004,PASS,Workbook condition count,9,9,Conditions!D8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-005,PASS,Workbook outstanding-condition count,9,9,Conditions!D9,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-006,PASS,Workbook funding gate,BLOCKED PENDING CONDITIONS,BLOCKED PENDING CONDITIONS,Conditions!D10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-007,PASS,Workbook funding-gate formula,"IF(D9>0,""BLOCKED PENDING CONDITIONS"",""CLEARED TO FUND"")","IF(D9>0,""BLOCKED PENDING CONDITIONS"",""CLEARED TO FUND"")",Conditions!D10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-081,PASS,Condition CP-01 matches case register,CP-01|outstanding|ASM-C007|yes,CP-01|outstanding|ASM-C007|yes,Conditions!C14:K14,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-082,PASS,Condition CP-02 matches case register,CP-02|outstanding|ASM-C007|yes,CP-02|outstanding|ASM-C007|yes,Conditions!C15:K15,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-083,PASS,Condition CP-03 matches case register,CP-03|outstanding|ASM-C007|yes,CP-03|outstanding|ASM-C007|yes,Conditions!C16:K16,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-084,PASS,Condition CP-04 matches case register,CP-04|outstanding|ASM-C007|yes,CP-04|outstanding|ASM-C007|yes,Conditions!C17:K17,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-085,PASS,Condition DD-01 matches case register,DD-01|outstanding|ASM-C001|yes,DD-01|outstanding|ASM-C001|yes,Conditions!C18:K18,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-086,PASS,Condition DD-02 matches case register,DD-02|outstanding|ASM-C001|yes,DD-02|outstanding|ASM-C001|yes,Conditions!C19:K19,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-087,PASS,Condition DD-03 matches case register,DD-03|outstanding|ASM-C001|yes,DD-03|outstanding|ASM-C001|yes,Conditions!C20:K20,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-088,PASS,Condition DD-04 matches case register,DD-04|outstanding|ASM-C001|yes,DD-04|outstanding|ASM-C001|yes,Conditions!C21:K21,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-089,PASS,Condition PF-01 matches case register,PF-01|outstanding|ASM-C005|yes,PF-01|outstanding|ASM-C005|yes,Conditions!C22:K22,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-010,PASS,Assumption D8 matches case input,5000000,5000000,Assumptions!D8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-011,PASS,Assumption D9 matches case input,5000000,5000000,Assumptions!D9,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-012,PASS,Assumption D10 matches case input,50000,50000,Assumptions!D10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-013,PASS,Assumption D12 matches case input,1.25,1.25,Assumptions!D12,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-014,PASS,Assumption D13 matches case input,7500000,7500000,Assumptions!D13,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-015,PASS,Assumption D14 matches case input,100000,100000,Assumptions!D14,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-016,PASS,Assumption D18 matches case input,4000000,4000000,Assumptions!D18,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-017,PASS,Assumption D19 matches case input,1,1,Assumptions!D19,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-018,PASS,Assumption D20 matches case input,0.02,0.02,Assumptions!D20,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-019,PASS,Assumption D21 matches case input,0.005,0.005,Assumptions!D21,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-020,PASS,Assumption D22 matches case input,2,2,Assumptions!D22,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-021,PASS,Assumption D23 matches case input,0.00125,0.00125,Assumptions!D23,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-022,PASS,Assumption D24 matches case input,20000,20000,Assumptions!D24,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-023,PASS,Assumption D32 matches case input,6000000,6000000,Assumptions!D32,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-030,PASS,Summary D8 matches engine base case,5000000.00,5000000,Summary!D8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-031,PASS,Summary D10 matches engine base case,7500000.00,7500000,Summary!D10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-032,PASS,Summary D11 matches engine base case,3096480.00,3096480,Summary!D11,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-033,PASS,Summary D12 matches engine base case,6000000.00,6000000,Summary!D12,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-034,PASS,Summary D13 matches engine base case,4000000.00,4000000,Summary!D13,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-035,PASS,Summary D14 matches engine base case,3000000.00,3000000,Summary!D14,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-036,PASS,Summary D18 matches engine base case,3870600.00,3870600,Summary!D18,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-037,PASS,Summary D19 matches engine base case,3870600.00,3870600,Summary!D19,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-038,PASS,Summary D20 matches engine base case,5050000.00,5050000,Summary!D20,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-039,PASS,Summary D21 matches engine base case,1179400.00,1179400,Summary!D21,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-040,PASS,Summary D22 matches engine base case,3050000.00,3050000,Summary!D22,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-041,PASS,Summary D23 matches engine base case,820600.00,820600,Summary!D23,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-040,PASS,Summary binding formula,"IF(D9=""YES"",0,FLOOR(MIN(D8,D10:D13),'Assumptions'!D14))","IF(D9=""YES"",0,FLOOR(MIN(D8,D10:D13),'Assumptions'!D14))",Summary!D14,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CC01,PASS,Collateral-call row 1 matches governed ladder,"(Decimal('0.02'), Decimal('3870600.00'), 'PASS', Decimal('58100.00'), Decimal('0.00'), Decimal('3000000.00'))","(Decimal('0.02'), Decimal('3870600'), 'PASS', Decimal('58100'), Decimal('0.00'), Decimal('3000000'))",Collateral!C38:L38,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CC02,PASS,Collateral-call row 2 matches governed ladder,"(Decimal('0.05'), Decimal('3751500.00'), 'CALL_REQUIRED', Decimal('-61000.00'), Decimal('64695.74'), Decimal('2900000.00'))","(Decimal('0.05'), Decimal('3751500'), 'CALL_REQUIRED', Decimal('-61000'), Decimal('64695.74'), Decimal('2900000'))",Collateral!C39:L39,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CC03,PASS,Collateral-call row 3 matches governed ladder,"(Decimal('0.10'), Decimal('3553000.00'), 'CALL_REQUIRED', Decimal('-259500.00'), Decimal('290512.17'), Decimal('2700000.00'))","(Decimal('0.1'), Decimal('3553000'), 'CALL_REQUIRED', Decimal('-259500'), Decimal('290512.17'), Decimal('2700000'))",Collateral!C40:L40,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CC04,PASS,Collateral-call row 4 matches governed ladder,"(Decimal('0.20'), Decimal('3156000.00'), 'CALL_REQUIRED', Decimal('-656500.00'), Decimal('826826.20'), Decimal('2400000.00'))","(Decimal('0.2'), Decimal('3156000'), 'CALL_REQUIRED', Decimal('-656500'), Decimal('826826.20'), Decimal('2400000'))",Collateral!C41:L41,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CC05,PASS,Collateral-call row 5 matches governed ladder,"(Decimal('0.30'), Decimal('2759000.00'), 'CALL_REQUIRED', Decimal('-1053500.00'), Decimal('1516372.80'), Decimal('2100000.00'))","(Decimal('0.3'), Decimal('2759000'), 'CALL_REQUIRED', Decimal('-1053500'), Decimal('1516372.80'), Decimal('2100000'))",Collateral!C42:L42,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CC06,PASS,Collateral-call row 6 matches governed ladder,"(Decimal('0.40'), Decimal('2362000.00'), 'CALL_REQUIRED', Decimal('-1450500.00'), Decimal('2435768.26'), Decimal('1800000.00'))","(Decimal('0.4'), Decimal('2362000'), 'CALL_REQUIRED', Decimal('-1450500'), Decimal('2435768.26'), Decimal('1800000'))",Collateral!C43:L43,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CC07,PASS,Collateral-call row 7 matches governed ladder,"(Decimal('0.50'), Decimal('1965000.00'), 'CALL_REQUIRED', Decimal('-1847500.00'), Decimal('3722921.91'), Decimal('1500000.00'))","(Decimal('0.5'), Decimal('1965000'), 'CALL_REQUIRED', Decimal('-1847500'), Decimal('3722921.91'), Decimal('1500000'))",Collateral!C44:L44,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-CC08,PASS,Exact modeled breach stress,0.034635,0.034635,Collateral!D46,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-057-K,PASS,Scenario base K matches engine,3870600.00,3870600,Scenarios!K7,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-057-L,PASS,Scenario base L matches engine,3096480.00,3096480,Scenarios!L7,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-057-M,PASS,Scenario base M matches engine,5050000.00,5050000,Scenarios!M7,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-057-N,PASS,Scenario base N matches engine,1179400.00,1179400,Scenarios!N7,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-058-K,PASS,Scenario collateral_down_30 K matches engine,2759000.00,2759000,Scenarios!K8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-058-L,PASS,Scenario collateral_down_30 L matches engine,2207200.00,2207200,Scenarios!L8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-058-M,PASS,Scenario collateral_down_30 M matches engine,5050000.00,5050000,Scenarios!M8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-058-N,PASS,Scenario collateral_down_30 N matches engine,2291000.00,2291000,Scenarios!N8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-059-K,PASS,Scenario route_delay_24h K matches engine,3830000.00,3830000,Scenarios!K9,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-059-L,PASS,Scenario route_delay_24h L matches engine,3064000.00,3064000,Scenarios!L9,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-059-M,PASS,Scenario route_delay_24h M matches engine,5050000.00,5050000,Scenarios!M9,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-059-N,PASS,Scenario route_delay_24h N matches engine,1220000.00,1220000,Scenarios!N9,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-060-K,PASS,Scenario route_failure K matches engine,0.00,0,Scenarios!K10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-060-L,PASS,Scenario route_failure L matches engine,0.00,0,Scenarios!L10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-060-M,PASS,Scenario route_failure M matches engine,5050000.00,5050000,Scenarios!M10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-060-N,PASS,Scenario route_failure N matches engine,5050000.00,5050000,Scenarios!N10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-0701,PASS,Workbook FIN-001 matches fact ledger,421300000,421300000,Financials!E7,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-0702,PASS,Workbook FIN-002 matches fact ledger,0.30,0.3,Financials!E8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-0703,PASS,Workbook FIN-003 matches fact ledger,35577,35577,Financials!E9,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-0704,PASS,Workbook FIN-004 matches fact ledger,2100000000,2100000000,Financials!E10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-0705,PASS,Workbook FIN-005 matches fact ledger,4742,4742,Financials!E11,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-0706,PASS,Workbook FIN-006 matches fact ledger,4528,4528,Financials!E12,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-0707,PASS,Workbook FIN-007 matches fact ledger,26307,26307,Financials!E13,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-0708,PASS,Workbook FIN-008 matches fact ledger,2400000000,2400000000,Financials!E17,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-0709,PASS,Workbook FIN-009 matches fact ledger,150000000,150000000,Financials!E18,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-0710,PASS,Workbook FIN-010 matches fact ledger,48100000,48100000,Financials!E19,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-0711,PASS,Workbook FIN-011 matches fact ledger,-802700000,-802700000,Financials!E20,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-0712,PASS,Workbook FIN-012 matches fact ledger,291600000,291600000,Financials!E21,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-0713,PASS,Workbook FIN-013 matches fact ledger,3600000000,3600000000,Financials!E22,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-L01,PASS,Liquidity line LIQ-01 matches analysis,"('LIQ-01', Decimal('421300000.00'))","('LIQ-01', Decimal('421300000'))",Liquidity!C7:E7,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-L02,PASS,Liquidity line LIQ-02 matches analysis,"('LIQ-02', Decimal('-126390000.00'))","('LIQ-02', Decimal('-126390000'))",Liquidity!C8:E8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-L03,PASS,Liquidity line LIQ-03 matches analysis,"('LIQ-03', Decimal('294910000.00'))","('LIQ-03', Decimal('294910000'))",Liquidity!C9:E9,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-L04,PASS,Liquidity line LIQ-04 matches analysis,"('LIQ-04', Decimal('-150000000.00'))","('LIQ-04', Decimal('-150000000'))",Liquidity!C10:E10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-L05,PASS,Liquidity line LIQ-05 matches analysis,"('LIQ-05', Decimal('-48100000.00'))","('LIQ-05', Decimal('-48100000'))",Liquidity!C11:E11,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-L06,PASS,Liquidity line LIQ-06 matches analysis,"('LIQ-06', Decimal('96810000.00'))","('LIQ-06', Decimal('96810000'))",Liquidity!C12:E12,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-L07,PASS,Liquidity line LIQ-07 matches analysis,"('LIQ-07', Decimal('-291600000.00'))","('LIQ-07', Decimal('-291600000'))",Liquidity!C13:E13,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-L08,PASS,Liquidity line LIQ-08 matches analysis,"('LIQ-08', Decimal('-194790000.00'))","('LIQ-08', Decimal('-194790000'))",Liquidity!C14:E14,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-L09,PASS,Liquidity line LIQ-09 matches analysis,"('LIQ-09', Decimal('-802700000.00'))","('LIQ-09', Decimal('-802700000'))",Liquidity!C15:E15,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-S01,PASS,Sensitivity D8 matches decision surface,1500000.00,1500000,Sensitivity!D8,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-S02,PASS,Sensitivity E10 matches decision surface,3000000.00,3000000,Sensitivity!E10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-S03,PASS,Sensitivity H10 matches decision surface,2500000.00,2500000,Sensitivity!H10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-S04,PASS,Sensitivity K10 matches decision surface,1500000.00,1500000,Sensitivity!K10,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09
+W-S05,PASS,Sensitivity K12 matches decision surface,2300000.00,2300000,Sensitivity!K12,0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09

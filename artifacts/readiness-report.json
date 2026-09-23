@@ -105,7 +105,7 @@
       "status": "VERIFIED_LOCAL"
     }
   ],
-  "evaluated_on": "2026-09-20",
+  "evaluated_on": "2026-09-22",
   "human_gates": [
     {
       "evidence": "Execution worksheet is available in outputs/reviewer-scorecard.pdf; governed ledger outcome is OUTSTANDING. Required evidence: Dated calculation steps, reviewer role, result, variance, conclusion, and permission to attribute the review role.",

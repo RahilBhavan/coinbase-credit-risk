@@ -1,0 +1,2 @@
+# Keep generated CSV bytes (CRLF from the csv module) so integrity hashes hold in a clone
+*.csv -text

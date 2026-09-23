@@ -50,6 +50,10 @@
       "bytes": 7946,
       "sha256": "81d58ad89b708e483ef3107af0aeed4f10fda2ce7bd82fac1b227eb55c783d65"
     },
+    "artifacts/current-opportunity-check.md": {
+      "bytes": 1706,
+      "sha256": "93a57947202aa8c501d454110d29da0d8c59eaeb8122e3eb195f2ffe92318981"
+    },
     "artifacts/decision-lineage.csv": {
       "bytes": 3492,
       "sha256": "a88cd53e612dccf8b7095674cb21bb3876e61cc3064b8d26fc893d7d43912d06"
@@ -65,6 +69,10 @@
     "artifacts/decision-view-audit.json": {
       "bytes": 8050,
       "sha256": "71373889118c73cf825bc472ed56c190af11837fa96fd34355c43ed9873f49e3"
+    },
+    "artifacts/demo-audit.json": {
+      "bytes": 267,
+      "sha256": "beb4f87d95248c0b74f4f01732445806bed6fbf5ffb51a92be8f0fb067b94057"
     },
     "artifacts/diligence-plan.csv": {
       "bytes": 3834,
@@ -82,6 +90,10 @@
       "bytes": 6122,
       "sha256": "a95882cdbbfd2fc9091973d947402a8013ad765a6ea4c2fb5fe70d46e0517577"
     },
+    "artifacts/external-review-kit.md": {
+      "bytes": 3149,
+      "sha256": "aa67e1472b228d7897ceba73f64439cb9f085ebdc8dd6a231bd9e5b39b3ba048"
+    },
     "artifacts/issuer-fact-ledger.csv": {
       "bytes": 3004,
       "sha256": "3a8a828e36ef47e9bdbdd966fe7befd7cbff8aad2e149b89dfa4103f2aa5f841"
@@ -93,6 +105,9 @@
     "artifacts/liquidity-analysis.json": {
       "bytes": 2419,
       "sha256": "d2c6beb3960a406200ab13b8f3e0f9476c1aa5a75d14aa599b0fabb23e18e31e"
+    },
+      "bytes": 3111,
+      "sha256": "e929b218c60132128d6d39a740c9aa9300b4e8ed12bfab06f350bca363dba10a"
     },
     "artifacts/model-risk-register.csv": {
       "bytes": 3615,
@@ -116,11 +131,11 @@
     },
     "artifacts/package-metrics.json": {
       "bytes": 1493,
-      "sha256": "3d1684f69128e645292b5e2cdae1f4581bf184f02896508a80dc10b222ea1dd1"
+      "sha256": "85277b4cda6f578bf65ad057ac1e69ef3c4a9291c41a33da19e7e4ba77492f52"
     },
     "artifacts/package-metrics.md": {
       "bytes": 804,
-      "sha256": "02eb57824f7dee233af6d3af3b0d4bff7f7f0b2735e173fce2bc0de96747dd3d"
+      "sha256": "c70d84e166f8fce0a48d548df2ed9f35c54b456358d1d25016cce8fc04ecad4b"
     },
     "artifacts/rating-analysis.csv": {
       "bytes": 1784,
@@ -131,12 +146,12 @@
       "sha256": "4cd01b1016be38ad44d56b79354c2cfcb3948035917c2e959c87b6a5e2750367"
     },
     "artifacts/readiness-report.json": {
-      "bytes": 4882,
-      "sha256": "46a47483d5a55f557b43b2cf31e498ef5bc9f3d5d63ac314bcaf8aacb3dcc2fe"
+      "bytes": 4978,
+      "sha256": "c762942e10cda19af8523a9e11152c567d0befaa50a967db5548f7681e2c2c5b"
     },
     "artifacts/readiness-report.md": {
-      "bytes": 3666,
-      "sha256": "160061d300e4177d87dc3de486abce1368067f5ad8da16076d138d5281784159"
+      "bytes": 3754,
+      "sha256": "425a4ea6c25719711718317e759111c89e4eb0f11fb7e2f0e817537a904b0c53"
     },
     "artifacts/reviewer-brief.md": {
       "bytes": 2682,
@@ -144,7 +159,7 @@
     },
     "artifacts/reviewer-scorecard-audit.json": {
       "bytes": 486,
-      "sha256": "07a120a02095ea809f0b07e4d32763faeac403e1121fdc2e9413280e8fa2744d"
+      "sha256": "cf948c26169e064c2911100a3cf78e390eb3aec5a118abb9ae77f081fee96d89"
     },
     "artifacts/reviewer-scorecard.csv": {
       "bytes": 2709,
@@ -192,7 +207,7 @@
     },
     "artifacts/workbook-audit.csv": {
       "bytes": 33239,
-      "sha256": "8af6c0fcf1c0a6a17d0e4c9a0b6d9078fd50b974b81befa5787c382cca5efa81"
+      "sha256": "8669ac812d3b72e32bffef7b365573c8d5dc377e3ab27fd618951000740540e0"
     },
     "data/case/assumption_governance.json": {
       "bytes": 3912,
@@ -280,31 +295,31 @@
     },
     "outputs/credit-memo.pdf": {
       "bytes": 8010,
-      "sha256": "1029b95599f995305c657a08f4a1f07103577c9e312350f2b60bf43362abf7bf"
+      "sha256": "8b4a2a55e75632c0346d6f6ec86621c937d168bc562e2abb88f39eac86e19348"
     },
     "outputs/credit-model.xlsx": {
-      "bytes": 87000,
-      "sha256": "0ebbc6c74bf78948bb6bc8566aef77fb1cc86e060071ce5e9c0c37aaa8aebc09"
+      "bytes": 87006,
+      "sha256": "4d41bff85fee59c75737bfbf1e517c30dd6b94a63e165debe2c45ad62a94ca24"
     },
     "outputs/decision-view.html": {
-      "bytes": 246737,
-      "sha256": "6e6889b6527f74d9cbf52c31da47e57296ab3a6e27967c60f472db829d459850"
+      "bytes": 246824,
+      "sha256": "56babd2eae97808c0561f351f0755b608cfaedb24778ba6d5eb19249922de71d"
     },
     "outputs/demo.mp4": {
-      "bytes": 861842,
-      "sha256": "10b609e7f59a62a39d517014f665b4d66b19b88997c24de0d680a3986a974179"
+      "bytes": 3521817,
+      "sha256": "56fb2d42a120b1425ddb105045a0b1e1fd804a4777ccd4d59d7bef1b6f5781b3"
     },
     "outputs/opposing-memo.pdf": {
       "bytes": 3689,
-      "sha256": "9ea7bfeeaef99cb4f34ec0db177dacb98b63dd9c52ddb601aa06a1c747ad1136"
+      "sha256": "9ca9ebec10e495e52993cc5f313485c48f6b620524497915b7d58ae1db1875e9"
     },
     "outputs/reviewer-brief.pdf": {
       "bytes": 3889,
-      "sha256": "60abd5e19751d240f027b4959d7b918a5d196a6ac9c08a23b1abef419153a72f"
+      "sha256": "db8dd1813129614567149d70d499be5e0809f5568d66227b9b28bd584b7c13ed"
     },
     "outputs/reviewer-scorecard.pdf": {
       "bytes": 9534,
-      "sha256": "aa8db54a907e426db788b18036fb19f8cd24967de3022d04093a386f2d634a6d"
+      "sha256": "e0956486b74ece77c9ae96348cb44dffc3c369489d2ad079a9fe9fbb618b20d1"
     }
   },
   "hash_algorithm": "sha256",

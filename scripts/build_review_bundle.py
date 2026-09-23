@@ -21,6 +21,7 @@ FILES = (
     "outputs/reviewer-scorecard.pdf",
     "outputs/decision-view.html",
     "outputs/demo.mp4",
+    "artifacts/demo-audit.json",
     "artifacts/decision-record.json",
     "artifacts/package-metrics.json",
     "artifacts/package-metrics.md",
@@ -37,6 +38,7 @@ FILES = (
     "artifacts/monitoring-plan.json",
     "artifacts/model-risk-register.csv",
     "artifacts/model-risk-register.json",
+    "artifacts/external-review-kit.md",
     "artifacts/condition-register.csv",
     "artifacts/condition-register.json",
     "artifacts/collateral-call-ladder.csv",
@@ -44,6 +46,7 @@ FILES = (
     "artifacts/committee-packet-audit.json",
     "artifacts/control-matrix.csv",
     "artifacts/control-matrix.json",
+    "artifacts/current-opportunity-check.md",
     "artifacts/covenant-plan.csv",
     "artifacts/covenant-plan.json",
     "artifacts/escalation-playbook.csv",
@@ -96,9 +99,9 @@ This is a hypothetical student credit-risk case. MARA is not represented as a Co
 14. Review `artifacts/collateral-call-ladder.csv` for the modeled coverage breach point, cure amounts, and covenant-compliant commitment step-downs.
 15. Review `artifacts/control-matrix.csv` to trace every pre-funding condition through its monitoring rule, draft covenant, escalation playbook, authority, and exit criteria.
 16. Review `artifacts/model-risk-register.csv` for known model limitations, mitigations, evidence requirements, owners, and the required disposition if unresolved.
-17. Use `outputs/reviewer-scorecard.pdf` to execute and document the independent human gates that remain outstanding without treating a generated form as validation.
-18. Record completed gate evidence with `scripts/record_reviewer_gate.py`; the command rejects incomplete or unretained evidence and never treats local checks as human review.
-19. Use `artifacts/reproducibility.md` to rebuild or independently reproduce the $3.09648 million collateral cap.
+17. Use `artifacts/external-review-kit.md` and `outputs/reviewer-scorecard.pdf` to execute and document the independent human gates that remain outstanding without treating generated forms as validation.
+19. Record completed gate evidence with `scripts/record_reviewer_gate.py`; the command rejects incomplete or unretained evidence and never treats local checks as human review.
+21. Use `artifacts/reproducibility.md` to rebuild or independently reproduce the $3.09648 million collateral cap.
 
 ## Decision in one line
 

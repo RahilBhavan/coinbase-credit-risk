@@ -28,7 +28,8 @@ Updated: September 20, 2026
 | Package metrics | Verified locally | `package-metrics.md` / `package-metrics.json` | Generated counts and primary-output hashes; source of truth for package scale |
 | Readiness report | Verified locally | `readiness-report.md` / `readiness-report.json` | Maps CR-01 through CR-10 separately from outstanding human gates |
 | Decision view | Verified locally | `../outputs/decision-view.html` | Runtime-audited sticky review navigation, filterable model-risk triage, deep links, accessible control names, live decision state, call-ladder cures, print layout, copy-summary action, and embedded-data checks |
-| Demo | Verified locally | `../outputs/demo.mp4` | Captioned silent walkthrough; generated narration assets are not muxed |
+| Demo | Verified locally | `../outputs/demo.mp4` | Narrated 1080p walkthrough; audio/video streams, duration, slide count, and file hash recorded in `demo-audit.json` |
+| External review kit | Ready for execution | `external-review-kit.md` | Reviewer instructions and evidence requirements for HG-01 through HG-03; does not itself clear a gate |
 | Reviewer brief | Verified locally | `../outputs/reviewer-brief.pdf` | Authorized outreach remains |
 | Reviewer gate scorecard | Verified locally | `../outputs/reviewer-scorecard.pdf` | Four-page governed status summary and execution worksheet for HG-01 through HG-03; pass states derive only from the validated evidence ledger |
 | Reviewer evidence ledger | Verified locally | `../data/review/reviewer-evidence.json` | Three ordered gate records; incomplete, future-dated, path-escaping, missing-file, or partially failed PASS claims are rejected |

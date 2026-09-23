@@ -1,8 +1,8 @@
 # Reproducibility guide
 
-**Status:** Locally verified method record for MARA-CR-001  
-**Current implementation:** Deterministic Python engine, Excel workbook, scenario outputs, written artifacts, captioned demo video, and local validation  
-**Not available:** Private diligence, narrated demo mux, second-reader reproduction, or external review
+**Status:** Locally verified method record for MARA-CR-001
+**Current implementation:** Deterministic Python engine, Excel workbook, scenario outputs, written artifacts, narrated captioned demo video, and local validation
+**Not available:** Private diligence, Excel-native recalculation, second-reader reproduction, legal review, screen-reader session evidence, or external review
 
 ## Exact inputs used
 
@@ -40,7 +40,7 @@ The canonical full build is:
 python3 scripts/build_package.py
 ```
 
-This executes evidence extraction, public-data liquidity analysis, condition-register and rating-bridge generation, the base decision, monitoring-plan generation, all scenarios, PDF and workbook generation, the interactive view, workbook audit, regression tests, readiness reporting, integrity-manifest creation, package validation, and portable review-bundle creation in dependency order. Use `--with-demo` on macOS when the captioned video also needs regeneration.
+This executes evidence extraction, public-data liquidity analysis, condition-register and rating-bridge generation, the base decision, monitoring-plan generation, all scenarios, PDF and workbook generation, the interactive view, workbook audit, regression tests, readiness reporting, integrity-manifest creation, package validation, and portable review-bundle creation in dependency order. Use `--with-demo` on macOS when the narrated, captioned video also needs regeneration.
 
 The final step creates `../outputs/review-package.zip`. It contains `START-HERE.md`, the principal reviewer outputs, supporting audit artifacts, and `BUNDLE-MANIFEST.json`. The builder reopens the ZIP, checks its central directory, and recomputes every embedded SHA-256 digest before reporting success.
 
@@ -92,13 +92,13 @@ The resulting `workbook-audit.csv` records one row per check and the SHA-256 of 
 
 The three PDFs in `../outputs/` are built by `../work/build_pdfs.py`. The build uses ReportLab. The verification pass extracts text from every page, renders each page with Poppler, and visually checks the PNG output.
 
-The captioned walkthrough is `../outputs/demo.mp4`. Rebuild its slides, local narration assets, and video container with the bundled Python runtime:
+The narrated, captioned walkthrough is `../outputs/demo.mp4`. Rebuild its slides, local narration assets, and video container with Python 3:
 
 ```bash
-<local-path> work/build_demo.py
+python3 work/build_demo.py
 ```
 
-The builder compiles a small local AVFoundation writer, creates a Motion JPEG intermediate, and transcodes it to MP4 with macOS `avconvert`. The distributed MP4 is silent and fully captioned. AIFF narration assets are retained under `../work/demo/`; the host Swift compiler/SDK mismatch prevented the planned narration mux.
+The builder uses macOS speech synthesis plus `ffmpeg` to create six narrated 1080p segments, concatenates them without re-encoding, and verifies the final duration and audio/video stream types with `ffprobe`. `demo-audit.json` records the exact output hash, duration, stream types, slide count, and failure count. AIFF narration assets are retained under `../work/demo/`.
 
 ## Evidence controls for the next version
 
@@ -113,7 +113,7 @@ If market data is added, fetch BTC-USD candles in explicit non-overlapping windo
 - The facility and all limit-setting inputs are invented for demonstration.
 - The model and workbook use illustrative policy and deal inputs. They are not calibrated credit policy.
 - No second-reader reproduction or external review has been completed.
-- The demo is captioned but silent; narration assets exist but are not muxed into the MP4.
+- The demo is locally verified as narrated and captioned, but no independent presenter or accessibility reviewer has assessed it.
 - No Base transaction, RPC call, wallet action, account, paid service, or deployment is required or permitted for this draft.
 
 ## Version rule

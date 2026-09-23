@@ -1,6 +1,6 @@
 # Three-minute demo storyboard
 
-Status: planned
+Status: built and locally verified; independent presentation assessment remains outstanding
 
 | Time | Screen | Spoken point | Proof on screen |
 |---|---|---|---|
@@ -23,4 +23,3 @@ Use one waterfall or bridge from quoted collateral value to eligible stressed pr
 ## Failure handling
 
 If Base does not change the outcome, say so and remove the switch from the final demo. If the decision is decline, present decline as the result rather than adjusting assumptions to force approval. If no external reviewer participates, label the opposing memo as self-review.
-

@@ -953,6 +953,32 @@ def check_reviewer_brief_contract() -> list[Result]:
         return [result("X-04", "FAIL", "Reviewer brief satisfies CR-08 content contract", f"Cannot validate reviewer brief: {exc}", pdf_path)]
 
 
+def check_demo_audit() -> list[Result]:
+    audit_path = ROOT / "artifacts" / "demo-audit.json"
+    demo_path = ROOT / "outputs" / "demo.mp4"
+    try:
+        payload = json.loads(audit_path.read_text(encoding="utf-8"))
+        problems = []
+        if payload.get("artifact") != "outputs/demo.mp4":
+            problems.append("artifact path is not outputs/demo.mp4")
+        if payload.get("slide_count") != 6:
+            problems.append("slide count is not 6")
+        if payload.get("stream_types") != ["audio", "video"]:
+            problems.append("audio/video stream types are not both verified")
+        if payload.get("failure_count") != 0:
+            problems.append("audit failure count is nonzero")
+        duration = float(payload.get("duration_seconds", 0))
+        if not 90 <= duration <= 180:
+            problems.append(f"duration {duration:.3f}s is outside 90-180s")
+        actual_hash = hashlib.sha256(demo_path.read_bytes()).hexdigest()
+        if payload.get("sha256") != actual_hash:
+            problems.append("recorded SHA-256 does not match demo.mp4")
+        actual = "; ".join(problems) if problems else f"Six-slide narrated demo is {duration:.3f}s with audio and video streams; SHA-256 matches."
+        return [result("X-24", "FAIL" if problems else "PASS", "Narrated demo audit matches the distributed MP4", actual, audit_path)]
+    except (OSError, UnicodeError, json.JSONDecodeError, TypeError, ValueError) as exc:
+        return [result("X-24", "FAIL", "Narrated demo audit matches the distributed MP4", f"Cannot validate demo audit: {exc}", audit_path)]
+
+
 def check_readiness_report() -> list[Result]:
     path = ROOT / "artifacts" / "readiness-report.json"
     try:
@@ -1255,7 +1281,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write-report", action="store_true", help="write artifacts/validation-report.md")
     args = parser.parse_args()
-    results = check_structure() + check_source_register() + check_fact_ledger() + check_workbook_audit() + check_integrity_manifest() + check_threshold_analysis() + check_machine_readable_files() + check_cross_artifact_consistency() + check_decision_record() + check_condition_register() + check_covenant_plan() + check_escalation_playbook() + check_what_if_contract() + check_scenario_attribution() + check_decision_lineage() + check_diligence_plan() + check_assumption_register() + check_model_risk_register() + check_reviewer_evidence_ledger() + check_collateral_call_ladder() + check_committee_packet_audit() + check_control_matrix() + check_reviewer_scorecard() + check_rating_analysis() + check_monitoring_plan() + check_liquidity_analysis() + check_reviewer_brief_contract() + check_readiness_report() + check_package_metrics() + check_outputs() + check_labels() + check_scenarios()
+    results = check_structure() + check_source_register() + check_fact_ledger() + check_workbook_audit() + check_integrity_manifest() + check_threshold_analysis() + check_machine_readable_files() + check_cross_artifact_consistency() + check_decision_record() + check_condition_register() + check_covenant_plan() + check_escalation_playbook() + check_what_if_contract() + check_scenario_attribution() + check_decision_lineage() + check_diligence_plan() + check_assumption_register() + check_model_risk_register() + check_reviewer_evidence_ledger() + check_collateral_call_ladder() + check_committee_packet_audit() + check_control_matrix() + check_reviewer_scorecard() + check_rating_analysis() + check_monitoring_plan() + check_liquidity_analysis() + check_reviewer_brief_contract() + check_demo_audit() + check_readiness_report() + check_package_metrics() + check_outputs() + check_labels() + check_scenarios()
     report = render(results)
     if args.write_report:
         (ROOT / "artifacts/validation-report.md").write_text(report, encoding="utf-8")

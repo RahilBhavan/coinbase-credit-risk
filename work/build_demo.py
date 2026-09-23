@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import json
+import hashlib
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -13,6 +15,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 WORK = ROOT / "work" / "demo"
 OUTPUT = ROOT / "outputs" / "demo.mp4"
+AUDIT = ROOT / "artifacts" / "demo-audit.json"
 WORK.mkdir(parents=True, exist_ok=True)
 
 NAVY = "#16324f"
@@ -143,31 +146,44 @@ for index, (_, narration) in enumerate(slides, 1):
     subprocess.run(["/usr/bin/say", "-r", "165", "-o", str(audio_path), "-f", str(text_path)], check=True)
     audio_files.append(audio_path)
 
-# The host's Swift compiler can lag its SDK, so the reproducible default uses
-# a tiny Objective-C AVFoundation writer. Narration assets remain beside the
-# slides for a later voice-mux pass; the exported walkthrough is captioned.
-binary = WORK / "build_demo"
-intermediate = WORK / "captioned-demo.mov"
+ffmpeg = shutil.which("ffmpeg")
+ffprobe = shutil.which("ffprobe")
+if not ffmpeg or not ffprobe:
+    raise RuntimeError("ffmpeg and ffprobe are required to build and verify the narrated demo")
+
+segments = []
+for index, ((slide_path, _), audio_path) in enumerate(zip(slides, audio_files), 1):
+    segment = WORK / f"segment-{index}.mp4"
+    subprocess.run(
+        [
+            ffmpeg, "-y", "-loglevel", "error", "-loop", "1", "-i", str(slide_path), "-i", str(audio_path),
+            "-c:v", "libx264", "-preset", "ultrafast", "-crf", "23", "-tune", "stillimage",
+            "-c:a", "aac", "-b:a", "160k", "-pix_fmt", "yuv420p", "-r", "10", "-shortest",
+            "-movflags", "+faststart", str(segment),
+        ],
+        check=True,
+    )
+    segments.append(segment)
+
+concat_file = WORK / "segments.txt"
+concat_file.write_text("".join(f"file '{path.name}'\n" for path in segments), encoding="utf-8")
 subprocess.run(
-    [
-        "/usr/bin/clang", "-fobjc-arc", "-fblocks",
-        "-framework", "Foundation", "-framework", "AVFoundation",
-        "-framework", "CoreGraphics", "-framework", "CoreMedia", "-framework", "CoreVideo",
-        "-framework", "ImageIO", str(ROOT / "work" / "build_demo.m"),
-        "-o", str(binary),
-    ],
+    [ffmpeg, "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(concat_file), "-c", "copy", "-movflags", "+faststart", str(OUTPUT)],
     check=True,
+    cwd=WORK,
 )
-subprocess.run(
-    [str(binary), str(intermediate), "14", *[str(slide_path) for slide_path, _ in slides]],
-    check=True,
-)
-subprocess.run(
-    [
-        "/usr/bin/avconvert", "--source", str(intermediate),
-        "--preset", "Preset1920x1080", "--output", str(OUTPUT),
-        "--replace", "--disableMetadataFilter",
-    ],
-    check=True,
-)
+
+probe = json.loads(subprocess.check_output(
+    [ffprobe, "-v", "error", "-show_entries", "format=duration:stream=index,codec_type,codec_name", "-of", "json", str(OUTPUT)],
+    text=True,
+))
+stream_types = {stream["codec_type"] for stream in probe["streams"]}
+duration = float(probe["format"]["duration"])
+if stream_types != {"audio", "video"} or not 90 <= duration <= 180:
+    raise RuntimeError(f"narrated demo verification failed: streams={sorted(stream_types)}, duration={duration}")
+AUDIT.write_text(json.dumps({
+    "schema_version": "1.0", "artifact": "outputs/demo.mp4", "slide_count": len(slides),
+    "duration_seconds": round(duration, 3), "stream_types": sorted(stream_types),
+    "sha256": hashlib.sha256(OUTPUT.read_bytes()).hexdigest(), "failure_count": 0,
+}, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 print(OUTPUT)

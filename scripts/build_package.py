@@ -20,7 +20,7 @@ def run(label: str, command: list[str], env: dict[str, str]) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--with-demo", action="store_true", help="Regenerate the macOS AVFoundation demo video.")
+    parser.add_argument("--with-demo", action="store_true", help="Regenerate the narrated demo with macOS speech synthesis and ffmpeg.")
     args = parser.parse_args()
     env = os.environ.copy()
     env["PYTHONPATH"] = str(ROOT / "src")
@@ -56,7 +56,7 @@ def main() -> int:
         ("package metrics", [py, "scripts/build_package_metrics.py"]),
     ]
     if args.with_demo:
-        steps.append(("captioned demo", [py, "work/build_demo.py"]))
+        steps.append(("narrated demo", [py, "work/build_demo.py"]))
     steps.extend([
         ("integrity manifest", [py, "scripts/write_integrity_manifest.py"]),
         ("package validation", [py, "scripts/validate_package.py", "--write-report"]),

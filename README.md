@@ -110,6 +110,5 @@ The recommendation is not authority to fund. The current evidence set leaves all
 
 The `3 / Watchful` obligor rating is an assumed ordinal bridge, not a Coinbase rating or a calibrated probability of default. Its five weighted factors reconcile to 3.10 and state the evidence that would improve or weaken each judgment.
 
-Reviewer outputs are in `outputs/`: `review-package.zip`, `committee-packet.pdf`, `credit-model.xlsx`, `credit-memo.pdf`, `opposing-memo.pdf`, `reviewer-brief.pdf`, `decision-view.html`, and `demo.mp4`. The ZIP opens with `START-HERE.md` and carries its own byte-length and SHA-256 manifest.
 
 No application, outreach, account creation, dependency installation, wallet action, transaction, deployment, or production change occurred. Major, coursework, spreadsheet skill, available time, New York hybrid feasibility, and complete eligibility remain unknown.

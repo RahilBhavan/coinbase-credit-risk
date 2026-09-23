@@ -1,0 +1,12 @@
+{
+  "artifact": "outputs/demo.mp4",
+  "duration_seconds": 147.646,
+  "failure_count": 0,
+  "schema_version": "1.0",
+  "sha256": "56fb2d42a120b1425ddb105045a0b1e1fd804a4777ccd4d59d7bef1b6f5781b3",
+  "slide_count": 6,
+  "stream_types": [
+    "audio",
+    "video"
+  ]
+}

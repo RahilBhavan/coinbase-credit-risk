@@ -36,6 +36,14 @@ def csv_rows(relative: str) -> list[dict[str, str]]:
         return []
 
 
+def json_payload(relative: str) -> dict[str, object]:
+    try:
+        value = json.loads((ROOT / relative).read_text(encoding="utf-8"))
+        return value if isinstance(value, dict) else {}
+    except (OSError, UnicodeError, json.JSONDecodeError):
+        return {}
+
+
 def criterion(identifier: str, name: str, evidence: list[str], passed: bool, detail: str) -> dict[str, object]:
     return {
         "id": identifier,
@@ -50,6 +58,7 @@ def build() -> dict[str, object]:
     workbook_audit = csv_rows("artifacts/workbook-audit.csv")
     scenarios = csv_rows("artifacts/scenario-results.csv")
     source_rows = csv_rows("artifacts/source-register.csv")
+    demo_audit = json_payload("artifacts/demo-audit.json")
     scenario_ids = {row.get("scenario_id", "") for row in scenarios}
     required_scenario_signals = {
         "base",
@@ -100,9 +109,9 @@ def build() -> dict[str, object]:
         ),
         criterion(
             "CR-07", "Three-minute-or-less walkthrough",
-            ["outputs/demo.mp4", "04-deliverables/demo-storyboard.md", "work/build_demo.py"],
-            present("outputs/demo.mp4") and text_has("work/build_demo.py", "hypothetical", "opposing memo", "thirty percent collateral decline", "collateral cap is three point zero nine six million"),
-            "Demo container exists and its deterministic slide source covers the required narrative beats and disclaimer.",
+            ["outputs/demo.mp4", "artifacts/demo-audit.json", "04-deliverables/demo-storyboard.md", "work/build_demo.py"],
+            present("outputs/demo.mp4") and demo_audit.get("stream_types") == ["audio", "video"] and demo_audit.get("failure_count") == 0 and 90 <= float(demo_audit.get("duration_seconds", 0)) <= 180 and text_has("work/build_demo.py", "hypothetical", "opposing memo", "thirty percent collateral decline", "collateral cap is three point zero nine six million"),
+            "Narrated demo exists, its audit confirms audio and video streams within three minutes, and its deterministic source covers the required narrative beats and disclaimer.",
         ),
         criterion(
             "CR-08", "One-page review request",

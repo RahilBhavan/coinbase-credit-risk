@@ -61,7 +61,7 @@ python3 scripts/validate_package.py
 python3 scripts/build_package.py
 ```
 
-`build_package.py` rebuilds every artifact in dependency order, then runs the tests and the validator. The workbook rebuild step uses a non-public spreadsheet tool; from a fresh clone it is skipped and the committed workbook is the source of truth. It also skips the decision-view audit if Node.js is missing. On macOS with `ffmpeg`, add `--with-demo` to rebuild the narrated video.
+`build_package.py` rebuilds every artifact in dependency order, then runs the tests and the validator. The workbook is built with a separate spreadsheet tool that is not part of this repo; the committed workbook is the source of truth, and scripts/validate_package.py plus the workbook audit check its formulas and values. `build_package.py` skips the workbook step when that tool is absent. It also skips the decision-view audit if Node.js is missing. On macOS with `ffmpeg`, add `--with-demo` to rebuild the narrated video.
 
 Evaluate one scenario from the command line:
 

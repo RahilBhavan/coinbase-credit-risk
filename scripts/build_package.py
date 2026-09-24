@@ -17,10 +17,10 @@ ROOT = Path(__file__).resolve().parents[1]
 def skip_reason(command: list[str]) -> str | None:
     if command[0] != "node":
         return None
+    if command[1] == "work/build_workbook.mjs" and not (ROOT / command[1]).exists():
+        return "workbook step skipped; the committed outputs/credit-model.xlsx is the source of truth"
     if shutil.which("node") is None:
         return "node is not installed; keeping the committed output"
-    if command[1] == "work/build_workbook.mjs" and not (ROOT / "work/node_modules/@oai/artifact-tool").exists():
-        return "The workbook rebuild step uses a non-public spreadsheet tool; from a fresh clone it is skipped and the committed workbook is the source of truth."
     return None
 
 

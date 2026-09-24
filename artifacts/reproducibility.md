@@ -80,7 +80,7 @@ Run the package validator:
 python3 scripts/validate_package.py --write-report
 ```
 
-The workbook is `../outputs/credit-model.xlsx`. Its reproducible builder is `../work/build_workbook.mjs`; it uses the bundled workspace artifact runtime rather than repository dependencies.
+The workbook is `../outputs/credit-model.xlsx`. The workbook is built with a separate spreadsheet tool that is not part of this repo; the committed workbook is the source of truth, and scripts/validate_package.py plus the workbook audit check its formulas and values.
 
 Audit its OOXML formulas, cached values, engine agreement, case inputs, and filing-fact inputs:
 

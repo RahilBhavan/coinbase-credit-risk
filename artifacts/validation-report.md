@@ -54,7 +54,7 @@ Summary: 49 PASS, 0 FAIL, 0 SKIP
 | O-09 | PASS | Artifact available: reviewer-scorecard.pdf | Valid non-empty PDF container (9,534 bytes). | outputs/reviewer-scorecard.pdf |
 | O-10 | PASS | Artifact available: feedback-log.md | Present and non-empty. | artifacts/feedback-log.md |
 | O-11 | PASS | Artifact available: reproducibility.md | Present and non-empty. | artifacts/reproducibility.md |
-| O-12 | PASS | Artifact available: decision-view.html | Self-contained HTML present (248,554 characters). | outputs/decision-view.html |
+| O-12 | PASS | Artifact available: decision-view.html | Self-contained HTML present (248,597 characters). | outputs/decision-view.html |
 | L-01 | PASS | Built narrative artifacts label the case hypothetical | Found an explicit label in 5 text artifact(s). | artifacts |
 | C-01 | PASS | Scenario schema and arithmetic consistency | Validated 11 scenario row(s). | artifacts/scenario-results.csv |
 

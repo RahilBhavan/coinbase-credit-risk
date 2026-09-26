@@ -2,7 +2,7 @@
   "artifact_sha256": {
     "outputs/committee-packet.pdf": "10a548915fdaac9904a635a9068d6ac6ca0397cb1a29b4dcd76fe77bb362f05c",
     "outputs/credit-model.xlsx": "25b254e85e6d29daf0fbdad5002b7c6bcedf46a1d4868f14bce45f2c40080c00",
-    "outputs/decision-view.html": "bae06001ba3ed67d8a091f234ec4d53ab498ae124d3c87a7a7a6b58db69cca0a",
+    "outputs/decision-view.html": "8d3ecc3a1b6f0747152df445a0cd6c362dabb8e8f0419924b3710d6a67886f8a",
     "outputs/reviewer-scorecard.pdf": "5f4c8e4c90219aa1b3d487d0366f66bf1411f8196d9a8917ffd89f3407cd3525"
   },
   "case_id": "MARA-CR-001",

@@ -3,9 +3,9 @@
 [![CI](https://github.com/RahilBhavan/mara-credit-case/actions/workflows/ci.yml/badge.svg)](https://github.com/RahilBhavan/mara-credit-case/actions/workflows/ci.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-[![Decision view showing the $3.0 million conditional recommendation, the four-cap comparison, and the collateral waterfall](docs/screenshot.png)](https://rahilbhavan.com/mara-credit-case)
+[![Decision view showing the $3.0 million conditional recommendation, the four-cap comparison, and the collateral waterfall](docs/screenshot.png)](https://mara.rahilbhavan.com/)
 
-**Live decision view: https://rahilbhavan.com/mara-credit-case**
+**Live decision view: https://mara.rahilbhavan.com/**
 
 A credit committee package that sizes a hypothetical $5.0 million, 12-month secured revolver to MARA Holdings from public filings, a tested decision engine, and a fictional collateral schedule.
 
@@ -39,7 +39,7 @@ These facts frame the borrower. The case does not treat MARA's reported bitcoin 
 - [Opposing memo (PDF)](outputs/opposing-memo.pdf): the strongest case against the recommendation.
 - [Committee packet (PDF)](outputs/committee-packet.pdf): decision, thresholds, conditions, controls, and model risks.
 - [Credit model workbook (XLSX)](outputs/credit-model.xlsx): 16 sheets of live formulas, audited cell by cell against the engine.
-- [Decision view (HTML)](https://rahilbhavan.com/mara-credit-case): eleven scenarios, a collateral what-if lab, the decision surface, and the condition register.
+- [Decision view (HTML)](https://mara.rahilbhavan.com/): eleven scenarios, a collateral what-if lab, the decision surface, and the condition register.
 - [Review package (ZIP)](outputs/review-package.zip): every output plus a start-here guide and a SHA-256 manifest.
 
 ## How it's built

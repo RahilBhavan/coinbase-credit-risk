@@ -90,7 +90,7 @@ if (reviewerScorecard.summary.gate_count !== 3 || readiness.human_gates.length !
 if (reviewerScorecard.summary.passed_count !== passedHumanGates || reviewerScorecard.summary.outstanding_count !== outstandingHumanGates) readinessErrors.push("scorecard and readiness gate counts differ");
 if (passedHumanGates + outstandingHumanGates !== 3) readinessErrors.push("unsupported human gate status");
 if (readiness.ready_to_share !== (readiness.local_acceptance_verified && passedHumanGates === 3)) readinessErrors.push("ready-to-share does not match local and human gate status");
-if (!html.includes('id="reviewerScorecardLink" href="/mara-credit-case/reviewer-scorecard.pdf"')) readinessErrors.push("scorecard link is missing or changed");
+if (!html.includes('id="reviewerScorecardLink" href="reviewer-scorecard.pdf"')) readinessErrors.push("scorecard link is missing or changed");
 const readinessResult = { status: readinessErrors.length ? "FAIL" : "PASS", gate_count: reviewerScorecard.summary.gate_count, outstanding_count: reviewerScorecard.summary.outstanding_count, errors: readinessErrors };
 const failures = [...vectorResults.filter(row => row.status === "FAIL"), ...idResults.filter(row => row.status === "FAIL"), ...(ladderErrors.length ? [ladderResult] : []), ...(controlErrors.length ? [controlResult] : []), ...(modelRiskErrors.length ? [modelRiskResult] : []), ...(navigationErrors.length ? [navigationResult] : []), ...(readinessErrors.length ? [readinessResult] : [])];
 const payload = {

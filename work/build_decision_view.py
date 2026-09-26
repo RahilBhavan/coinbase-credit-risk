@@ -39,96 +39,25 @@ template = r"""<!doctype html>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>MARA secured revolver: credit decision view</title>
   <meta name="description" content="A $5M secured revolver request to MARA Holdings, sized from public filings: a $3.0M conditional limit, with funding blocked until diligence clears.">
-  <link rel="canonical" href="https://rahilbhavan.github.io/mara-credit-case/">
+  <link rel="canonical" href="https://rahilbhavan.com/mara-credit-case">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rahilbhavan.github.io/mara-credit-case/">
+  <meta property="og:url" content="https://rahilbhavan.com/mara-credit-case">
   <meta property="og:title" content="MARA secured revolver: credit decision view">
   <meta property="og:description" content="A $5M secured revolver request to MARA Holdings, sized from public filings: a $3.0M conditional limit, with funding blocked until diligence clears.">
-  <meta property="og:image" content="https://rahilbhavan.github.io/mara-credit-case/social-card.png">
+  <meta property="og:image" content="https://rahilbhavan.com/mara-credit-case/social-card.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%2338bdf8'%3EMC%3C/text%3E%3C/svg%3E">
-  <style>
-    :root { --navy:#16324f; --blue:#2f75b5; --ink:#17202a; --muted:#64707d; --line:#d8e0e8; --paper:#f4f7fa; --warn:#fff2cc; --bad:#a32121; --good:#1f6a44; }
-    * { box-sizing:border-box; }
-    body { margin:0; color:var(--ink); background:var(--paper); font:15px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    .skip-link { position:absolute; left:12px; top:-60px; z-index:10; background:#fff; color:var(--navy); padding:10px 14px; border-radius:6px; font-weight:700; }
-    .skip-link:focus { top:12px; }
-    header { background:var(--navy); color:#fff; padding:22px max(24px,calc((100vw - 1160px)/2)); }
-    header h1 { margin:0 0 4px; font-size:24px; letter-spacing:.1px; }
-    header p { margin:0; opacity:.78; }
-    main { max-width:1160px; margin:0 auto; padding:22px 24px 40px; }
-    .boundary { background:var(--warn); border:1px solid #d6b656; padding:11px 14px; margin-bottom:18px; border-radius:7px; }
-    .grid { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr); gap:18px; }
-    .card { min-width:0; background:white; border:1px solid var(--line); border-radius:10px; padding:17px; box-shadow:0 2px 10px rgba(22,50,79,.05); }
-    .card h2 { margin:0 0 12px; color:var(--navy); font-size:17px; }
-    .decision { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; }
-    .decision strong { display:block; color:var(--navy); font-size:31px; line-height:1.1; margin-top:3px; }
-    .status { padding:7px 10px; border-radius:999px; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; background:#e4f2ea; color:var(--good); }
-    .status.decline { background:#fbe6e6; color:var(--bad); }
-    .muted { color:var(--muted); font-size:13px; }
-    select { width:100%; font:inherit; padding:9px 10px; border:1px solid #aebbc8; border-radius:6px; background:white; margin:4px 0 14px; }
-    input { font:inherit; accent-color:var(--blue); }
-    button { font:inherit; font-weight:650; color:var(--navy); background:#fff; border:1px solid #9aabba; border-radius:6px; padding:8px 11px; cursor:pointer; }
-    button:hover { background:#edf4fa; }
-    :is(a,button,select):focus-visible { outline:3px solid #f2b134; outline-offset:2px; }
-    .toolbar { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 18px; align-items:center; }
-    .toolbar .muted { margin-left:auto; }
-    .review-nav { position:sticky; top:0; z-index:5; display:flex; gap:7px; overflow-x:auto; margin:0 0 18px; padding:9px; background:rgba(244,247,250,.96); border:1px solid var(--line); border-radius:8px; backdrop-filter:blur(8px); }
-    .review-nav a { flex:0 0 auto; color:var(--navy); background:#fff; border:1px solid #b8c5d1; border-radius:999px; padding:6px 10px; font-size:12px; font-weight:700; text-decoration:none; }
-    .review-nav a:hover { background:#edf4fa; }
-    .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-top:15px; }
-    .metric { border:1px solid var(--line); border-radius:7px; padding:10px; }
-    .metric span { display:block; color:var(--muted); font-size:12px; }
-    .metric b { font-size:18px; color:var(--navy); }
-    table { width:100%; border-collapse:collapse; }
-    th { text-align:left; color:white; background:var(--navy); padding:8px 10px; font-size:12px; }
-    td { padding:8px 10px; border-bottom:1px solid var(--line); }
-    td:last-child { text-align:right; font-variant-numeric:tabular-nums; }
-    .scenario-table { display:block; overflow-x:auto; white-space:nowrap; }
-    .scenario-table td:last-child { text-align:left; white-space:normal; min-width:190px; }
-    .scenario-table tr.active { background:#fff7df; }
-    .scenario-table button { border:0; padding:2px 0; background:transparent; color:#145a8d; text-decoration:underline; font-weight:700; }
-    .delta-down { color:var(--bad); font-weight:700; }
-    .delta-flat { color:var(--muted); }
-    .call-pass { color:var(--good); font-weight:700; }
-    .call-required { color:var(--bad); font-weight:700; }
-    .action-link { display:inline-block; color:white; background:var(--blue); border-radius:6px; padding:9px 12px; font-weight:700; text-decoration:none; }
-    .action-link:hover { background:var(--navy); }
-    .gate { color:var(--bad)!important; font-size:14px!important; }
-    .condition-table td:nth-child(1),.condition-table td:nth-child(4) { white-space:nowrap; }
-    .condition-table td:last-child { text-align:left; }
-    .bar-row { display:grid; grid-template-columns:105px 1fr 95px; align-items:center; gap:8px; margin:9px 0; }
-    .track { height:14px; background:#edf1f5; border-radius:4px; overflow:hidden; }
-    .bar { height:100%; background:var(--blue); transition:width .25s; }
-    .bar.binding { background:#c26b2e; }
-    .blockers { color:var(--bad); font-weight:650; }
-    .question { font-size:18px; color:var(--navy); margin:4px 0 0; }
-    .lab-grid { display:grid; grid-template-columns:repeat(2,minmax(220px,1fr)); gap:14px 22px; }
-    .lab-control { display:grid; grid-template-columns:1fr auto; gap:4px 12px; align-items:center; }
-    .lab-control input[type="range"] { grid-column:1/-1; width:100%; }
-    .lab-value { color:var(--navy); font-weight:700; font-variant-numeric:tabular-nums; }
-    .control-checks { display:flex; flex-wrap:wrap; gap:8px 18px; margin:16px 0; padding:12px; border:1px solid var(--line); border-radius:7px; }
-    .control-checks label { display:flex; gap:7px; align-items:center; }
-    .risk-filters { display:flex; flex-wrap:wrap; gap:10px 18px; align-items:end; margin:14px 0 10px; padding:11px 12px; border:1px solid var(--line); border-radius:7px; background:#f7fafc; }
-    .risk-filters label { display:grid; gap:3px; color:var(--muted); font-size:12px; }
-    .risk-filters label:has(input[type="checkbox"]) { display:flex; align-items:center; gap:7px; padding-bottom:9px; }
-    .risk-filters select { width:auto; min-width:150px; margin:0; }
-    .lab-result { border-left:4px solid var(--blue); background:#f7fafc; padding:13px 14px; margin-top:14px; }
-    .lab-result.decline { border-color:var(--bad); background:#fff7f7; }
-    .wide { grid-column:1/-1; }
-    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-    footer { color:var(--muted); margin-top:18px; font-size:12px; }
-    @media (max-width:820px) { .grid,.lab-grid { grid-template-columns:minmax(0,1fr); } .metrics { grid-template-columns:1fr; } }
-    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; } }
-    @media print { body { background:#fff; font-size:11px; } header { padding:12px 0; color:var(--navy); background:#fff; border-bottom:2px solid var(--navy); } main { max-width:none; padding:12px 0; } .toolbar,.review-nav,.risk-filters,.skip-link { display:none!important; } .card { box-shadow:none; break-inside:avoid; padding:11px; } .grid { gap:10px; } footer { margin-top:10px; } }
-  </style>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23171717'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='600' text-anchor='middle' fill='white'%3EMC%3C/text%3E%3C/svg%3E">
+  <style>__STYLES__</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to decision content</a>
-<header><h1>MARA-CR-001 credit decision</h1><p>Hypothetical $5 million facility | public issuer facts + fictional transaction terms</p></header>
+<header>
+  <div class="site-nav"><a class="brand" href="#main-content" aria-label="MARA credit decision, skip to content"><span class="brand-mark" aria-hidden="true">MC</span><span>MARA <span class="brand-light">/ Credit case</span></span></a><span class="nav-context">Independent credit analysis</span><a class="nav-document" href="/mara-credit-case/committee-packet.pdf">Committee packet <span aria-hidden="true">↗</span></a></div>
+  <div class="hero"><span class="hero-eyebrow">MARA-CR-001 · Decision view</span><h1>Credit decision, traced to the evidence.</h1><p>Hypothetical $5 million secured revolver, examined through its limits, collateral, conditions, and stress cases.</p><div class="hero-actions"><a class="hero-primary" href="#decisionSummary">Explore the decision <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="/mara-credit-case/credit-memo.pdf">Read the credit memo</a></div></div>
+</header>
 <main id="main-content" tabindex="-1">
   <div class="boundary">MARA is not represented as a Coinbase customer. The facility, collateral, Base route, policy caps, and portfolio are fictional. This view supports an independent case study, not a real credit decision.</div>
-  <p class="muted">Download: <a href="credit-memo.pdf">credit memo (PDF)</a> | <a href="committee-packet.pdf">committee packet (PDF)</a> | <a href="reviewer-scorecard.pdf">reviewer scorecard (PDF)</a></p>
+  <p class="muted">Download: <a href="/mara-credit-case/credit-memo.pdf">credit memo (PDF)</a> | <a href="/mara-credit-case/committee-packet.pdf">committee packet (PDF)</a> | <a href="/mara-credit-case/reviewer-scorecard.pdf">reviewer scorecard (PDF)</a></p>
   <div class="toolbar" aria-label="Decision view actions">
     <button id="copySummary" type="button">Copy scenario summary</button>
     <button id="downloadScenario" type="button">Download scenario JSON</button>
@@ -148,7 +77,7 @@ template = r"""<!doctype html>
       <label class="muted" for="scenario">Change one declared case</label>
       <select id="scenario" aria-describedby="scenarioHelp"></select>
       <p id="scenarioHelp" class="sr-only">Selecting a scenario updates the recommendation, constraints, waterfall, and shareable URL.</p>
-      <div><span class="muted">Binding constraint</span><div id="binding" style="font-size:21px;font-weight:700;color:var(--navy)"></div></div>
+      <div><span class="muted">Binding constraint</span><div id="binding"></div></div>
       <p id="blockers" class="blockers"></p>
     </section>
     <section class="card">
@@ -301,7 +230,7 @@ template = r"""<!doctype html>
       <p class="muted">Local model verification is complete. Sharing readiness remains separate and cannot be cleared by rebuilding the package or generating a blank review form.</p>
       <div class="metrics"><div class="metric"><span>Local acceptance</span><b id="readinessLocal"></b></div><div class="metric"><span>Ready to share</span><b id="readinessShare" class="gate"></b></div><div class="metric"><span>Human gates passed</span><b id="readinessPassed"></b></div><div class="metric"><span>Human gates outstanding</span><b id="readinessOutstanding"></b></div></div>
       <div class="scenario-table condition-table"><table><thead><tr><th scope="col">Gate</th><th scope="col">Required review</th><th scope="col">Reviewer role</th><th scope="col">Status</th><th scope="col">Evidence required</th></tr></thead><tbody id="humanGateTable"></tbody></table></div>
-      <p><a class="action-link" id="reviewerScorecardLink" href="reviewer-scorecard.pdf">Open blank reviewer scorecard</a></p>
+      <p><a class="action-link" id="reviewerScorecardLink" href="/mara-credit-case/reviewer-scorecard.pdf">Open blank reviewer scorecard</a></p>
       <p class="muted" id="readinessInterpretation"></p>
     </section>
     <section class="card wide">
@@ -483,6 +412,7 @@ function renderLab(){
  document.querySelector("#labRecommendation").textContent=money(result.recommended_amount_usd);document.querySelector("#labProceeds").textContent=money(result.available_proceeds_usd);document.querySelector("#labCollateralCap").textContent=money(result.collateral_cap_usd);document.querySelector("#labBinding").textContent=result.binding_cap.replaceAll("_"," ");document.querySelector("#labProForma").textContent=money(result.recommended_pro_forma_exposure_usd);document.querySelector("#labSurplus").textContent=money(result.coverage_surplus_usd);
  document.querySelector("#labDecision").textContent=result.decision==="decline"?"Decline under these simulated inputs.":"Conditional recommendation under these simulated inputs; the funding gate remains separate.";
  document.querySelector("#labBlockers").textContent=result.hard_blockers.length?"Hard blockers: "+result.hard_blockers.join(", "):"No simulated hard blocker.";
+ document.querySelector("#labBlockers").classList.toggle("clear",!result.hard_blockers.length);
  document.querySelector("#labResult").classList.toggle("decline",result.decision==="decline");
 }
 function resetLab(){
@@ -512,6 +442,7 @@ function render(id){
  document.querySelector("#fundingGate").textContent=r.funding_gate_status.replaceAll("_"," ");
  document.querySelector("#binding").textContent=r.binding_cap.replaceAll("_"," ");
  document.querySelector("#blockers").textContent=r.hard_blockers.length?"Blocker: "+r.hard_blockers.join(", "):"No simulated hard blocker in this scenario";
+ document.querySelector("#blockers").classList.toggle("clear",!r.hard_blockers.length);
  const caps=r.caps_usd,max=Math.max(...Object.values(caps).map(Number));
  document.querySelector("#bars").setAttribute("aria-label","Four-cap comparison. "+Object.entries(caps).map(([k,v])=>k.replaceAll("_"," ")+" "+money(v)+(k===r.binding_cap?", binding":"")).join("; "));
  document.querySelector("#bars").innerHTML=Object.entries(caps).map(([k,v])=>`<div class="bar-row"><span>${k.replaceAll("_"," ")}</span><div class="track"><div class="bar ${k===r.binding_cap?"binding":""}" style="width:${100*Number(v)/max}%"></div></div><b>${money(v)}</b></div>`).join("");
@@ -560,6 +491,6 @@ const initial=scenarios.some(row=>row.scenario_id===requested)?requested:"base";
 </script>
 </body></html>"""
 
-output = template.replace("__SCENARIOS__", js(SCENARIOS)).replace("__BASE__", js(BASE)).replace("__THRESHOLDS__", js(THRESHOLDS)).replace("__MONITORING__", js(MONITORING)).replace("__LIQUIDITY__", js(LIQUIDITY)).replace("__COVENANTS__", js(COVENANTS)).replace("__ESCALATIONS__", js(ESCALATIONS)).replace("__WHAT_IF__", js(WHAT_IF)).replace("__ATTRIBUTION__", js(ATTRIBUTION)).replace("__LINEAGE__", js(LINEAGE)).replace("__DILIGENCE__", js(DILIGENCE)).replace("__ASSUMPTIONS__", js(ASSUMPTIONS)).replace("__MODEL_RISKS__", js(MODEL_RISKS)).replace("__CONTROL_MATRIX__", js(CONTROL_MATRIX)).replace("__REVIEWER_SCORECARD__", js(REVIEWER_SCORECARD)).replace("__READINESS__", js(READINESS)).replace("__COLLATERAL_CALLS__", js(COLLATERAL_CALLS))
+output = template.replace("__STYLES__", (ROOT / "work/decision_view.css").read_text(encoding="utf-8")).replace("__SCENARIOS__", js(SCENARIOS)).replace("__BASE__", js(BASE)).replace("__THRESHOLDS__", js(THRESHOLDS)).replace("__MONITORING__", js(MONITORING)).replace("__LIQUIDITY__", js(LIQUIDITY)).replace("__COVENANTS__", js(COVENANTS)).replace("__ESCALATIONS__", js(ESCALATIONS)).replace("__WHAT_IF__", js(WHAT_IF)).replace("__ATTRIBUTION__", js(ATTRIBUTION)).replace("__LINEAGE__", js(LINEAGE)).replace("__DILIGENCE__", js(DILIGENCE)).replace("__ASSUMPTIONS__", js(ASSUMPTIONS)).replace("__MODEL_RISKS__", js(MODEL_RISKS)).replace("__CONTROL_MATRIX__", js(CONTROL_MATRIX)).replace("__REVIEWER_SCORECARD__", js(REVIEWER_SCORECARD)).replace("__READINESS__", js(READINESS)).replace("__COLLATERAL_CALLS__", js(COLLATERAL_CALLS))
 (ROOT / "outputs/decision-view.html").write_text(output, encoding="utf-8")
 print(ROOT / "outputs/decision-view.html")

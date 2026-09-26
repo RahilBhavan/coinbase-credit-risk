@@ -124,7 +124,7 @@
     },
     "artifacts/package-metrics.json": {
       "bytes": 1493,
-      "sha256": "9f833cf5d7501e7dcd8095c88406245c905d8c26f3fd28168b334ae869a28747"
+      "sha256": "ffcbf7d328c34d1cd9ec4ce4d38376fec2ac8d4fea43afc7e893b68998fcd781"
     },
     "artifacts/package-metrics.md": {
       "bytes": 804,
@@ -295,8 +295,8 @@
       "sha256": "25b254e85e6d29daf0fbdad5002b7c6bcedf46a1d4868f14bce45f2c40080c00"
     },
     "outputs/decision-view.html": {
-      "bytes": 248601,
-      "sha256": "71834fe33c9d44d58d4ad9a872563b6bcfdd5f7d2b087344b37cbb9e9f344e32"
+      "bytes": 254022,
+      "sha256": "bae06001ba3ed67d8a091f234ec4d53ab498ae124d3c87a7a7a6b58db69cca0a"
     },
     "outputs/demo.mp4": {
       "bytes": 3517709,

@@ -21,4 +21,7 @@ outputs/*.inspect.ndjson
 venv/
 .idea/
 .vscode/
-
+.vercel/
+_site/
+.vercel
+.env*

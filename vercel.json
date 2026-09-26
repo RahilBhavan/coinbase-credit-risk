@@ -1,0 +1,4 @@
+{
+  "buildCommand": "mkdir -p _site && cp outputs/decision-view.html _site/index.html && cp outputs/credit-memo.pdf outputs/committee-packet.pdf outputs/reviewer-scorecard.pdf docs/social-card.png _site/",
+  "outputDirectory": "_site"
+}
